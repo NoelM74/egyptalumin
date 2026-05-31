@@ -6,7 +6,7 @@
     "enabled": true
   },
   "assets": {
-    "directory": "egyptalumin-main"
+    "directory": "egyptalumin-main/dist"
   },
   "compatibility_flags": [
     "nodejs_compat"
