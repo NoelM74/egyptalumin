@@ -8,6 +8,9 @@
   "assets": {
     "directory": "egyptalumin-main/dist"
   },
+  "build": {
+    "command": "npm install --prefix egyptalumin-main && npm run build --prefix egyptalumin-main"
+  },
   "compatibility_flags": [
     "nodejs_compat"
   ]
