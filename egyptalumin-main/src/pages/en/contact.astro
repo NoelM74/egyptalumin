@@ -1,0 +1,138 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Contact Our B2B Sales & Technical Desk | Egypt Alumin" 
+  description="Request a quote or technical sample of our primary aluminium ingots, ADC12, or AL-Si silicon alloys. Direct response from sales partner Noel Murphy."
+  lang="en"
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="/en/">Home</a></li>
+        <li aria-current="page">Contact</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="product-hero" style="padding: 4rem 0 3rem 0;">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="eyebrow on-dark">Rapid 24-Hour B2B Response</span>
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Direct B2B Sales & Technical Desk</h1>
+        <p class="product-hero-lead" style="font-size: 1.15rem; color: rgba(255,255,255,0.85);">
+          Request standard pricing, custom chemical composition tolerances, or arrange sample metal shipments 
+          for industrial trial melts directly with Noel Murphy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT GRID
+       ============================================================ -->
+  <section style="background: var(--white); padding: 5rem 0;">
+    <div class="container">
+      <div class="cbam-inner" style="grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: start;">
+        
+        <!-- Contact Form Card -->
+        <div style="background: var(--silver-soft); border: 1px solid var(--border); padding: 3rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+          <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem; font-family:'Outfit',sans-serif;">Request a Quote (RFQ)</h2>
+          <p style="color:var(--ink-soft); font-size:0.95rem; margin-bottom: 2rem;">Please fill out the form below. Noel Murphy or our technical desk will get back to you within 1 business day.</p>
+          
+          <form class="contact-form" style="display:flex; flex-direction:column; gap:1.5rem;" onsubmit="event.preventDefault(); alert('Thank you for your inquiry! Noel Murphy will contact you shortly.');">
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+              <div>
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Full Name *</label>
+                <input type="text" required placeholder="John Doe" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
+              </div>
+              <div>
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Company Name *</label>
+                <input type="text" required placeholder="EuroFoundry GmbH" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+              <div>
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Work Email *</label>
+                <input type="email" required placeholder="john@company.com" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
+              </div>
+              <div>
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Direct Phone *</label>
+                <input type="tel" required placeholder="+49 170 1234567" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+              <div>
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Product Interest</label>
+                <select style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit; background:white;">
+                  <option>Primary Ingot (A7 / Al99.7)</option>
+                  <option>Die-Casting Alloy (ADC12 / EN AC-46000)</option>
+                  <option>Silicon Alloy (AlSi7Mg / AlSi11 / Other)</option>
+                  <option>Other / Custom Alloy Composition</option>
+                </select>
+              </div>
+              <div>
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Estimated Monthly Volume (Tonnes)</label>
+                <input type="text" placeholder="e.g. 50 tonnes" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
+              </div>
+            </div>
+
+            <div>
+              <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Specification Details / Message</label>
+              <textarea placeholder="Please describe any custom chemical limits, packaging, or trial shipment requests..." style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit; min-height:120px; resize:vertical;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:fit-content; cursor:pointer; font-size:1rem; padding: 0.85rem 2rem;">Submit RFQ</button>
+          </form>
+        </div>
+
+        <!-- Noel Murphy Profile Card & Quick Info -->
+        <div style="display:flex; flex-direction:column; gap:2rem;">
+          
+          <div style="background:var(--silver-soft); border:1px solid var(--border); padding:2rem; border-radius:var(--radius-lg); text-align:center;">
+            <div style="width:110px; height:110px; border-radius:50%; overflow:hidden; margin:0 auto 1.25rem auto; box-shadow:var(--shadow-md);">
+              <img src="/images/branding/brand-noel-murphy-portrait-02.webp" alt="Noel Murphy" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <h3 style="font-family:'Outfit',sans-serif; margin-bottom:0.25rem;">Noel Murphy</h3>
+            <span style="color:var(--teal); font-weight:600; font-size:0.85rem; text-transform:uppercase; tracking:0.05em; display:block; margin-bottom:1rem;">European Sales Partner</span>
+            
+            <hr style="border:0; border-top:1px solid var(--border); margin-bottom:1.25rem;" />
+            
+            <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.75rem; font-size:0.9rem; text-align:left;">
+              <li style="display:flex; gap:0.5rem;">
+                <span>📞</span>
+                <a href="tel:+353871187806" style="color:var(--navy); font-weight:600;">+353 87 118 7806</a>
+              </li>
+              <li style="display:flex; gap:0.5rem;">
+                <span>✉️</span>
+                <a href="mailto:noel@egyptalumin.com" style="color:var(--navy); font-weight:600;">noel@egyptalumin.com</a>
+              </li>
+              <li style="display:flex; gap:0.5rem;">
+                <span>💬</span>
+                <a href="https://wa.me/353871187806" target="_blank" style="color:var(--teal); font-weight:600;">Direct WhatsApp Chat</a>
+              </li>
+            </ul>
+          </div>
+
+          <div style="background:var(--navy); color:white; padding:2rem; border-radius:var(--radius-lg);">
+            <h3 style="font-family:'Outfit',sans-serif; margin-bottom:1rem; font-size:1.15rem; color:var(--amber);">Compliance Checkmarks:</h3>
+            <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.8rem; font-size:0.85rem; color:rgba(255,255,255,0.85);">
+              <li>✓ Full REACH compliance number available</li>
+              <li>✓ EU-CBAM quarterly emissions verified</li>
+              <li>✓ ISO 9001:2015 certified production</li>
+              <li>✓ Standard EN 10204 3.1 analysis certificates</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>
