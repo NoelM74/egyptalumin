@@ -1,0 +1,277 @@
+---
+interface Props {
+  lang?: 'en' | 'de' | 'fr' | 'it';
+}
+
+const { lang = 'en' } = Astro.props;
+
+const t = {
+  en: {
+    home: "/en/",
+    products: "Products",
+    productsUrl: "/en/products/",
+    industries: "Industries",
+    industriesUrl: "/en/industries/",
+    quality: "Quality",
+    qualityUrl: "/en/quality/",
+    cbam: "CBAM Guide",
+    cbamUrl: "/en/cbam-guide/",
+    about: "About",
+    aboutUrl: "/en/about/",
+    contact: "Contact",
+    contactUrl: "/en/contact/",
+    rfq: "Request a Quote",
+    tagline: "Aluminium ingots · Egypt → Europe"
+  },
+  de: {
+    home: "/de/",
+    products: "Produkte",
+    productsUrl: "/de/produkte/",
+    industries: "Branchen",
+    industriesUrl: "/de/branchen/",
+    quality: "Qualität",
+    qualityUrl: "/de/qualitaet/",
+    cbam: "CBAM-Leitfaden",
+    cbamUrl: "/de/cbam-leitfaden/",
+    about: "Über uns",
+    aboutUrl: "/de/ueber-uns/",
+    contact: "Kontakt",
+    contactUrl: "/de/kontakt/",
+    rfq: "Angebot anfordern",
+    tagline: "Aluminiumbarren · Ägypten → Europa"
+  },
+  fr: {
+    home: "/fr/",
+    products: "Produits",
+    productsUrl: "/fr/produits/",
+    industries: "Industries",
+    industriesUrl: "/fr/industries/",
+    quality: "Qualité",
+    qualityUrl: "/fr/qualite/",
+    cbam: "Guide de la CBAM",
+    cbamUrl: "/fr/guide-cbam/",
+    about: "À Propos",
+    aboutUrl: "/fr/a-propos/",
+    contact: "Contact",
+    contactUrl: "/fr/contact/",
+    rfq: "Demander un devis",
+    tagline: "Lingots d'aluminium · Égypte → Europe"
+  },
+  it: {
+    home: "/it/",
+    products: "Prodotti",
+    productsUrl: "/it/prodotti/",
+    industries: "Industrie",
+    industriesUrl: "/it/industrie/",
+    quality: "Qualità",
+    qualityUrl: "/it/qualita/",
+    cbam: "Guida CBAM",
+    cbamUrl: "/it/guida-cbam/",
+    about: "Chi Siamo",
+    aboutUrl: "/it/chi-siamo/",
+    contact: "Contatti",
+    contactUrl: "/it/contatti/",
+    rfq: "Richiedi preventivo",
+    tagline: "Lingotti di alluminio · Egitto → Europa"
+  }
+};
+
+const labels = t[lang] || t.en;
+
+// Current path for active state highlighting
+const pathname = Astro.url.pathname;
+---
+
+<header class="site-header" role="banner">
+  <nav class="nav" aria-label="Primary">
+    <a href={labels.home} class="brand" aria-label="Egypt Alumin home">
+      <span class="brand-mark" aria-hidden="true">EA</span>
+      <span>
+        <span class="brand-name">Egypt Alumin</span><br/>
+        <span class="brand-tag">{labels.tagline}</span>
+      </span>
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href={labels.productsUrl} class={pathname.includes('/products/') || pathname.includes('/produkte/') || pathname.includes('/produits/') || pathname.includes('/prodotti/') ? 'active' : ''}>{labels.products}</a></li>
+      <li><a href={labels.industriesUrl} class={pathname.includes('/industries/') || pathname.includes('/branchen/') || pathname.includes('/industrie/') ? 'active' : ''}>{labels.industries}</a></li>
+      <li><a href={labels.qualityUrl} class={pathname.includes('/quality/') || pathname.includes('/qualitaet/') || pathname.includes('/qualite/') || pathname.includes('/qualita/') ? 'active' : ''}>{labels.quality}</a></li>
+      <li><a href={labels.cbamUrl} class={pathname.includes('cbam') ? 'active' : ''}>{labels.cbam}</a></li>
+      <li><a href={labels.aboutUrl} class={pathname.includes('/about/') || pathname.includes('/ueber-uns/') || pathname.includes('/a-propos/') || pathname.includes('/chi-siamo/') ? 'active' : ''}>{labels.about}</a></li>
+      <li><a href={labels.contactUrl} class={pathname.includes('/contact/') || pathname.includes('/kontakt/') || pathname.includes('/contatti/') ? 'active' : ''}>{labels.contact}</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <div class="lang-switch-dropdown" aria-label="Language">
+        <button class="lang-btn" aria-haspopup="listbox" aria-expanded="false">
+          🌐 {lang.toUpperCase()} <span class="chevron">▼</span>
+        </button>
+        <ul class="lang-dropdown" role="listbox">
+          <li><a href="/en/" class={lang === 'en' ? 'active' : ''}>English (EN)</a></li>
+          <li><a href="/de/" class={lang === 'de' ? 'active' : ''}>Deutsch (DE)</a></li>
+          <li><a href="/fr/" class={lang === 'fr' ? 'active' : ''}>Français (FR)</a></li>
+          <li><a href="/it/" class={lang === 'it' ? 'active' : ''}>Italiano (IT)</a></li>
+        </ul>
+      </div>
+
+      <span class="nav-phone" aria-label="Direct sales line">
+        <a href="tel:+353871187806">📞 +353 87 118 7806</a>
+      </span>
+      <a href={labels.contactUrl} class="btn btn-primary nav-rfq-btn">{labels.rfq}</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6" class="line-1"/>
+          <line x1="3" y1="12" x2="21" y2="12" class="line-2"/>
+          <line x1="3" y1="18" x2="21" y2="18" class="line-3"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu toggle logic
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      navLinks.classList.toggle('mobile-open');
+      document.body.classList.toggle('nav-lock-scroll');
+    });
+  }
+
+  // Language switch dropdown logic
+  const langBtn = document.querySelector('.lang-btn');
+  const langDropdown = document.querySelector('.lang-switch-dropdown');
+
+  if (langBtn && langDropdown) {
+    langBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = langBtn.getAttribute('aria-expanded') === 'true';
+      langBtn.setAttribute('aria-expanded', !isExpanded);
+      langDropdown.classList.toggle('open');
+    });
+
+    document.addEventListener('click', () => {
+      langBtn.setAttribute('aria-expanded', 'false');
+      langDropdown.classList.remove('open');
+    });
+  }
+</script>
+
+<style>
+  /* Local Styles for enhanced premium header layout */
+  .lang-switch-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .lang-btn {
+    background: var(--silver-soft);
+    border: 1px solid var(--border);
+    color: var(--navy);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.45rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: all 0.2s ease;
+  }
+  .lang-btn:hover {
+    background: var(--white);
+    border-color: var(--teal);
+  }
+  .lang-btn .chevron {
+    font-size: 0.6rem;
+    opacity: 0.7;
+    transition: transform 0.2s ease;
+  }
+  .lang-switch-dropdown.open .lang-btn .chevron {
+    transform: rotate(180deg);
+  }
+  .lang-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    list-style: none;
+    padding: 0.35rem;
+    min-width: 140px;
+    box-shadow: var(--shadow-lg);
+    z-index: 101;
+  }
+  .lang-switch-dropdown.open .lang-dropdown {
+    display: block;
+    animation: slideDown 0.2s ease forwards;
+  }
+  .lang-dropdown li a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  .lang-dropdown li a:hover {
+    background: var(--silver-soft);
+    color: var(--teal);
+  }
+  .lang-dropdown li a.active {
+    background: rgba(0, 123, 95, 0.08);
+    color: var(--teal);
+    font-weight: 600;
+  }
+  
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Responsive header overrides */
+  @media (max-width: 1023px) {
+    .nav-links {
+      display: none;
+      position: fixed;
+      top: 65px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 65px);
+      background: var(--white);
+      flex-direction: column;
+      padding: 2.5rem 1.5rem;
+      gap: 1.5rem;
+      z-index: 99;
+      box-shadow: var(--shadow-lg);
+      border-top: 1px solid var(--border);
+    }
+    .nav-links.mobile-open {
+      display: flex;
+      animation: fadeIn 0.25s ease-out forwards;
+    }
+    .nav-links a {
+      font-size: 1.25rem;
+      font-weight: 600;
+      width: 100%;
+      display: block;
+      padding: 0.5rem 0;
+    }
+    .nav-rfq-btn {
+      display: none; /* Show only on desktop, use mobile menu links for mobile */
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>

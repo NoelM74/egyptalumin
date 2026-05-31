@@ -1,0 +1,175 @@
+---
+interface Props {
+  lang?: 'en' | 'de' | 'fr' | 'it';
+}
+
+const { lang = 'en' } = Astro.props;
+
+const t = {
+  en: {
+    description: "Premium aluminium ingot manufacturer supplying A7, ADC12 and AL-Si alloy ingots to the European market. ISO 9001 certified. CBAM-ready. REACH compliant.",
+    productsHeader: "Products",
+    companyHeader: "Company",
+    resourcesHeader: "Resources",
+    rights: "© 2026 Egypt Alumin. All rights reserved.",
+    privacy: "Privacy Policy",
+    cookies: "Cookie Policy",
+    catalogue: "Full Catalogue (PDF)",
+    
+    // Links
+    a7Url: "/en/products/a7-primary-aluminium-ingot/",
+    adc12Url: "/en/products/adc12-die-casting-alloy/",
+    alsiUrl: "/en/products/aluminium-silicon-alloy-ingot/",
+    
+    aboutUrl: "/en/about/",
+    facilityUrl: "/en/about/our-facility/",
+    noelUrl: "/en/about/noel-murphy/",
+    sustainabilityUrl: "/en/sustainability/",
+    
+    cbamUrl: "/en/cbam-guide/",
+    qualityUrl: "/en/quality/",
+    logisticsUrl: "/en/logistics/",
+    faqUrl: "/en/faq/",
+    blogUrl: "/en/blog/"
+  },
+  de: {
+    description: "Premium-Aluminiumbarren-Hersteller für A7-, ADC12- und AL-Si-Legierungsbarren für den europäischen Markt. ISO 9001 zertifiziert. CBAM-bereit. REACH-konform.",
+    productsHeader: "Produkte",
+    companyHeader: "Unternehmen",
+    resourcesHeader: "Ressourcen",
+    rights: "© 2026 Egypt Alumin. Alle Rechte vorbehalten.",
+    privacy: "Datenschutzerklärung",
+    cookies: "Cookie-Richtlinie",
+    catalogue: "Gesamtkatalog (PDF)",
+    
+    a7Url: "/de/produkte/a7-primaer-aluminiummassel/",
+    adc12Url: "/de/produkte/adc12-druckguss-legierung/",
+    alsiUrl: "/de/produkte/aluminium-silizium-legierung/",
+    
+    aboutUrl: "/de/ueber-uns/",
+    facilityUrl: "/de/ueber-uns/unsere-anlage/",
+    noelUrl: "/de/ueber-uns/noel-murphy/",
+    sustainabilityUrl: "/de/nachhaltigkeit/",
+    
+    cbamUrl: "/de/cbam-leitfaden/",
+    qualityUrl: "/de/qualitaet/",
+    logisticsUrl: "/de/logistik/",
+    faqUrl: "/de/faq/",
+    blogUrl: "/de/blog/"
+  },
+  fr: {
+    description: "Fabricant de lingots d'aluminium de qualité supérieure fournissant des lingots A7, ADC12 et AL-Si pour le marché européen. Certifié ISO 9001. Prêt pour la CBAM. Conforme REACH.",
+    productsHeader: "Produits",
+    companyHeader: "Entreprise",
+    resourcesHeader: "Ressources",
+    rights: "© 2026 Egypt Alumin. Tous droits réservés.",
+    privacy: "Politique de Confidentialité",
+    cookies: "Politique relative aux cookies",
+    catalogue: "Catalogue Complet (PDF)",
+    
+    a7Url: "/fr/produits/lingot-d-aluminium-primaire-a7/",
+    adc12Url: "/fr/produits/alliage-de-moulage-sous-pression-adc12/",
+    alsiUrl: "/fr/produits/alliage-aluminium-silicium-al-si/",
+    
+    aboutUrl: "/fr/a-propos/",
+    facilityUrl: "/fr/a-propos/notre-usine/",
+    noelUrl: "/fr/a-propos/noel-murphy/",
+    sustainabilityUrl: "/fr/durabilite/",
+    
+    cbamUrl: "/fr/guide-cbam/",
+    qualityUrl: "/fr/qualite/",
+    logisticsUrl: "/fr/logistique/",
+    faqUrl: "/fr/faq/",
+    blogUrl: "/fr/blog/"
+  },
+  it: {
+    description: "Produttore di lingotti di alluminio premium che fornisce lingotti A7, ADC12 e AL-Si al mercato europeo. Certificato ISO 9001. CBAM-ready. Conforme a REACH.",
+    productsHeader: "Prodotti",
+    companyHeader: "Azienda",
+    resourcesHeader: "Risorse",
+    rights: "© 2026 Egypt Alumin. Tutti i diritti riservati.",
+    privacy: "Informativa sulla Privacy",
+    cookies: "Cookie Policy",
+    catalogue: "Catalogo Completo (PDF)",
+    
+    a7Url: "/it/prodotti/lingotto-di-alluminio-primario-a7/",
+    adc12Url: "/it/prodotti/lega-pressofusione-adc12/",
+    alsiUrl: "/it/prodotti/lega-alluminio-silicio-al-si/",
+    
+    aboutUrl: "/it/chi-siamo/",
+    facilityUrl: "/it/chi-siamo/il-nostro-stabilimento/",
+    noelUrl: "/it/chi-siamo/noel-murphy/",
+    sustainabilityUrl: "/it/sostenibilita/",
+    
+    cbamUrl: "/it/guida-cbam/",
+    qualityUrl: "/it/qualita/",
+    logisticsUrl: "/it/logistica/",
+    faqUrl: "/it/faq/",
+    blogUrl: "/it/blog/"
+  }
+};
+
+const labels = t[lang] || t.en;
+---
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href={lang === 'en' ? '/en/' : `/${lang}/`} class="brand" style="color:#fff">
+          <span class="brand-mark" aria-hidden="true">EA</span>
+          <span class="brand-name">Egypt Alumin</span>
+        </a>
+        <p>{labels.description}</p>
+        <div class="footer-cert">
+          <span>ISO 9001</span>
+          <span>REACH Compliant</span>
+          <span>CBAM Ready</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>{labels.productsHeader}</h4>
+        <ul>
+          <li><a href={labels.a7Url}>A7 Primary Ingot</a></li>
+          <li><a href={labels.adc12Url}>ADC12 Die-Casting Ingot</a></li>
+          <li><a href={labels.alsiUrl}>AL-Si Alloy</a></li>
+          <li><a href="/assets/product-catalogue.pdf" target="_blank">{labels.catalogue}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>{labels.companyHeader}</h4>
+        <ul>
+          <li><a href={labels.aboutUrl}>About Egypt Alumin</a></li>
+          <li><a href={labels.facilityUrl}>Our Facility</a></li>
+          <li><a href={labels.noelUrl}>Noel Murphy</a></li>
+          <li><a href={labels.sustainabilityUrl}>Sustainability</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>{labels.resourcesHeader}</h4>
+        <ul>
+          <li><a href={labels.cbamUrl}>{labels.cbamUrl.includes('cbam-leitfaden') ? 'CBAM-Leitfaden' : labels.cbamUrl.includes('guide-cbam') ? 'Guide de la CBAM' : 'CBAM Guide'}</a></li>
+          <li><a href={labels.qualityUrl}>Quality & Compliance</a></li>
+          <li><a href={labels.logisticsUrl}>Logistics & Shipping</a></li>
+          <li><a href={labels.faqUrl}>FAQ</a></li>
+          <li><a href={labels.blogUrl}>Industry Insights (Blog)</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div>{labels.rights} · <a href={`/${lang}/privacy-policy/`} style="color:rgba(255,255,255,.5)">{labels.privacy}</a> · <a href={`/${lang}/cookie-policy/`} style="color:rgba(255,255,255,.5)">{labels.cookies}</a></div>
+      <div class="footer-lang">
+        <a href="/en/" class={lang === 'en' ? 'active' : ''}>EN</a>
+        <a href="/de/" class={lang === 'de' ? 'active' : ''}>DE</a>
+        <a href="/fr/" class={lang === 'fr' ? 'active' : ''}>FR</a>
+        <a href="/it/" class={lang === 'it' ? 'active' : ''}>IT</a>
+      </div>
+    </div>
+  </div>
+</footer>

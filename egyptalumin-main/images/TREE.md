@@ -1,0 +1,48 @@
+# /images tree
+
+- hero/
+  - hero-home-egypt-to-europe-01.webp
+  - hero-cbam-guide-aluminium-imports-01.webp
+  - hero-a7-primary-aluminium-01.webp
+  - hero-adc12-die-casting-alloy-01.webp
+  - hero-al-si-alloy-range-01.webp
+  - hero-quality-and-compliance-01.webp
+  - hero-about-egypt-alumin-01.webp
+- products/
+  - product-a7-ingot-stack-01.webp
+  - product-a7-ingot-closeup-02.webp
+  - product-adc12-ingot-stack-01.webp
+  - product-adc12-surface-closeup-02.webp
+  - product-al-si-ingot-stack-01.webp
+  - product-al-si-alloy-closeup-02.webp
+- factory/
+  - factory-facility-exterior-01.webp
+  - factory-production-line-01.webp
+  - factory-ingot-casting-01.webp
+  - factory-quality-control-lab-01.webp
+  - factory-bundled-ingot-storage-01.webp
+  - factory-loading-and-dispatch-01.webp
+- applications/
+  - application-automotive-components-01.webp
+  - application-die-casting-housings-01.webp
+  - application-ev-battery-housings-01.webp
+  - application-electrical-conductors-01.webp
+  - application-construction-extrusions-01.webp
+  - application-packaging-and-foil-01.webp
+  - application-industrial-machinery-01.webp
+  - application-engineered-castings-01.webp
+- branding/
+  - brand-logo-primary-01.svg
+  - brand-logo-white-01.svg
+  - brand-badge-iso-9001-01.svg
+  - brand-badge-reach-compliant-01.svg
+  - brand-badge-cbam-ready-01.svg
+  - brand-noel-murphy-portrait-01.webp
+  - brand-noel-murphy-portrait-02.webp
+- blog/
+  - blog-aluminium-ingot-grades-guide-01.webp
+  - blog-cbam-2026-guide-01.webp
+  - blog-egypt-aluminium-industry-overview-01.webp
+  - blog-en-standards-comparison-01.webp
+  - blog-die-casting-alloy-selection-01.webp
+  - blog-egypt-to-europe-logistics-guide-01.webp

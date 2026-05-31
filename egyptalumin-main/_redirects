@@ -1,0 +1,33 @@
+# Egypt Alumin — Cloudflare Pages redirects
+# Documentation: https://developers.cloudflare.com/pages/configuration/redirects/
+
+# Trailing-slash normalisation for product pages
+# (so /en/products/adc12-die-casting-alloy/ resolves to the .html file)
+/en/products/a7-primary-aluminium-ingot     /en/products/a7-primary-aluminium-ingot.html     200
+/en/products/a7-primary-aluminium-ingot/    /en/products/a7-primary-aluminium-ingot.html     200
+/en/products/adc12-die-casting-alloy        /en/products/adc12-die-casting-alloy.html        200
+/en/products/adc12-die-casting-alloy/       /en/products/adc12-die-casting-alloy.html        200
+/en/products/aluminium-silicon-alloy-ingot  /en/products/aluminium-silicon-alloy-ingot.html  200
+/en/products/aluminium-silicon-alloy-ingot/ /en/products/aluminium-silicon-alloy-ingot.html  200
+
+/de/produkte/a7-primaer-aluminiummassel       /de/produkte/a7-primaer-aluminiummassel.html     200
+/de/produkte/a7-primaer-aluminiummassel/      /de/produkte/a7-primaer-aluminiummassel.html     200
+/de/produkte/adc12-druckguss-legierung        /de/produkte/adc12-druckguss-legierung.html      200
+/de/produkte/adc12-druckguss-legierung/       /de/produkte/adc12-druckguss-legierung.html      200
+/de/produkte/aluminium-silizium-legierung     /de/produkte/aluminium-silizium-legierung.html   200
+/de/produkte/aluminium-silizium-legierung/    /de/produkte/aluminium-silizium-legierung.html   200
+
+# CBAM guide pages
+/en/cbam-guide           /en/cbam-guide.html           200
+/en/cbam-guide/          /en/cbam-guide.html           200
+/de/cbam-guide           /de/cbam-leitfaden.html       200
+/de/cbam-guide/          /de/cbam-leitfaden.html       200
+/de/cbam-leitfaden       /de/cbam-leitfaden.html       200
+/de/cbam-leitfaden/      /de/cbam-leitfaden.html       200
+
+# Language root normalisation
+/en   /en/   301
+/de   /de/   301
+
+# Root → English by default
+/     /en/   302

@@ -1,0 +1,44 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  lang?: 'en' | 'de' | 'fr' | 'it';
+}
+
+const { title, description = "Premium aluminium ingot manufacturer supplying A7, ADC12 and AL-Si alloy ingots to the European market. ISO 9001 certified. CBAM-ready. REACH compliant.", lang = 'en' } = Astro.props;
+
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+		<meta name="theme-color" content="#1B2A4A" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:locale" content={lang === 'en' ? 'en_IE' : lang === 'de' ? 'de_DE' : lang === 'fr' ? 'fr_FR' : 'it_IT'} />
+
+		<!-- Typography -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<Header lang={lang} />
+		<slot />
+		<Footer lang={lang} />
+	</body>
+</html>
