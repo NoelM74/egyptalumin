@@ -1,0 +1,131 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const articles = [
+  {
+    title: "Guide to Aluminium Ingot Grades for European Manufacturers",
+    slug: "aluminium-ingot-grades-guide",
+    excerpt: "Understand the chemical compositions, impurity limits, and standard designations (EN 576, P1020A) of primary aluminium ingots to choose the ideal remelting feedstock.",
+    category: "Technical",
+    image: "/images/blog/6.1-guide-aluminium-ingot-grades-european-manufacturers.webp",
+    date: "May 25, 2026",
+    readTime: "6 min read"
+  },
+  {
+    title: "CBAM 2026: Practical Guide for European Aluminium Buyers",
+    slug: "cbam-2026-guide",
+    excerpt: "Prepare your B2B supply chain for the definitive Carbon Border Adjustment Mechanism regime starting January 1, 2026. Learn reporting requirements and emission audits.",
+    category: "Compliance",
+    image: "/images/blog/6.2-cbam-2026-guide-european-aluminium-buyers.webp",
+    date: "May 22, 2026",
+    readTime: "8 min read"
+  },
+  {
+    title: "Egypt's Aluminium Industry: Nile Valley Smelting & Production Capacity",
+    slug: "egypt-aluminium-industry-overview",
+    excerpt: "An in-depth look at Egypt's strategic primary aluminium smelting capacity, modern production technologies, and the expansion driving low-carbon metal supply to Europe.",
+    category: "Industry",
+    image: "/images/blog/6.3-egypt-aluminium-industry-nile-valley-production.webp",
+    date: "May 18, 2026",
+    readTime: "5 min read"
+  },
+  {
+    title: "Aluminium Alloy Standards: Comparing EN, JIS, and GB/T Specifications",
+    slug: "en-standards-comparison",
+    excerpt: "A critical technical reference guide for design engineers and buyers comparing EN AC-46000, JIS ADC12, and Chinese GB/T ingot standards for global B2B sourcing.",
+    category: "Standards",
+    image: "/images/blog/6.4-aluminium-alloy-standards-en-jis-gbt-comparison.webp",
+    date: "May 15, 2026",
+    readTime: "7 min read"
+  },
+  {
+    title: "Choosing the Right Aluminium Alloy for B2B Die-Casting Applications",
+    slug: "die-casting-alloy-selection",
+    excerpt: "Compare mechanical properties, fluidity, and corrosion resistance of ADC12, AlSi9Cu3, and premium Al-Si alloys like AlSi10MnMg for safety-critical components.",
+    category: "Engineering",
+    image: "/images/blog/6.5-choosing-aluminium-alloy-die-casting-applications-guide.webp",
+    date: "May 12, 2026",
+    readTime: "6 min read"
+  },
+  {
+    title: "Shipping Aluminium from Egypt to Europe: B2B Logistics & Customs Guide",
+    slug: "egypt-to-europe-logistics-guide",
+    excerpt: "Navigate transit times, major shipping lanes, port operations, and customs clearance procedures from Egypt's Mediterranean ports to European hubs like Rotterdam and Genoa.",
+    category: "Logistics",
+    image: "/images/blog/6.6-shipping-aluminium-egypt-europe-logistics-guide.webp",
+    date: "May 08, 2026",
+    readTime: "7 min read"
+  }
+];
+---
+
+<Layout 
+  title="Aluminium Industry Insights & B2B Guides | Egypt Alumin" 
+  description="Authoritative B2B resources for aluminium buyers. Practical guides on EN alloy standards, CBAM compliance, Egyptian smelting capacity, and Mediterranean shipping logistics."
+  lang="en"
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="/en/">Home</a></li>
+        <li aria-current="page">Blog (Industry Insights)</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="blog-hero">
+    <div class="container">
+      <span class="eyebrow on-dark">Knowledge & Topical Authority</span>
+      <h1>Industry Insights & Technical Guides</h1>
+      <p class="blog-hero-lead">
+        Expert analysis, market intelligence, and technical references engineered for European procurement managers and foundry engineers.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BLOG GRID
+       ============================================================ -->
+  <section style="background: var(--silver-soft); padding: 4rem 0 6rem;">
+    <div class="container">
+      <div class="blog-grid">
+        {articles.map((item) => (
+          <a href={`/en/blog/${item.slug}/`} class="blog-card" id={`blog-card-${item.slug}`}>
+            <div class="blog-card-image">
+              <img src={item.image} alt={item.title} loading="lazy" />
+              <span class="blog-card-badge">{item.category}</span>
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span>{item.date}</span>
+                <span>•</span>
+                <span>{item.readTime}</span>
+              </div>
+              <h3>{item.title}</h3>
+              <p class="blog-card-excerpt">{item.excerpt}</p>
+              <span class="blog-card-link">Read Full Guide</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FINAL CTA
+       ============================================================ -->
+  <section class="final-cta">
+    <div class="container">
+      <span class="eyebrow on-dark">Direct Sales Technical Desk</span>
+      <h2>Ready to discuss your supply requirements?</h2>
+      <p>Request material test certificates, arrange a trial delivery, or enquire about dynamic CBAM reporting.</p>
+      <div class="final-cta-actions">
+        <a href="/en/contact/" class="btn btn-primary">Request a Sample</a>
+        <a href="tel:+353871187806" class="btn btn-secondary">Call Noel: +353 87 118 7806</a>
+      </div>
+    </div>
+  </section>
+</Layout>

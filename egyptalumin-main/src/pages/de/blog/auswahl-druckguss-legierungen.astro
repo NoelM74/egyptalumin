@@ -1,0 +1,186 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: "Startseite", url: "/de/" },
+  { name: "Blog", url: "/de/blog/" },
+  { name: "Legierungsauswahl Leitfaden", url: "/de/blog/auswahl-druckguss-legierungen/" }
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://egyptalumin.com/de/blog/auswahl-druckguss-legierungen/#breadcrumb",
+      "itemListElement": breadcrumbs.map((b, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": b.name,
+        "item": `https://egyptalumin.com${b.url}`
+      }))
+    },
+    {
+      "@type": "Article",
+      "@id": "https://egyptalumin.com/de/blog/auswahl-druckguss-legierungen/#article",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://egyptalumin.com/de/blog/auswahl-druckguss-legierungen/"
+      },
+      "headline": "Die Wahl der richtigen Aluminiumlegierung für B2B-Druckgussanwendungen",
+      "description": "Ein umfassender Leitfaden zum Vergleich von ADC12, AlSi9Cu3 und High-Performance-Al-Si-Legierungen für den B2B-Druckguss.",
+      "image": "https://egyptalumin.com/images/blog/6.5-choosing-aluminium-alloy-die-casting-applications-guide.webp",
+      "datePublished": "2026-05-12T08:00:00+08:00",
+      "dateModified": "2026-05-12T08:00:00+08:00",
+      "author": {
+        "@type": "Person",
+        "name": "Noel Murphy",
+        "jobTitle": "Partner, Europäische Operationen",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Egypt Alumin"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Egypt Alumin",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://egyptalumin.com/assets/logo.png"
+        }
+      }
+    }
+  ]
+};
+---
+
+<Layout 
+  title="Wahl der Aluminiumlegierung für Druckguss | Egypt Alumin"
+  description="Vergleich von ADC12, AlSi7Mg und AlSi12 Aluminiumlegierungen für den B2B-Druckguss. Technische Berichte zu mechanischen Eigenschaften und E-Mobilitäts-Strukturen."
+  lang="de"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        {breadcrumbs.map((b, i) => (
+          i === breadcrumbs.length - 1 ? (
+            <li aria-current="page">{b.name}</li>
+          ) : (
+            <li><a href={b.url}>{b.name}</a></li>
+          )
+        ))}
+      </ol>
+    </div>
+  </nav>
+
+  <article class="article-container">
+    <header class="article-header">
+      <div class="container">
+        <div class="article-header-meta">
+          <span class="article-badge">Konstruktion</span>
+          <span>12. Mai 2026</span>
+          <span>•</span>
+          <span>6 Min. Lesezeit</span>
+        </div>
+        <h1>Die Wahl der richtigen Aluminiumlegierung für B2B-Druckgussanwendungen</h1>
+        <div class="article-author-info">
+          <div class="article-author-avatar">NM</div>
+          <div class="article-author-details">
+            <strong>Noel Murphy</strong>
+            <span>Europäischer Vertrieb</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="article-layout">
+        <div class="article-body">
+          <img src="/images/blog/6.5-choosing-aluminium-alloy-die-casting-applications-guide.webp" alt="High pressure die casting machinery" class="article-hero-image" />
+          
+          <p>
+            Im High-Pressure-Die-Casting (HPDC) ist die Wahl der optimalen Aluminiumlegierung ein komplexer Kompromiss zwischen mechanischen Eigenschaften (Festigkeit, Duktilität), physikalischem Gussverhalten (Fließfähigkeit, Schwindung) und den B2B-Verarbeitungskosten. Während Standardlegierungen für einfache Bauteile genügen, fordern Elektromobilität (EV) und Leichtbau-Elektronik hochspezialisierte Gefügestrukturen.
+          </p>
+
+          <h2>Der globale Standard: Die ADC12- / AlSi9Cu3-Familie</h2>
+          <p>
+            Die Legierungsfamilie **ADC12 / EN AC-46000** bildet das Fundament des modernen Druckgusses und wird für rund 70 % aller Getriebegehäuse, Ölwannen, Elektronikabdeckungen und Motorhalterungen eingesetzt.
+          </p>
+          <p>
+            **Vorteile:** Der Kupfergehalt (2,0 % - 4,0 %) verleiht dem Bauteil eine hohe Zugfestigkeit, Härte und hervorragende Zerspanbarkeit. Der hohe Siliziumgehalt (ca. 10 %) sorgt für eine exzellente Fließfähigkeit und minimale Schwindung beim Erstarrungsprozess.
+          </p>
+          <p>
+            **Nachteile:** Das enthaltene Kupfer beeinträchtigt die Korrosionsbeständigkeit und verringert die Duktilität (Bruchdehnung). Diese Werkstoffe sind daher ungeeignet für crashrelevante Sicherheitsbauteile, die bei einem Aufprall Energie absorbieren müssen, ohne zu brechen.
+          </p>
+
+          <h2>Strukturbauteile im Auto: Die AlSi7Mg- / AlSi10Mg-Familie</h2>
+          <p>
+            Durch den Boom der Elektromobilität werden Strukturbauteile wie Federbeindome, Längsträger und Batteriegehäuse zunehmend aus eisenarmen, kupferfreien Legierungen wie **AlSi7Mg (EN AC-42000)** oder **AlSi10MnMg (EN AC-43500)** gegossen.
+          </p>
+          <ul>
+            <li><strong>Hohe Dehnungsfähigkeit:</strong> Da diese Legierungen kupferfrei sind, können sie einer Lösungsglühung und Warmauslagerung (T6) unterzogen werden, um hervorragende Dehnungswerte (>10 %) zu erzielen. Dadurch verformen sich die Bauteile im Crashfall plastisch, statt spröde zu brechen.</li>
+            <li><strong>Hervorragende Schweißbarkeit:</strong> Die Verwendung von reinem Primärmetall verhindert spröde Phasen und ermöglicht das direkte Schweißen und Nieten des Strukturknotens in den Spaceframe der Karosserie.</li>
+          </ul>
+
+          <h2>Dünnwandige Präzision: Die AlSi12-Familie</h2>
+          <p>
+            Für hochkomplexe Elektronikgehäuse, Kühlkörper und Telekommunikationsgehäuse wählen Konstrukteure gezielt **AlSi12 (EN AC-44200)**. Mit einem Siliziumgehalt nahe dem Eutektikum (12,0 %) bietet diese Legierung die höchste Fließfähigkeit aller Gussmetalle. Damit lassen sich dünnwandige Kühlrippen mit Wandstärken von bis zu **1,0 mm** fehlerfrei gießen.
+          </p>
+
+          <blockquote>
+            "Durch die Herstellung gasarmer, kornfeiner AlSi7Mg- und AlSi12-Legierungsmasseln unter strenger Laboraufsicht in Ägypten bietet Egypt Alumin europäischen Gießereien die notwendige Werkstoffkonstanz für fehlerfreie Strukturbauteile."
+          </blockquote>
+
+          <h2>Zusammenfassung: Legierungsauswahl-Matrix</h2>
+          <p>
+            Die Wahl des perfekten Masselvormaterials orientiert sich strikt am Bauteilzweck:
+          </p>
+          <ol>
+            <li><strong>Standard-Maschinenbauteile:</strong> Wählen Sie **ADC12 / EN AC-46000** für maximale Festigkeit und Zerspanbarkeit.</li>
+            <li><strong>Fahrwerks- & Crashstrukturen:</strong> Wählen Sie **AlSi7Mg oder AlSi10MnMg** für Duktilität, Schweißbarkeit und Zähigkeit.</li>
+            <li><strong>Präzisions-Kühlkörper:</strong> Wählen Sie **AlSi12** für optimale Formenfüllung bei dünnen Wandstärken.</li>
+          </ol>
+        </div>
+
+        <aside class="article-sidebar">
+          <div class="rfq-card">
+            <h3>Technischer Support</h3>
+            <p>Unser Engineering-Desk stellt detaillierte Datenblätter und Gießanleitungen für alle Legierungen bereit.</p>
+            <a href="/de/kontakt/" class="btn btn-primary">Technik kontaktieren</a>
+            <div class="rfq-divider"></div>
+            <div class="rfq-contact">
+              <span>✉️ E-Mail:</span>
+              <a href="mailto:noel@egyptalumin.com">noel@egyptalumin.com</a>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3>Verwandte Artikel</h3>
+            <ul class="mini-articles-list">
+              <li>
+                <a href="/de/blog/aluminium-legierungs-standards-vergleich/" class="mini-article-card">
+                  <div class="mini-article-thumb">STD</div>
+                  <div class="mini-article-info">
+                    <strong>Aluminium Standards im Vergleich</strong>
+                    <span>7 Min. Lesezeit</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/de/blog/aluminium-barren-qualitaeten-leitfaden/" class="mini-article-card">
+                  <div class="mini-article-thumb">QUAL</div>
+                  <div class="mini-article-info">
+                    <strong>Massel-Qualitäten-Leitfaden</strong>
+                    <span>6 Min. Lesezeit</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </article>
+</Layout>

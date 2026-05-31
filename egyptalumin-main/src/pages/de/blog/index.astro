@@ -1,0 +1,131 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const articles = [
+  {
+    title: "Aluminium-Massel-Qualitäten-Leitfaden für europäische Hersteller",
+    slug: "aluminium-barren-qualitaeten-leitfaden",
+    excerpt: "Verstehen Sie die chemischen Zusammensetzungen, Verunreinigungsgrenzen und Standardbezeichnungen (EN 576, P1020A) von Primäraluminiumbarren zur Auswahl Ihres Vormaterials.",
+    category: "Technisch",
+    image: "/images/blog/6.1-guide-aluminium-ingot-grades-european-manufacturers.webp",
+    date: "25. Mai 2026",
+    readTime: "6 Min. Lesezeit"
+  },
+  {
+    title: "CBAM 2026: Praxisleitfaden für europäische Aluminium-Einkäufer",
+    slug: "cbam-2026-leitfaden",
+    excerpt: "Bereiten Sie Ihre B2B-Lieferkette auf das definitive Carbon Border Adjustment Mechanism-Regime ab dem 1. Januar 2026 vor. Erfahren Sie alles über Berichte und Emissionen.",
+    category: "Compliance",
+    image: "/images/blog/6.2-cbam-2026-guide-european-aluminium-buyers.webp",
+    date: "22. Mai 2026",
+    readTime: "8 Min. Lesezeit"
+  },
+  {
+    title: "Ägyptens Aluminiumindustrie: Nile Valley Smelting & Produktionskapazität",
+    slug: "aegypten-aluminium-industrie-ueberblick",
+    excerpt: "Ein detaillierter Blick auf Ägyptens strategische Primäraluminium-Schmelzkapazität, moderne Produktionstechnologien und den Ausbau für die Versorgung Europas.",
+    category: "Industrie",
+    image: "/images/blog/6.3-egypt-aluminium-industry-nile-valley-production.webp",
+    date: "18. Mai 2026",
+    readTime: "5 Min. Lesezeit"
+  },
+  {
+    title: "Aluminium-Legierungsstandards: Vergleich von EN, JIS und GB/T",
+    slug: "aluminium-legierungs-standards-vergleich",
+    excerpt: "Ein technischer Referenzleitfaden für Konstrukteure und Einkäufer zum Vergleich von EN AC-46000, JIS ADC12 und chinesischen GB/T-Standards.",
+    category: "Standards",
+    image: "/images/blog/6.4-aluminium-alloy-standards-en-jis-gbt-comparison.webp",
+    date: "15. Mai 2026",
+    readTime: "7 Min. Lesezeit"
+  },
+  {
+    title: "Die Wahl der richtigen Aluminiumlegierung für B2B-Druckgussanwendungen",
+    slug: "auswahl-druckguss-legierungen",
+    excerpt: "Vergleichen Sie die mechanischen Eigenschaften, die Fließfähigkeit und die Korrosionsbeständigkeit von ADC12, AlSi9Cu3 und Premium-Al-Si-Legierungen wie AlSi10MnMg.",
+    category: "Konstruktion",
+    image: "/images/blog/6.5-choosing-aluminium-alloy-die-casting-applications-guide.webp",
+    date: "12. Mai 2026",
+    readTime: "6 Min. Lesezeit"
+  },
+  {
+    title: "Aluminium-Versand von Ägypten nach Europa: B2B-Logistik & Zoll",
+    slug: "logistik-aegypten-europa-leitfaden",
+    excerpt: "Navigieren Sie durch Transitzeiten, Schifffahrtsrouten, Hafenbetriebe und Zollabfertigungsverfahren von ägyptischen Mittelmeerhäfen zu europäischen Häfen.",
+    category: "Logistik",
+    image: "/images/blog/6.6-shipping-aluminium-egypt-europe-logistics-guide.webp",
+    date: "08. Mai 2026",
+    readTime: "7 Min. Lesezeit"
+  }
+];
+---
+
+<Layout 
+  title="Aluminium-Industrieberichte & B2B-Leitfäden | Egypt Alumin" 
+  description="Autoritative B2B-Ressourcen für Aluminium-Einkäufer. Praktische Leitfäden zu EN-Legierungsstandards, CBAM-Compliance, ägyptischen Kapazitäten und Seefracht-Logistik."
+  lang="de"
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="/de/">Startseite</a></li>
+        <li aria-current="page">Blog (Branchen-Insights)</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="blog-hero">
+    <div class="container">
+      <span class="eyebrow on-dark">Wissen & Branchenkompetenz</span>
+      <h1>Branchen-Insights & Technische Leitfäden</h1>
+      <p class="blog-hero-lead">
+        Fachanalysen, Marktberichte und technische Referenzen für europäische Einkaufsleiter und Gießerei-Ingenieure.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BLOG GRID
+       ============================================================ -->
+  <section style="background: var(--silver-soft); padding: 4rem 0 6rem;">
+    <div class="container">
+      <div class="blog-grid">
+        {articles.map((item) => (
+          <a href={`/de/blog/${item.slug}/`} class="blog-card" id={`blog-card-${item.slug}`}>
+            <div class="blog-card-image">
+              <img src={item.image} alt={item.title} loading="lazy" />
+              <span class="blog-card-badge">{item.category}</span>
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span>{item.date}</span>
+                <span>•</span>
+                <span>{item.readTime}</span>
+              </div>
+              <h3>{item.title}</h3>
+              <p class="blog-card-excerpt">{item.excerpt}</p>
+              <span class="blog-card-link">Vollständigen Artikel lesen</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FINAL CTA
+       ============================================================ -->
+  <section class="final-cta">
+    <div class="container">
+      <span class="eyebrow on-dark">Technischer Vertrieb</span>
+      <h2>Bereit, Ihre Lieferanforderungen zu besprechen?</h2>
+      <p>Fordern Sie Materialprüfzeugnisse an, vereinbaren Sie eine Testlieferung oder sprechen Sie mit uns über CBAM-Reporting.</p>
+      <div class="final-cta-actions">
+        <a href="/de/kontakt/" class="btn btn-primary">Muster anfordern</a>
+        <a href="tel:+353871187806" class="btn btn-secondary">Noel anrufen: +353 87 118 7806</a>
+      </div>
+    </div>
+  </section>
+</Layout>

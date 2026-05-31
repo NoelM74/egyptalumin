@@ -1,0 +1,231 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: "Home", url: "/en/" },
+  { name: "Blog", url: "/en/blog/" },
+  { name: "Logistics Guide", url: "/en/blog/egypt-to-europe-logistics-guide/" }
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://egyptalumin.com/en/blog/egypt-to-europe-logistics-guide/#breadcrumb",
+      "itemListElement": breadcrumbs.map((b, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": b.name,
+        "item": `https://egyptalumin.com${b.url}`
+      }))
+    },
+    {
+      "@type": "Article",
+      "@id": "https://egyptalumin.com/en/blog/egypt-to-europe-logistics-guide/#article",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://egyptalumin.com/en/blog/egypt-to-europe-logistics-guide/"
+      },
+      "headline": "Shipping Aluminium from Egypt to Europe: B2B Logistics & Customs Guide",
+      "description": "A comprehensive logistical analysis of B2B aluminium sea freight from Egypt's Mediterranean ports to European hubs, covering transit times and customs rules.",
+      "image": "https://egyptalumin.com/images/blog/6.6-shipping-aluminium-egypt-europe-logistics-guide.webp",
+      "datePublished": "2026-05-08T08:00:00+08:00",
+      "dateModified": "2026-05-08T08:00:00+08:00",
+      "author": {
+        "@type": "Person",
+        "name": "Noel Murphy",
+        "jobTitle": "Partner, European Operations",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Egypt Alumin"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Egypt Alumin",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://egyptalumin.com/assets/logo.png"
+        }
+      }
+    }
+  ]
+};
+---
+
+<Layout 
+  title="Shipping Aluminium Egypt to Europe: B2B Logistics Guide | Egypt Alumin"
+  description="Logistics and customs guide for B2B aluminium shipping. Practical information on transit times, Mediterranean shipping lanes, and duty-free import procedures."
+  lang="en"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        {breadcrumbs.map((b, i) => (
+          i === breadcrumbs.length - 1 ? (
+            <li aria-current="page">{b.name}</li>
+          ) : (
+            <li><a href={b.url}>{b.name}</a></li>
+          )
+        ))}
+      </ol>
+    </div>
+  </nav>
+
+  <article class="article-container">
+    <header class="article-header">
+      <div class="container">
+        <div class="article-header-meta">
+          <span class="article-badge">Logistics</span>
+          <span>May 08, 2026</span>
+          <span>•</span>
+          <span>7 min read</span>
+        </div>
+        <h1>Shipping Aluminium from Egypt to Europe: B2B Logistics & Customs Guide</h1>
+        <div class="article-author-info">
+          <div class="article-author-avatar">NM</div>
+          <div class="article-author-details">
+            <strong>Noel Murphy</strong>
+            <span>European Operations Desk</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="article-layout">
+        <div class="article-body">
+          <img src="/images/blog/6.6-shipping-aluminium-egypt-europe-logistics-guide.webp" alt="Cargo ship transporting industrial containers" class="article-hero-image" />
+          
+          <p>
+            For B2B procurement managers sourcing raw primary metals and casting alloys, physical delivery is the ultimate test of supply chain resilience. An outstanding metallurgical specification is useless if the shipment faces long port congestion or customs holdups. As supply chains adapt to global geopolitical friction, the close maritime link between Egypt's Mediterranean ports and European manufacturing hubs has become highly strategic.
+          </p>
+
+          <h2>Primary Ports of Origin & Destination</h2>
+          <p>
+            Egypt's modern maritime infrastructure is built to support large-scale industrial metal exports. The primary shipping routes originate from:
+          </p>
+          <ul>
+            <li><strong>Alexandria Port & El Dekheila:</strong> The primary commercial container ports, handling over 60% of national metal exports.</li>
+            <li><strong>Damietta Port:</strong> Highly automated container terminals with deep-water berths, specialized in rapid bulk industrial shipments.</li>
+          </ul>
+          <p>
+            From these ports, leading maritime carriers (including MSC, Maersk, and CMA CGM) operate frequent, weekly direct routes to European gateways:
+          </p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Destination Port</th>
+                  <th>Region Serviced</th>
+                  <th>Average Ocean Transit (Days)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Genoa (Italy)</strong></td>
+                  <td>Northern Italy / Switzerland / Southern France</td>
+                  <td>8 - 10 Days</td>
+                </tr>
+                <tr>
+                  <td><strong>Koper (Slovenia)</strong></td>
+                  <td>Central Europe / Austria / Germany / Czechia</td>
+                  <td>10 - 12 Days</td>
+                </tr>
+                <tr>
+                  <td><strong>Barcelona (Spain)</strong></td>
+                  <td>Iberian Peninsula</td>
+                  <td>10 - 12 Days</td>
+                </tr>
+                <tr>
+                  <td><strong>Rotterdam (Netherlands)</strong></td>
+                  <td>Benelux / Western Germany / UK</td>
+                  <td>18 - 22 Days</td>
+                </tr>
+                <tr>
+                  <td><strong>Hamburg (Germany)</strong></td>
+                  <td>Northern Germany / Poland / Baltics</td>
+                  <td>20 - 24 Days</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>EU-Egypt Free Trade Agreement: Zero Preferential Tariffs</h2>
+          <p>
+            One of the most important financial advantages of sourcing aluminium from Egypt is the **EU-Egypt Association Agreement**.
+          </p>
+          <p>
+            Under this long-standing bilateral trade framework, primary aluminium and cast alloys originating from Egypt enter the European Union with **0% preferential customs tariffs**.
+          </p>
+          <p>
+            **How to claim it:** To benefit from this duty-free status, every shipment must be accompanied by an official **EUR.1 Movement Certificate** (or an authorized Origin Declaration on the commercial invoice). This certificate proves that the metal underwent substantial transformation within Egypt, satisfying the rules of origin.
+          </p>
+
+          <h2>Required Documentation Checklist</h2>
+          <p>
+            To guarantee seamless, rapid customs clearance at your destination port, Egypt Alumin provides a complete, pre-vetted documentation package with every container shipment:
+          </p>
+          <ol>
+            <li><strong>Commercial Invoice & Packing List:</strong> Itemized by bundle number and heat batch.</li>
+            <li><strong>Bill of Lading (B/L):</strong> Issued by top-tier shipping lines.</li>
+            <li><strong>EUR.1 Movement Certificate:</strong> Securing your 0% import duty status.</li>
+            <li><strong>EN 10204 3.1 Material Test Certificate:</strong> Displaying full Optical Emission Spectrometry (OES) chemical logs.</li>
+            <li><strong>CBAM Emissions Declaration:</strong> Detailing pre-verified Scope 1 & 2 embedded emissions.</li>
+            <li><strong>SGS Inspection Certificate:</strong> Independent verification of quality and quantity at the Alexandria port (on request).</li>
+          </ol>
+
+          <blockquote>
+            "By pre-registering our export invoices with the Egyptian REX (Registered Exporter) database and providing verified CBAM sheets, we eliminate potential customs holding times, allowing our metals to move directly from port to factory floor."
+          </blockquote>
+
+          <h2>Summary: Optimizing Sourcing Logistics</h2>
+          <p>
+            By choosing Egypt as your strategic raw material corridor, you gain short transit times, zero import duties, and complete compliance transparency, giving your production lines a powerful competitive edge.
+          </p>
+        </div>
+
+        <aside class="article-sidebar">
+          <div class="rfq-card">
+            <h3>Customs & Shipping Desk</h3>
+            <p>Need specialized delivery (DDP, CIF, or custom port routing)? Speak directly with Noel Murphy.</p>
+            <a href="/en/contact/" class="btn btn-primary">Enquire Logistics</a>
+            <div class="rfq-divider"></div>
+            <div class="rfq-contact">
+              <span>📞 Logistics Desk:</span>
+              <a href="tel:+353871187806">+353 87 118 7806</a>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3>Related Guides</h3>
+            <ul class="mini-articles-list">
+              <li>
+                <a href="/en/blog/cbam-2026-guide/" class="mini-article-card">
+                  <div class="mini-article-thumb">CBAM</div>
+                  <div class="mini-article-info">
+                    <strong>CBAM 2026 Practical Guide</strong>
+                    <span>8 min read</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/en/blog/egypt-aluminium-industry-overview/" class="mini-article-card">
+                  <div class="mini-article-thumb">IND</div>
+                  <div class="mini-article-info">
+                    <strong>Egypt's Smelting Capacities</strong>
+                    <span>5 min read</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </article>
+</Layout>

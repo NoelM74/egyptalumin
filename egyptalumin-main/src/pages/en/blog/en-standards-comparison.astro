@@ -1,0 +1,238 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: "Home", url: "/en/" },
+  { name: "Blog", url: "/en/blog/" },
+  { name: "Standards Comparison", url: "/en/blog/en-standards-comparison/" }
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://egyptalumin.com/en/blog/en-standards-comparison/#breadcrumb",
+      "itemListElement": breadcrumbs.map((b, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": b.name,
+        "item": `https://egyptalumin.com${b.url}`
+      }))
+    },
+    {
+      "@type": "Article",
+      "@id": "https://egyptalumin.com/en/blog/en-standards-comparison/#article",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://egyptalumin.com/en/blog/en-standards-comparison/"
+      },
+      "headline": "Aluminium Alloy Standards: Comparing EN, JIS, and GB/T Specifications",
+      "description": "A deep technical comparison of global B2B aluminium alloy standards, detailing compositional variances between EN AC-46000, JIS ADC12, and GB/T YL113.",
+      "image": "https://egyptalumin.com/images/blog/6.4-aluminium-alloy-standards-en-jis-gbt-comparison.webp",
+      "datePublished": "2026-05-15T08:00:00+08:00",
+      "dateModified": "2026-05-15T08:00:00+08:00",
+      "author": {
+        "@type": "Person",
+        "name": "Noel Murphy",
+        "jobTitle": "Partner, European Operations",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Egypt Alumin"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Egypt Alumin",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://egyptalumin.com/assets/logo.png"
+        }
+      }
+    }
+  ]
+};
+---
+
+<Layout 
+  title="Aluminium Alloy Standards Comparison: EN vs JIS vs GB/T | Egypt Alumin"
+  description="Technical reference guide for design engineers comparing EN AC-46000, JIS ADC12, and Chinese GB/T specifications for high-pressure die-casting and primary alloys."
+  lang="en"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        {breadcrumbs.map((b, i) => (
+          i === breadcrumbs.length - 1 ? (
+            <li aria-current="page">{b.name}</li>
+          ) : (
+            <li><a href={b.url}>{b.name}</a></li>
+          )
+        ))}
+      </ol>
+    </div>
+  </nav>
+
+  <article class="article-container">
+    <header class="article-header">
+      <div class="container">
+        <div class="article-header-meta">
+          <span class="article-badge">Standards</span>
+          <span>May 15, 2026</span>
+          <span>•</span>
+          <span>7 min read</span>
+        </div>
+        <h1>Aluminium Alloy Standards: Comparing EN, JIS, and GB/T Specifications</h1>
+        <div class="article-author-info">
+          <div class="article-author-avatar">NM</div>
+          <div class="article-author-details">
+            <strong>Noel Murphy</strong>
+            <span>European Operations Desk</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="article-layout">
+        <div class="article-body">
+          <img src="/images/blog/6.4-aluminium-alloy-standards-en-jis-gbt-comparison.webp" alt="Aluminium alloy spectrometry testing" class="article-hero-image" />
+          
+          <p>
+            For design engineers and B2B procurement managers sourcing globally, translating metallurgical standard designations is a constant challenge. Sourcing an ingot under one regional standard to fulfill a specification written in another requires a granular, element-by-element chemical comparison. A small discrepancy in iron limits or zinc thresholds can alter alloy mechanical properties, resulting in casting rejects or structural failures.
+          </p>
+
+          <h2>Primary Standards Framework: The Three Giants</h2>
+          <p>
+            In global industrial procurement, three primary standard frameworks dictate B2B aluminium alloy trade:
+          </p>
+          <ul>
+            <li><strong>European Standards (EN):</strong> Managed by CEN, focusing heavily on chemical limits and material numbers (e.g., EN AC-46000).</li>
+            <li><strong>Japanese Industrial Standards (JIS):</strong> Widely specified in automotive applications globally (e.g., JIS H 5302 ADC12).</li>
+            <li><strong>Chinese National Standards (GB/T):</strong> Used heavily in Asian raw feedstock production (e.g., GB/T 15115 YL113).</li>
+          </ul>
+
+          <h2>The Case of Die-Casting Mainstream: EN AC-46000 vs. JIS ADC12</h2>
+          <p>
+            The Al-Si-Cu alloy family represents the most widely used casting feedstock on earth, crucial for automotive engine brackets, gearbox housings, and power-tool structures. While many databases label **EN AC-46000**, **JIS ADC12**, and **GB/T YL113** as identical, a closer chemical inspection reveals critical metallurgical details.
+          </p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Element</th>
+                  <th>EN AC-46000 (%)</th>
+                  <th>JIS ADC12 (%)</th>
+                  <th>Chinese GB/T YL113 (%)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Silicon (Si)</strong></td>
+                  <td>8.0 - 11.0</td>
+                  <td>9.6 - 12.0</td>
+                  <td>9.6 - 12.0</td>
+                </tr>
+                <tr>
+                  <td><strong>Copper (Cu)</strong></td>
+                  <td>2.0 - 4.0</td>
+                  <td>1.5 - 3.5</td>
+                  <td>1.5 - 3.5</td>
+                </tr>
+                <tr>
+                  <td><strong>Iron (Fe)</strong></td>
+                  <td>1.30 Max</td>
+                  <td>1.30 Max</td>
+                  <td>1.30 Max</td>
+                </tr>
+                <tr>
+                  <td><strong>Magnesium (Mg)</strong></td>
+                  <td>0.15 - 0.55</td>
+                  <td>0.30 Max</td>
+                  <td>0.30 Max</td>
+                </tr>
+                <tr>
+                  <td><strong>Manganese (Mn)</strong></td>
+                  <td>0.55 Max</td>
+                  <td>0.50 Max</td>
+                  <td>0.50 Max</td>
+                </tr>
+                <tr>
+                  <td><strong>Zinc (Zn)</strong></td>
+                  <td>1.20 Max</td>
+                  <td>1.00 Max</td>
+                  <td>1.00 Max</td>
+                </tr>
+                <tr>
+                  <td><strong>Nickel (Ni)</strong></td>
+                  <td>0.55 Max</td>
+                  <td>0.50 Max</td>
+                  <td>0.50 Max</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>Key Metallurgical Implications of Differences</h2>
+          <p>
+            Understanding these compositional boundaries is crucial for optimal casting execution:
+          </p>
+          <ul>
+            <li><strong>Silicon Control & Fluidity:</strong> JIS ADC12 specifies a higher bottom limit of silicon (9.6%) compared to EN AC-46000 (8.0%). Higher silicon content increases molten metal fluidity, allowing the alloy to easily fill thin-walled die cavities in complex automotive components.</li>
+            <li><strong>Magnesium limits:</strong> EN AC-46000 specifies a strict range of **0.15% to 0.55%** magnesium, whereas Japanese ADC12 only sets a **0.30% maximum limit**. Magnesium combines with silicon to form Mg₂Si, which undergoes precipitation hardening. Foundry operators must monitor magnesium levels to prevent excessive brittleness.</li>
+            <li><strong>Iron & Die-Soldering:</strong> All three standards allow up to **1.30% iron**. In high-pressure die casting, a minimum of 0.6% iron is intentionally required to prevent the molten alloy from welding to the steel die faces (die-soldering).</li>
+          </ul>
+
+          <blockquote>
+            "At Egypt Alumin, we cast our alloy ingots with custom narrow-range windows that satisfy both EN AC-46000 and JIS ADC12 simultaneously, simplifying stock management for multi-national B2B foundries."
+          </blockquote>
+
+          <h2>Summary: Strategic Procurement</h2>
+          <p>
+            Never assume regional alloy codes are perfect, one-to-one drops. By checking spectrographic tolerances and demanding EN 10204 3.1 certification, procurement managers ensure perfect standards compliance across global production locations.
+          </p>
+        </div>
+
+        <aside class="article-sidebar">
+          <div class="rfq-card">
+            <h3>Get Standard Certificates</h3>
+            <p>Our alloys are cast to guarantee strict conformance to EN, JIS, or customized specifications.</p>
+            <a href="/en/contact/" class="btn btn-primary">Request Samples</a>
+            <div class="rfq-divider"></div>
+            <div class="rfq-contact">
+              <span>✉️ Technical Desk:</span>
+              <a href="mailto:noel@egyptalumin.com">noel@egyptalumin.com</a>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3>Related Guides</h3>
+            <ul class="mini-articles-list">
+              <li>
+                <a href="/en/blog/aluminium-ingot-grades-guide/" class="mini-article-card">
+                  <div class="mini-article-thumb">GRADES</div>
+                  <div class="mini-article-info">
+                    <strong>Guide to Ingot Purity & Grades</strong>
+                    <span>6 min read</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/en/blog/die-casting-alloy-selection/" class="mini-article-card">
+                  <div class="mini-article-thumb">CAST</div>
+                  <div class="mini-article-info">
+                    <strong>Aluminium Die-Casting Alloys</strong>
+                    <span>6 min read</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </article>
+</Layout>

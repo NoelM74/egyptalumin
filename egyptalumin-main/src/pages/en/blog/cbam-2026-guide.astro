@@ -1,0 +1,187 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: "Home", url: "/en/" },
+  { name: "Blog", url: "/en/blog/" },
+  { name: "CBAM 2026 Guide", url: "/en/blog/cbam-2026-guide/" }
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://egyptalumin.com/en/blog/cbam-2026-guide/#breadcrumb",
+      "itemListElement": breadcrumbs.map((b, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": b.name,
+        "item": `https://egyptalumin.com${b.url}`
+      }))
+    },
+    {
+      "@type": "Article",
+      "@id": "https://egyptalumin.com/en/blog/cbam-2026-guide/#article",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://egyptalumin.com/en/blog/cbam-2026-guide/"
+      },
+      "headline": "CBAM 2026: Practical Guide for European Aluminium Buyers",
+      "description": "Learn the legal obligations, emissions reporting requirements, and compliance checklist for the EU Carbon Border Adjustment Mechanism (CBAM) starting January 1, 2026.",
+      "image": "https://egyptalumin.com/images/blog/6.2-cbam-2026-guide-european-aluminium-buyers.webp",
+      "datePublished": "2026-05-22T08:00:00+08:00",
+      "dateModified": "2026-05-22T08:00:00+08:00",
+      "author": {
+        "@type": "Person",
+        "name": "Noel Murphy",
+        "jobTitle": "Partner, European Operations",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Egypt Alumin"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Egypt Alumin",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://egyptalumin.com/assets/logo.png"
+        }
+      }
+    }
+  ]
+};
+---
+
+<Layout 
+  title="CBAM 2026: Practical Guide for European Aluminium Buyers | Egypt Alumin"
+  description="Navigate the definitive EU Carbon Border Adjustment Mechanism (CBAM) regime. Practical advice on quarterly emissions declarations, Scope 1 & 2 verification, and B2B audit steps."
+  lang="en"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        {breadcrumbs.map((b, i) => (
+          i === breadcrumbs.length - 1 ? (
+            <li aria-current="page">{b.name}</li>
+          ) : (
+            <li><a href={b.url}>{b.name}</a></li>
+          )
+        ))}
+      </ol>
+    </div>
+  </nav>
+
+  <article class="article-container">
+    <header class="article-header">
+      <div class="container">
+        <div class="article-header-meta">
+          <span class="article-badge">Compliance</span>
+          <span>May 22, 2026</span>
+          <span>•</span>
+          <span>8 min read</span>
+        </div>
+        <h1>CBAM 2026: Practical Guide for European Aluminium Buyers</h1>
+        <div class="article-author-info">
+          <div class="article-author-avatar">NM</div>
+          <div class="article-author-details">
+            <strong>Noel Murphy</strong>
+            <span>European Operations Desk</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="article-layout">
+        <div class="article-body">
+          <img src="/images/blog/6.2-cbam-2026-guide-european-aluminium-buyers.webp" alt="Aluminium casting and clean energy" class="article-hero-image" />
+          
+          <p>
+            The transition from the transitional phase to the definitive regime of the **European Union’s Carbon Border Adjustment Mechanism (CBAM)** on **January 1, 2026**, represents the most significant shift in industrial B2B import policy in a generation. No longer can European manufacturers source high-carbon metals from global markets without paying an equivalent carbon price. Under CBAM, imports of aluminium are subject to a strict financial tariff directly linked to the weekly average price of EU Emissions Trading System (ETS) carbon allowances.
+          </p>
+
+          <h2>The Transition Timeline: What Changes in 2026</h2>
+          <p>
+            During the transitional period (October 2023 to December 2025), European importers only had to submit quarterly reporting declarations without financial obligations. This was a preparation phase.
+          </p>
+          <p>
+            From **1 January 2026**, the definitive regime begins. Importers must purchase **CBAM certificates** to cover the specific greenhouse gas emissions embedded in their imported aluminium products. The price of these certificates will track the actual weekly LME/ETS auction price of allowances (currently hovering between €75 and €95 per tonne of CO₂).
+          </p>
+
+          <h2>Scope 1 & Scope 2: What You Must Report</h2>
+          <p>
+            Aluminium is classified under CBAM as a sector requiring direct and indirect emissions reporting:
+          </p>
+          <ul>
+            <li><strong>Scope 1 (Direct Emissions):</strong> Emissions generated directly within the smelting and alloying process. This includes electrode consumption (anodes) and preheating fuel combustion.</li>
+            <li><strong>Scope 2 (Indirect Emissions):</strong> Emissions generated from the production of electricity consumed in the smelting facility. Because primary aluminium is produced via electrolysis, this number is typically huge unless the facility is powered by low-carbon sources.</li>
+          </ul>
+
+          <h2>The Risks of Relying on "Default Values"</h2>
+          <p>
+            Under the definitive regime, if an importer cannot provide verified, site-specific embedded-emissions data from their non-EU manufacturer, the EU Customs Authority will apply **Default Values**. These default values are set intentionally high—matching the worst-performing 10% of EU facilities.
+          </p>
+          <blockquote>
+            "Relying on EU default values will instantly render your imported aluminium uncompetitive. An importer using default values could face carbon tariff penalties exceeding €500 per tonne of aluminium. Securing audited, low-carbon primary data from your supplier is no longer an option—it is a commercial necessity."
+          </blockquote>
+
+          <h2>Your Action Plan for CBAM Compliance</h2>
+          <p>
+            To secure your import pipeline and avoid severe penalties, European procurement departments should implement this three-step checklist:
+          </p>
+          <ol>
+            <li><strong>Register as an Authorized CBAM Declarant:</strong> Only authorized declarants are legally permitted to import CBAM-covered industrial products into the EU customs territory. Apply through your national registry immediately.</li>
+            <li><strong>Audit Supplier Smelting Sources:</strong> Demand certified emissions documentation. Egypt Alumin provides verified, third-party audited carbon footprints for every melt batch, showing direct carbon advantages due to natural gas and solar-supplemented energy feeds.</li>
+            <li><strong>Integrate Carbon Pricing into Sourcing Models:</strong> Model the financial impact of ETS pricing. Sourcing from low-emissions producers near Europe lowers shipping times AND your CBAM certificate liabilities.</li>
+          </ol>
+
+          <h2>Summary: Strategic Sourcing</h2>
+          <p>
+            CBAM is not just a regulatory hurdle; it is a strategic differentiator. By partnering with low-carbon producers like Egypt Alumin, you secure not only consistent, premium physical aluminium, but a fully transparent, verified emissions ledger that keeps your supply chain compliant and financially optimized.
+          </p>
+        </div>
+
+        <aside class="article-sidebar">
+          <div class="rfq-card">
+            <h3>CBAM Compliance Desk</h3>
+            <p>Our European Sales Partner Noel Murphy provides pre-verified CBAM reporting data with every shipment container.</p>
+            <a href="/en/contact/" class="btn btn-primary">Speak to Noel</a>
+            <div class="rfq-divider"></div>
+            <div class="rfq-contact">
+              <span>✉️ Compliance:</span>
+              <a href="mailto:noel@egyptalumin.com">noel@egyptalumin.com</a>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3>Related Guides</h3>
+            <ul class="mini-articles-list">
+              <li>
+                <a href="/en/blog/aluminium-ingot-grades-guide/" class="mini-article-card">
+                  <div class="mini-article-thumb">GRADES</div>
+                  <div class="mini-article-info">
+                    <strong>Guide to Ingot Grades & Purity</strong>
+                    <span>6 min read</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/en/blog/egypt-to-europe-logistics-guide/" class="mini-article-card">
+                  <div class="mini-article-thumb">LOG</div>
+                  <div class="mini-article-info">
+                    <strong>Aluminium See-Freight Logistics</strong>
+                    <span>7 min read</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </article>
+</Layout>

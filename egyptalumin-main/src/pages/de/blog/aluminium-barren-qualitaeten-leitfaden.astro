@@ -1,0 +1,227 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: "Startseite", url: "/de/" },
+  { name: "Blog", url: "/de/blog/" },
+  { name: "Massel-Qualitäten Leitfaden", url: "/de/blog/aluminium-barren-qualitaeten-leitfaden/" }
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://egyptalumin.com/de/blog/aluminium-barren-qualitaeten-leitfaden/#breadcrumb",
+      "itemListElement": breadcrumbs.map((b, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": b.name,
+        "item": `https://egyptalumin.com${b.url}`
+      }))
+    },
+    {
+      "@type": "Article",
+      "@id": "https://egyptalumin.com/de/blog/aluminium-barren-qualitaeten-leitfaden/#article",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://egyptalumin.com/de/blog/aluminium-barren-qualitaeten-leitfaden/"
+      },
+      "headline": "Aluminium-Massel-Qualitäten-Leitfaden für europäische Hersteller",
+      "description": "Eine detaillierte technische Analyse der Primäraluminiumbarren-Spezifikationen, chemischen Reinheitsgrenzen und Standardbezeichnungen (EN 576, P1020A).",
+      "image": "https://egyptalumin.com/images/blog/6.1-guide-aluminium-ingot-grades-european-manufacturers.webp",
+      "datePublished": "2026-05-25T08:00:00+08:00",
+      "dateModified": "2026-05-25T08:00:00+08:00",
+      "author": {
+        "@type": "Person",
+        "name": "Noel Murphy",
+        "jobTitle": "Partner, Europäische Operationen",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Egypt Alumin"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Egypt Alumin",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://egyptalumin.com/assets/logo.png"
+        }
+      }
+    }
+  ]
+};
+---
+
+<Layout 
+  title="Aluminium-Massel-Qualitäten-Leitfaden | Egypt Alumin"
+  description="Technische Analyse von Primäraluminium-Spezifikationen (EN 576, P1020A), chemischen Reinheitsgrenzen, Verunreinigungen und optimalen Umschmelzpraktiken."
+  lang="de"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        {breadcrumbs.map((b, i) => (
+          i === breadcrumbs.length - 1 ? (
+            <li aria-current="page">{b.name}</li>
+          ) : (
+            <li><a href={b.url}>{b.name}</a></li>
+          )
+        ))}
+      </ol>
+    </div>
+  </nav>
+
+  <article class="article-container">
+    <header class="article-header">
+      <div class="container">
+        <div class="article-header-meta">
+          <span class="article-badge">Technisch</span>
+          <span>25. Mai 2026</span>
+          <span>•</span>
+          <span>6 Min. Lesezeit</span>
+        </div>
+        <h1>Aluminium-Massel-Qualitäten-Leitfaden für europäische Hersteller</h1>
+        <div class="article-author-info">
+          <div class="article-author-avatar">NM</div>
+          <div class="article-author-details">
+            <strong>Noel Murphy</strong>
+            <span>Europäischer Vertrieb</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="article-layout">
+        <div class="article-body">
+          <img src="/images/blog/6.1-guide-aluminium-ingot-grades-european-manufacturers.webp" alt="Primary Aluminium Ingot Stack" class="article-hero-image" />
+          
+          <p>
+            In der hochpräzisen B2B-Metallurgie ist die Auswahl der richtigen Primäraluminiumqualität die wichtigste Entscheidung, die die nachgelagerte Gussqualität, die elektrische Leitfähigkeit und die mechanische Leistung beeinflusst. Während viele Einkaufsabteilungen Primäraluminium einfach als Standardware betrachten, wissen Konstrukteure und Gießereimetallurgen, dass geringfügige Abweichungen bei Elementkonzentrationen massive Auswirkungen auf Produktionsausbeute und Ausschussraten haben.
+          </p>
+
+          <h2>Standard-Reinheitsgrenzen: A7 & P1020A verstehen</h2>
+          <p>
+            Der weltweite Standard für primäres Hüttenaluminium wird von der **Qualität A7** (nach russischer GOST 11069) und ihren direkten Äquivalenten **P1020A** (nach LME-Spezifikationen) und **Al99.7** (nach der europäischen Norm EN 576) dominiert. Alle diese Standards fordern einen Mindestgehalt an reinem Aluminium von **99,70%**.
+          </p>
+          <p>
+            Die entscheidende metallurgische Feinheit ist jedoch nicht die Mindestreinheit von 99,70%, sondern die genaue Verteilung der verbleibenden maximal **0,30%** Verunreinigungen. Silizium (Si) und Eisen (Fe) sind die wichtigsten Begleitelemente, die sorgfältig kontrolliert werden müssen.
+          </p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Element</th>
+                  <th>Standard A7 / P1020A Max (%)</th>
+                  <th>Egypt Alumin Premium-Toleranzen (%)</th>
+                  <th>Metallurgischer Einfluss</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Aluminium (Al)</strong></td>
+                  <td>99.70 Min</td>
+                  <td>99.72 - 99.78</td>
+                  <td>Mechanische Festigkeit und elektrische Kapazität.</td>
+                </tr>
+                <tr>
+                  <td><strong>Eisen (Fe)</strong></td>
+                  <td>0.25 Max</td>
+                  <td>0.14 - 0.18</td>
+                  <td>Begrenzt das Kleben an der Form, zu viel führt jedoch zu Sprödigkeit.</td>
+                </tr>
+                <tr>
+                  <td><strong>Silizium (Si)</strong></td>
+                  <td>0.20 Max</td>
+                  <td>0.08 - 0.12</td>
+                  <td>Regelt die Fließfähigkeit und Schwindung, abgestimmt auf Eisen.</td>
+                </tr>
+                <tr>
+                  <td><strong>Kupfer (Cu)</strong></td>
+                  <td>0.03 Max</td>
+                  <td>0.005 Max</td>
+                  <td>Streng begrenzt zur Vermeidung von Korrosionsanfälligkeit.</td>
+                </tr>
+                <tr>
+                  <td><strong>Zink (Zn)</strong></td>
+                  <td>0.03 Max</td>
+                  <td>0.015 Max</td>
+                  <td>Niedrig gehalten, um Heißrisse beim Umschmelzen zu vermeiden.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>Warum ein niedriger Eisengehalt für anspruchsvolle Anwendungen entscheidend ist</h2>
+          <p>
+            Für Automobilgießereien und Walzdraht-Hersteller ist der Eisengehalt im Primäraluminiumbarren die wichtigste Qualitätsvariable. Wenn Primärmetall zur Herstellung von Konstruktionsgusslegierungen (wie AlSi7Mg) umgeschmolzen wird, führen hohe Eisenwerte zur Bildung von groben, nadelartigen intermetallischen Betaphasen (Al₅FeSi). Diese Nadeln wirken als starke Spannungskonzentratoren und reduzieren die Dehnung (Duktilität) sowie die Ermüdungsfestigkeit des Bauteils drastisch.
+          </p>
+          <blockquote>
+            "Durch die Begrenzung unseres standardmäßigen Eisengehalts auf unter 0,16% (weit unter dem LME-Limit von 0,25%) garantiert Egypt Alumin, dass europäische Tier-1-Gusskomponenten eine hervorragende Ermüdungsbeständigkeit erzielen, insbesondere bei EV-Batteriegehäusen und Fahrwerksknoten."
+          </blockquote>
+
+          <h2>Umschmelzeffizienz & Ofenpraxis</h2>
+          <p>
+            Um optimale metallurgische Ausbeuten in Ihren Schmelzöfen zu erzielen, empfiehlt Egypt Alumin die folgenden industriellen Umschmelzpraktiken:
+          </p>
+          <ul>
+            <li><strong>Temperaturkontrolle:</strong> Halten Sie die Schmelzetemperatur im Ofen zwischen 720°C und 750°C, um Krätzebildung und Metallabbrand zu minimieren.</li>
+            <li><strong>Entgasung:</strong> Nutzen Sie Impellerentgasung mit Argon anstelle von Chlortabletten, um den gelösten Wasserstoffgehalt auf ≤ 0,12 ml / 100g Al zu senken.</li>
+            <li><strong>Vorwärmung:</strong> Wärmen Sie die Masselpakete immer auf 150°C vor, bevor Sie sie in das Schmelzbad einbringen. Dies beseitigt Oberflächenfeuchtigkeit vollständig und verhindert Wasserstoffaufnahme sowie gefährliche Metallspritzer.</li>
+          </ul>
+
+          <h2>Zusammenfassung: Strategischer Einkauf</h2>
+          <p>
+            Die Sicherung von Primäraluminium, das sich konstant am oberen Ende der Reinheitsgrenzen bewegt, ermöglicht B2B-Herstellern eine präzise Kontrolle ihrer Gusschemie. Die Produktionsanlagen von Egypt Alumin liefern diese hervorragende Qualität direkt an europäische Häfen, dokumentiert durch lückenlose Spektralanalyse-Zertifikate (MTC) bei jedem Paket.
+          </p>
+        </div>
+
+        <aside class="article-sidebar">
+          <div class="rfq-card">
+            <h3>Muster anfordern</h3>
+            <p>Wir liefern Testchargen von 5-10 Tonnen unserer A7-Masseln direkt an europäische Gießereien.</p>
+            <a href="/de/kontakt/" class="btn btn-primary">Angebot anfordern</a>
+            <div class="rfq-divider"></div>
+            <div class="rfq-contact">
+              <span>📞 B2B-Hotline:</span>
+              <a href="tel:+353871187806">+353 87 118 7806</a>
+            </div>
+            <div class="rfq-contact">
+              <span>✉️ E-Mail:</span>
+              <a href="mailto:noel@egyptalumin.com">noel@egyptalumin.com</a>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3>Verwandte Artikel</h3>
+            <ul class="mini-articles-list">
+              <li>
+                <a href="/de/blog/aluminium-legierungs-standards-vergleich/" class="mini-article-card">
+                  <div class="mini-article-thumb">STD</div>
+                  <div class="mini-article-info">
+                    <strong>Vergleich von EN, JIS & GB/T</strong>
+                    <span>7 Min. Lesezeit</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/de/blog/cbam-2026-leitfaden/" class="mini-article-card">
+                  <div class="mini-article-thumb">CBAM</div>
+                  <div class="mini-article-info">
+                    <strong>CBAM 2026 Leitfaden</strong>
+                    <span>8 Min. Lesezeit</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </article>
+</Layout>

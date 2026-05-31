@@ -1,0 +1,181 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: "Startseite", url: "/de/" },
+  { name: "Blog", url: "/de/blog/" },
+  { name: "Ägyptische Industrie", url: "/de/blog/aegypten-aluminium-industrie-ueberblick/" }
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://egyptalumin.com/de/blog/aegypten-aluminium-industrie-ueberblick/#breadcrumb",
+      "itemListElement": breadcrumbs.map((b, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": b.name,
+        "item": `https://egyptalumin.com${b.url}`
+      }))
+    },
+    {
+      "@type": "Article",
+      "@id": "https://egyptalumin.com/de/blog/aegypten-aluminium-industrie-ueberblick/#article",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://egyptalumin.com/de/blog/aegypten-aluminium-industrie-ueberblick/"
+      },
+      "headline": "Ägyptens Aluminiumindustrie: Nile Valley Smelting & Produktionskapazität",
+      "description": "Ein Überblick über Ägyptens strategische Primäraluminium-Schmelzkapazität, Aswan-Energie-Vorteile und die Logistikroute nach Europa.",
+      "image": "https://egyptalumin.com/images/blog/6.3-egypt-aluminium-industry-nile-valley-production.webp",
+      "datePublished": "2026-05-18T08:00:00+08:00",
+      "dateModified": "2026-05-18T08:00:00+08:00",
+      "author": {
+        "@type": "Person",
+        "name": "Noel Murphy",
+        "jobTitle": "Partner, Europäische Operationen",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Egypt Alumin"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Egypt Alumin",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://egyptalumin.com/assets/logo.png"
+        }
+      }
+    }
+  ]
+};
+---
+
+<Layout 
+  title="Ägyptens Aluminiumindustrie & Kapazitäten | Egypt Alumin"
+  description="Strategische Analyse von Ägyptens B2B-Aluminiumsektor, Energiequellen im Niltal, Exportdaten und CO₂-Vorteilen für europäische Hersteller."
+  lang="de"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        {breadcrumbs.map((b, i) => (
+          i === breadcrumbs.length - 1 ? (
+            <li aria-current="page">{b.name}</li>
+          ) : (
+            <li><a href={b.url}>{b.name}</a></li>
+          )
+        ))}
+      </ol>
+    </div>
+  </nav>
+
+  <article class="article-container">
+    <header class="article-header">
+      <div class="container">
+        <div class="article-header-meta">
+          <span class="article-badge">Industrie</span>
+          <span>18. Mai 2026</span>
+          <span>•</span>
+          <span>5 Min. Lesezeit</span>
+        </div>
+        <h1>Ägyptens Aluminiumindustrie: Nile Valley Smelting & Produktionskapazität</h1>
+        <div class="article-author-info">
+          <div class="article-author-avatar">NM</div>
+          <div class="article-author-details">
+            <strong>Noel Murphy</strong>
+            <span>Europäischer Vertrieb</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="article-layout">
+        <div class="article-body">
+          <img src="/images/blog/6.3-egypt-aluminium-industry-nile-valley-production.webp" alt="Primary aluminium smelter facility" class="article-hero-image" />
+          
+          <p>
+            Ägyptens Primäraluminiumindustrie erlebt derzeit eine historische Renaissance und entwickelt sich zu einem der wichtigsten metallurgischen Lieferanten für die Europäische Union. Mit fast **878 Millionen US-Dollar an jährlichen Exporten** haben sich ägyptisches Primärmetall und Legierungsmasseln als erstklassige, geografisch nahe Vormaterial-Option für europäische Gießereien etabliert, die ihre Lieferketten diversifizieren möchten.
+          </p>
+
+          <h2>Strategischer Vorteil: Die Route Alexandria-Genua</h2>
+          <p>
+            Während traditionelle Lieferwege aus Asien oder dem Nahen Osten lange Seereisen (typischerweise 30 bis 45 Tage) und kritische maritime Nadelöhre erfordern, profitiert Ägypten von einer unschlagbaren geografischen Lage.
+          </p>
+          <p>
+            Über die modernisierten Häfen von **Alexandria** und **Damiette** gelangen die Lieferungen in **nur 10 bis 14 Tagen** direkt zu südeuropäischen Umschlagplätzen wie Genua, Triest oder Barcelona. Dieser kurze Seeweg reduziert das im Transport gebundene Betriebskapital für europäische B2B-Einkäufer erheblich.
+          </p>
+
+          <h2>Schmelzen im Niltal: Wasserkraft & Erdgas</h2>
+          <p>
+            Historisch entstand die ägyptische Schwerindustrie im Niltal, angetrieben durch die saubere, reichlich vorhandene Wasserkraft des **Assuan-Staudamms**. Dieses Fundament verschafft Ägypten einen erheblichen Vorteil beim CO₂-Fußabdruck gegenüber Ländern, deren Gießereien hauptsächlich mit Kohlestrom betrieben werden.
+          </p>
+          <p>
+            Heute wird das Niltal-Netz durch hocheffiziente Erdgaskraftwerke und massive Investitionen in Solarkraftwerke ergänzt.
+          </p>
+          <blockquote>
+            "Durch die Kombination von Wasserkraft und modernem Erdgas erreichen ägyptische Schmelzhütten einen Scope 1 & 2 CO₂-Wert, der deutlich unter dem globalen Durchschnitt liegt. Das spart europäischen Importeuren bares Geld bei den CBAM-Abgaben."
+          </blockquote>
+
+          <h2>Kapazitätsausbau: Das 50.000-Tonnen-Werk von Egypt Alumin</h2>
+          <p>
+            Egypt Alumin repräsentiert den neuesten Stand der Technik in der ägyptischen Produktion. Unser **50.000 m² großes Werk** bietet:
+          </p>
+          <ul>
+            <li><strong>Aktuelle Leistung:</strong> 50,000 Tonnen hochreine Masseln pro Jahr, mit einer aktiven Ausbauplanung auf 100.000 Tonnen bis 2028.</li>
+            <li><strong>Automatisierter Guss:</strong> Moderne Linien für 25kg A7-Primärmasseln, 20kg ADC12-Druckgusslegierungen und kundenbezogene Al-Si-Masseln.</li>
+            <li><strong>Qualitätskontrolle:</strong> Lückenlose spektrometrische Kontrollen (OES) und Entgasungsanlagen für höchste strukturelle Zuverlässigkeit.</li>
+          </ul>
+
+          <h2>Zusammenfassung</h2>
+          <p>
+            Ägypten ist längst kein rein regionaler Akteur mehr. Italien ist heute der wichtigste europäische Abnehmer für ägyptisches Aluminium (mit einem Wert von über 513 Millionen US-Dollar jährlich). Vor dem Hintergrund von CBAM und geopolitischen Risiken bietet das Niltal eine zuverlässige, grüne und kosteneffiziente Beschaffungsalternative für die europäische Industrie.
+          </p>
+        </div>
+
+        <aside class="article-sidebar">
+          <div class="rfq-card">
+            <h3>Kapazität sichern</h3>
+            <p>Wir nehmen derzeit Volumenreservierungen für Lieferungen im zweiten Halbjahr 2026 nach Europa entgegen.</p>
+            <a href="/de/kontakt/" class="btn btn-primary">Anfrage senden</a>
+            <div class="rfq-divider"></div>
+            <div class="rfq-contact">
+              <span>📞 B2B-Hotline:</span>
+              <a href="tel:+353871187806">+353 87 118 7806</a>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3>Verwandte Artikel</h3>
+            <ul class="mini-articles-list">
+              <li>
+                <a href="/de/blog/logistik-aegypten-europa-leitfaden/" class="mini-article-card">
+                  <div class="mini-article-thumb">LOG</div>
+                  <div class="mini-article-info">
+                    <strong>Hafen- & Seeweg-Logistik</strong>
+                    <span>7 Min. Lesezeit</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/de/blog/auswahl-druckguss-legierungen/" class="mini-article-card">
+                  <div class="mini-article-thumb">GUSS</div>
+                  <div class="mini-article-info">
+                    <strong>Auswahl Druckguss-Legierungen</strong>
+                    <span>6 Min. Lesezeit</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </article>
+</Layout>

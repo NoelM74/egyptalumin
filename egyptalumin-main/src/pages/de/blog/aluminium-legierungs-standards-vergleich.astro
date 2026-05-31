@@ -1,0 +1,232 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: "Startseite", url: "/de/" },
+  { name: "Blog", url: "/de/blog/" },
+  { name: "Legierungsstandards Vergleich", url: "/de/blog/aluminium-legierungs-standards-vergleich/" }
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://egyptalumin.com/de/blog/aluminium-legierungs-standards-vergleich/#breadcrumb",
+      "itemListElement": breadcrumbs.map((b, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": b.name,
+        "item": `https://egyptalumin.com${b.url}`
+      }))
+    },
+    {
+      "@type": "Article",
+      "@id": "https://egyptalumin.com/de/blog/aluminium-legierungs-standards-vergleich/#article",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://egyptalumin.com/de/blog/aluminium-legierungs-standards-vergleich/"
+      },
+      "headline": "Aluminium-Legierungsstandards: Vergleich von EN, JIS und GB/T",
+      "description": "Ein detaillierter technischer Vergleich globaler B2B-Aluminiumlegierungsstandards, der die chemischen Unterschiede zwischen EN AC-46000, JIS ADC12 und GB/T YL113 aufzeigt.",
+      "image": "https://egyptalumin.com/images/blog/6.4-aluminium-alloy-standards-en-jis-gbt-comparison.webp",
+      "datePublished": "2026-05-15T08:00:00+08:00",
+      "dateModified": "2026-05-15T08:00:00+08:00",
+      "author": {
+        "@type": "Person",
+        "name": "Noel Murphy",
+        "jobTitle": "Partner, Europäische Operationen",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Egypt Alumin"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Egypt Alumin",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://egyptalumin.com/assets/logo.png"
+        }
+      }
+    }
+  ]
+};
+---
+
+<Layout 
+  title="Aluminium-Legierungsstandards im Vergleich | Egypt Alumin"
+  description="Technischer Referenzleitfaden für Konstruktionsingenieure zum Vergleich von EN AC-46000, JIS ADC12 und chinesischen GB/T-Spezifikationen für Druckgusslegierungen."
+  lang="de"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        {breadcrumbs.map((b, i) => (
+          i === breadcrumbs.length - 1 ? (
+            <li aria-current="page">{b.name}</li>
+          ) : (
+            <li><a href={b.url}>{b.name}</a></li>
+          )
+        ))}
+      </ol>
+    </div>
+  </nav>
+
+  <article class="article-container">
+    <header class="article-header">
+      <div class="container">
+        <div class="article-header-meta">
+          <span class="article-badge">Standards</span>
+          <span>15. Mai 2026</span>
+          <span>•</span>
+          <span>7 Min. Lesezeit</span>
+        </div>
+        <h1>Aluminium-Legierungsstandards: Vergleich von EN, JIS und GB/T Specifications</h1>
+        <div class="article-author-info">
+          <div class="article-author-avatar">NM</div>
+          <div class="article-author-details">
+            <strong>Noel Murphy</strong>
+            <span>Europäischer Vertrieb</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="article-layout">
+        <div class="article-body">
+          <img src="/images/blog/6.4-aluminium-alloy-standards-en-jis-gbt-comparison.webp" alt="Aluminium alloy spectrometry testing" class="article-hero-image" />
+          
+          <p>
+            Für Konstrukteure und B2B-Einkäufer, die auf globalen Märkten einkaufen, ist die Übersetzung regionaler Legierungsbezeichnungen eine ständige Herausforderung. Die Verwendung einer Legierung nach einer ausländischen Norm zur Erfüllung von Konstruktionsvorgaben erfordert einen detaillierten, elementgenauen chemischen Abgleich. Geringe Abweichungen bei Eisen- oder Zinkgrenzwerten können die mechanischen Eigenschaften drastisch verändern und zu Bauteilausschuss oder strukturellen Rissen führen.
+          </p>
+
+          <h2>Die drei globalen Standardwerke</h2>
+          <p>
+            In der globalen industriellen Beschaffung dominieren drei Regelwerke den B2B-Handel mit Aluminiumlegierungen:
+          </p>
+          <ul>
+            <li><strong>Europäische Normen (EN):</strong> Verwaltet von CEN, mit starkem Fokus auf enge Toleranzbereiche und Werkstoffnummern (z. B. EN AC-46000).</li>
+            <li><strong>Japanese Industrial Standards (JIS):</strong> Weltweit verbreitet, insbesondere im Automotive-Bereich (z. B. JIS H 5302 ADC12).</li>
+            <li><strong>Chinesische Nationalstandards (GB/T):</strong> Stark vertreten bei asiatischen Rohstoffexporten (z. B. GB/T 15115 YL113).</li>
+          </ul>
+
+          <h2>Druckguss-Klassiker im Vergleich: EN AC-46000 vs. JIS ADC12</h2>
+          <p>
+            Die Al-Si-Cu-Legierungsfamilie bildet das Rückgrat des weltweiten Druckgusses, unverzichtbar für Getriebegehäuse, Motorhalterungen und Gehäuse von Elektrowerkzeugen. Obwohl viele Werkstofftabellen **EN AC-46000**, **JIS ADC12** und **GB/T YL113** als völlig identisch bezeichnen, zeigen sich bei genauerer Betrachtung signifikante Unterschiede.
+          </p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Element</th>
+                  <th>EN AC-46000 (%)</th>
+                  <th>JIS ADC12 (%)</th>
+                  <th>Chinesische GB/T YL113 (%)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Silizium (Si)</strong></td>
+                  <td>8.0 - 11.0</td>
+                  <td>9.6 - 12.0</td>
+                  <td>9.6 - 12.0</td>
+                </tr>
+                <tr>
+                  <td><strong>Kupfer (Cu)</strong></td>
+                  <td>2.0 - 4.0</td>
+                  <td>1.5 - 3.5</td>
+                  <td>1.5 - 3.5</td>
+                </tr>
+                <tr>
+                  <td><strong>Eisen (Fe)</strong></td>
+                  <td>1.30 Max</td>
+                  <td>1.30 Max</td>
+                  <td>1.30 Max</td>
+                </tr>
+                <tr>
+                  <td><strong>Magnesium (Mg)</strong></td>
+                  <td>0.15 - 0.55</td>
+                  <td>0.30 Max</td>
+                  <td>0.30 Max</td>
+                </tr>
+                <tr>
+                  <td><strong>Mangan (Mn)</strong></td>
+                  <td>0.55 Max</td>
+                  <td>0.50 Max</td>
+                  <td>0.50 Max</td>
+                </tr>
+                <tr>
+                  <td><strong>Zink (Zn)</strong></td>
+                  <td>1.20 Max</td>
+                  <td>1.00 Max</td>
+                  <td>1.00 Max</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>Wichtige metallurgische Auswirkungen</h2>
+          <p>
+            Die feinen Unterschiede in den Toleranzbereichen haben direkten Einfluss auf das Gussverhalten:
+          </p>
+          <ul>
+            <li><strong>Silizium & Fließfähigkeit:</strong> JIS ADC12 fordert eine höhere Untergrenze an Silizium (9,6%) als EN AC-46000 (8,0%). Ein höherer Siliziumgehalt verbessert die Fließfähigkeit der Schmelze erheblich, was das Füllen extrem dünnwandiger Gussformen erleichtert.</li>
+            <li><strong>Magnesium-Gehalt:</strong> EN AC-46000 fordert einen strengen Toleranzbereich von **0,15% bis 0,55%** Magnesium, während das japanische ADC12 lediglich einen **Maximalwert von 0,30%** festlegt. Magnesium verbindet sich mit Silizium zu Mg₂Si, was die Festigkeit durch Wärmebehandlung steigert, aber bei Überschreitung zu Versprödung führen kann.</li>
+            <li><strong>Eisen & Formen-Kleben:</strong> Alle drei Normen erlauben bis zu **1,30% Eisen**. Ein kontrollierter Mindestgehalt von ca. 0,6% Eisen ist im Druckguss notwendig, um das Verschweißen der heißen Schmelze mit der Stahlform (Formen-Kleben) zu verhindern.</li>
+          </ul>
+
+          <blockquote>
+            "Bei Egypt Alumin gießen wir unsere Legierungsmasseln in kundenbezogenen, engen Toleranzfenstern, die sowohl EN AC-46000 als auch JIS ADC12 gleichzeitig erfüllen. Das vereinfacht das Lagermanagement globaler Gießereien."
+          </blockquote>
+
+          <h2>Zusammenfassung</h2>
+          <p>
+            Verlassen Sie sich im globalen Einkauf niemals blind auf Pauschalaussagen zur Äquivalenz. Durch die Anforderung detaillierter Spektralanalysen (MTC nach EN 10204 3.1) sichern sich Einkäufer eine perfekte Materialkompatibilität an allen Produktionsstandorten.
+          </p>
+        </div>
+
+        <aside class="article-sidebar">
+          <div class="rfq-card">
+            <h3>Analysenzertifikate</h3>
+            <p>Unsere Legierungen werden exakt nach Ihren Vorgaben (EN, JIS, Sondertoleranzen) gegossen.</p>
+            <a href="/de/kontakt/" class="btn btn-primary">Muster anfordern</a>
+            <div class="rfq-divider"></div>
+            <div class="rfq-contact">
+              <span>✉️ Technik-Support:</span>
+              <a href="mailto:noel@egyptalumin.com">noel@egyptalumin.com</a>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3>Verwandte Artikel</h3>
+            <ul class="mini-articles-list">
+              <li>
+                <a href="/de/blog/aluminium-barren-qualitaeten-leitfaden/" class="mini-article-card">
+                  <div class="mini-article-thumb">QUAL</div>
+                  <div class="mini-article-info">
+                    <strong>Massel-Qualitäten-Leitfaden</strong>
+                    <span>6 Min. Lesezeit</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/de/blog/auswahl-druckguss-legierungen/" class="mini-article-card">
+                  <div class="mini-article-thumb">GUSS</div>
+                  <div class="mini-article-info">
+                    <strong>Druckguss-Legierungen</strong>
+                    <span>6 Min. Lesezeit</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </article>
+</Layout>
