@@ -1,0 +1,200 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout 
+  title="B2B-Logistik & Versandprotokolle | Egypt Alumin" 
+  description="Autoritative Logistikrouten, Hafendetails, Transitzeiten und Zolldokumentation (EUR.1) für den B2B-Import von Primäraluminium aus Ägypten nach Europa."
+  lang="de"
+>
+  <nav class="breadcrumb" aria-label="Brotkrumen-Navigation">
+    <div class="container">
+      <ol>
+        <li><a href="/de/">Startseite</a></li>
+        <li aria-current="page">Logistik & Versand</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="product-hero">
+    <div class="container">
+      <div class="product-hero-grid" style="grid-template-columns: 1fr;">
+        <div style="text-align: center; max-width: 850px; margin: 0 auto;">
+          <span class="eyebrow on-dark">Logistikwege im Mittelmeer</span>
+          <h1 style="font-size: 3.2rem; margin-bottom: 1.2rem;">Direkte maritime Rohstoffversorgung</h1>
+          <p class="product-hero-lead" style="font-size: 1.25rem;">
+            Direkte Anbindung unserer Schmelzkapazitäten in Ägypten an die wichtigsten europäischen Containerhäfen. 
+            Verlässliche Frequenz, zollfreier Transit und reibungslose Zollabfertigung.
+          </p>
+          <div class="product-hero-badges" style="justify-content: center; margin-top: 1.8rem;">
+            <span>Häfen Alexandria & Damiette</span>
+            <span>Zollfrei dank EUR.1-Zertifikat</span>
+            <span>10–24 Tage Transitzeit</span>
+            <span>Vollständige REACH-Registrierung</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRANSIT TIME GRID
+       ============================================================ -->
+  <section style="background: var(--white); padding: 5rem 0;">
+    <div class="container">
+      <div class="section-header" style="text-align:center; max-width:700px; margin: 0 auto 4rem auto;">
+        <span class="eyebrow">Transit-Frequenzen</span>
+        <h2>Geschätzte maritime Transportzeiten</h2>
+        <p>Direkte Containerverbindungen von den ägyptischen Haupthäfen Alexandria und Damiette zu den wichtigsten europäischen B2B-Umschlagplätzen.</p>
+      </div>
+
+      <div class="product-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        <!-- South Europe -->
+        <div style="background:var(--silver-soft); border: 1px solid var(--border); padding:2.5rem 2rem; border-radius:var(--radius-lg); text-align:center;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(0,123,95,0.1); display: grid; place-items: center; margin: 0 auto 1.5rem auto; color: var(--teal);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 style="font-family:'Outfit',sans-serif; color:var(--teal); font-size: 2.2rem; margin-bottom: 0.5rem;">10–14 Tage</h3>
+          <strong>Südeuropäische Häfen</strong>
+          <p style="font-size:0.9rem; margin-top:0.5rem; color:var(--ink-soft);">Direktverbindung nach Genua (Italien), Barcelona (Spanien) und Marseille (Frankreich).</p>
+        </div>
+
+        <!-- North Europe -->
+        <div style="background:var(--silver-soft); border: 1px solid var(--border); padding:2.5rem 2rem; border-radius:var(--radius-lg); text-align:center;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(0,123,95,0.1); display: grid; place-items: center; margin: 0 auto 1.5rem auto; color: var(--teal);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 style="font-family:'Outfit',sans-serif; color:var(--teal); font-size: 2.2rem; margin-bottom: 0.5rem;">18–24 Tage</h3>
+          <strong>Nordeuropäische Häfen</strong>
+          <p style="font-size:0.9rem; margin-top:0.5rem; color:var(--ink-soft);">Direktverbindung nach Rotterdam (Niederlande), Hamburg (Deutschland) und Antwerpen (Belgien).</p>
+        </div>
+
+        <!-- Eastern Europe -->
+        <div style="background:var(--silver-soft); border: 1px solid var(--border); padding:2.5rem 2rem; border-radius:var(--radius-lg); text-align:center;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(0,123,95,0.1); display: grid; place-items: center; margin: 0 auto 1.5rem auto; color: var(--teal);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M5 17V5a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v12"/></svg>
+          </div>
+          <h3 style="font-family:'Outfit',sans-serif; color:var(--teal); font-size: 2.2rem; margin-bottom: 0.5rem;">12–16 Tage</h3>
+          <strong>Zentral- & Osteuropa</strong>
+          <p style="font-size:0.9rem; margin-top:0.5rem; color:var(--ink-soft);">Verbindung über Koper (Slowenien) und Rijeka (Kroatien) für schnellen Weitertransport per Schiene.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DOCUMENTATION & CUSTOMS
+       ============================================================ -->
+  <section style="background: var(--silver-soft); padding: 5rem 0;">
+    <div class="container">
+      <div class="cbam-inner" style="grid-template-columns: 1fr 1.1fr; gap: 4rem; align-items: center;">
+        <div class="product-image" style="box-shadow:var(--shadow-lg);">
+          <div class="product-img-container-inner" style="border-radius: var(--radius-lg); overflow: hidden;">
+            <img src="/images/blog/6.6-shipping-aluminium-egypt-europe-logistics-guide.webp" alt="Cargo Ship Logistik" class="product-img-modern" style="width:100%; object-fit:cover;" />
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow">Zollfreie Einfuhr in die EU</span>
+          <h2>Reibungslose Importabwicklung</h2>
+          <p>
+            Aluminiumbarren und -legierungen mit Ursprung in Ägypten sind unter dem Assoziierungsabkommen zwischen der EU und Ägypten 
+            von jeglichen <strong>Einfuhrzöllen (0 % Präferenzzollsatz) befreit</strong>.
+          </p>
+          <p>
+            Um eine zügige Verzollung in den Empfangshäfen zu gewährleisten, stellen wir mit jeder Lieferung ein lückenloses 
+            Dokumentenpaket zur Verfügung:
+          </p>
+          <ul style="padding-left:1.5rem; line-height:1.8; color:var(--ink-soft); margin:1.5rem 0;">
+            <li><strong>Warenverkehrsbescheinigung EUR.1</strong> (zur Sicherung der Zollfreiheit)</li>
+            <li><strong>REACH-Konformitätserklärung</strong> (vollständige Registrierung vorliegend)</li>
+            <li><strong>Konnossement / Bill of Lading</strong> (Clean on Board)</li>
+            <li><strong>Analyse- & Schmelzzertifikat</strong> (direkt aus unserem Labor)</li>
+            <li><strong>Handelsrechnung & detaillierte Packliste</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTAINER SPECIFICATIONS
+       ============================================================ -->
+  <section style="background: var(--white); padding: 5rem 0;">
+    <div class="container">
+      <div class="cbam-inner" style="grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center;">
+        <div>
+          <span class="eyebrow">Ladungsparameter</span>
+          <h2>Verpackung & Containerkapazitäten</h2>
+          <p>
+            Um die Reinheit und Qualität der Legierungen während der Seepassage zu schützen, werden alle Barrenstapel 
+            mit hochfesten Stahlbändern fest verzurrt und auf stabilen Transportpaletten geliefert.
+          </p>
+          <div style="margin:2rem 0; border-top: 1px solid var(--border);">
+            <div style="display:flex; justify-content:space-between; padding: 1rem 0; border-bottom:1px solid var(--border);">
+              <strong>Gewicht je Barrenstapel:</strong>
+              <span style="color:var(--teal); font-weight:600;">ca. 1.000 kg</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding: 1rem 0; border-bottom:1px solid var(--border);">
+              <strong>Mindestbestellmenge (MOQ):</strong>
+              <span style="color:var(--teal); font-weight:600;">20 Tonnen (1 FCL)</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding: 1rem 0; border-bottom:1px solid var(--border);">
+              <strong>FCL-Auslastung (20-Fuß-Heavy-Container):</strong>
+              <span style="color:var(--teal); font-weight:600;">20 bis 22 Tonnen</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding: 1rem 0; border-bottom:1px solid var(--border);">
+              <strong>Verpackungsformen:</strong>
+              <span style="color:var(--teal); font-weight:600;">Stahlbandgezurrt / Holzpaletten</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-image" style="box-shadow:var(--shadow-lg);">
+          <div class="product-img-container-inner" style="border-radius: var(--radius-lg); overflow: hidden;">
+            <img src="/images/factory/factory-loading-and-dispatch-01.webp" alt="Verladeanlage" class="product-img-modern" style="width:100%; object-fit:cover;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FINAL CTA
+       ============================================================ -->
+  <section class="final-cta">
+    <div class="container">
+      <span class="eyebrow on-dark">Direktkontakt Logistik</span>
+      <h2>Planen Sie Ihren Lieferzeitplan</h2>
+      <p>Egal, ob Sie bestimmte Lieferfristen, cif/ddp Lieferbedingungen oder feste Abrufverträge vereinbaren möchten — sprechen Sie direkt mit Noel Murphy.</p>
+      <div class="final-cta-actions">
+        <a href="/de/kontakt/" class="btn btn-primary">Angebot anfordern</a>
+        <a href="tel:+353871187806" class="btn btn-secondary">Noel anrufen: +353 87 118 7806</a>
+      </div>
+      <p class="final-cta-direct">
+        Direkt-E-Mail: <a href="mailto:noel@egyptalumin.com">noel@egyptalumin.com</a> · WhatsApp: <a href="https://wa.me/353871187806">Direktchat</a>
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .product-img-container-inner {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 16/10;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+  .product-img-modern {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .product-img-container-inner:hover .product-img-modern {
+    transform: scale(1.03);
+  }
+</style>
