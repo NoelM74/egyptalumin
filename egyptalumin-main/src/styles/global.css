@@ -1568,3 +1568,9 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
 /* Readable text for lists/labels inside the dark navy .cbam-inner panel */
 .cbam-inner ul, .cbam-inner li { color: rgba(255,255,255,.85); }
 .cbam-inner li strong, .cbam-inner p strong { color: #fff; }
+
+/* Quality/feature pillar cards (icon tile + heading + paragraph) must stack
+   vertically — the base .app-item is a horizontal flex row used elsewhere. */
+.app-item:has(h3){ display:block; border-left:0; }
+.app-item:has(h3) h3{ color:var(--navy); }
+.app-item:has(h3) p{ margin:0; }

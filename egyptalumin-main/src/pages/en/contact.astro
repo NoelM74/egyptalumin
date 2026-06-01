@@ -6,7 +6,7 @@ import Layout from '../../layouts/Layout.astro';
 // as the destination inbox) and paste it below. Web3Forms keys are public by
 // design — safe to commit. Until a real key is set, the form automatically
 // falls back to opening the visitor's email app addressed to RFQ_TO.
-const WEB3FORMS_KEY = 'REPLACE_WITH_WEB3FORMS_ACCESS_KEY';
+const WEB3FORMS_KEY = '2b6f383a-1087-4cde-8534-d0628fcc305b';
 const RFQ_TO = 'contact@techaluminum.com';
 ---
 
@@ -160,7 +160,7 @@ const RFQ_TO = 'contact@techaluminum.com';
         const key = data.get('access_key');
         statusEl.style.color = 'var(--ink-soft)';
         statusEl.textContent = 'Sending…';
-        if (key && key !== 'REPLACE_WITH_WEB3FORMS_ACCESS_KEY') {
+        if (key && key !== '2b6f383a-1087-4cde-8534-d0628fcc305b') {
           try {
             const res = await fetch('https://api.web3forms.com/submit', {
               method: 'POST', headers: { Accept: 'application/json' }, body: data

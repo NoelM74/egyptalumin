@@ -1,0 +1,26 @@
+# Cloudflare redirects — stopgap until DE/FR/IT sub-pages are built.
+# Syntax: <from>  <to>  <status>   (first match wins)
+
+# Cookie & Privacy policy — single English source for now
+/de/cookie-policy/    /en/cookie-policy/    302
+/fr/cookie-policy/    /en/cookie-policy/    302
+/it/cookie-policy/    /en/cookie-policy/    302
+/de/privacy-policy/   /en/privacy-policy/   302
+/fr/privacy-policy/   /en/privacy-policy/   302
+/it/privacy-policy/   /en/privacy-policy/   302
+
+# French sections not yet translated → English equivalents
+/fr/produits/*        /en/products/         302
+/fr/industries/*      /en/industries/       302
+/fr/qualite/*         /en/quality/          302
+/fr/guide-cbam/*      /en/cbam-guide/        302
+/fr/a-propos/*        /en/about/            302
+/fr/contact/*         /en/contact/          302
+
+# Italian sections not yet translated → English equivalents
+/it/prodotti/*        /en/products/         302
+/it/industrie/*       /en/industries/       302
+/it/qualita/*         /en/quality/          302
+/it/guida-cbam/*      /en/cbam-guide/        302
+/it/chi-siamo/*       /en/about/            302
+/it/contatti/*        /en/contact/          302

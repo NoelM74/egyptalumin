@@ -4,7 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 // RFQ-Formular: kostenlosen Access-Key unter https://web3forms.com holen
 // (Zielpostfach contact@techaluminum.com) und unten einsetzen. Solange kein
 // Key gesetzt ist, öffnet das Formular automatisch die E-Mail-App des Besuchers.
-const WEB3FORMS_KEY = 'REPLACE_WITH_WEB3FORMS_ACCESS_KEY';
+const WEB3FORMS_KEY = '2b6f383a-1087-4cde-8534-d0628fcc305b';
 const RFQ_TO = 'contact@techaluminum.com';
 ---
 
@@ -158,7 +158,7 @@ const RFQ_TO = 'contact@techaluminum.com';
         const key = data.get('access_key');
         statusEl.style.color = 'var(--ink-soft)';
         statusEl.textContent = 'Wird gesendet…';
-        if (key && key !== 'REPLACE_WITH_WEB3FORMS_ACCESS_KEY') {
+        if (key && key !== '2b6f383a-1087-4cde-8534-d0628fcc305b') {
           try {
             const res = await fetch('https://api.web3forms.com/submit', {
               method: 'POST', headers: { Accept: 'application/json' }, body: data
