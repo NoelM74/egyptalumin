@@ -17,7 +17,7 @@
   --stone:#E8E3DC; --surface:#F2EDE6;
   --border:#DDD9D0;
   /* Legacy aliases (keep for backward compat during transition) */
-  --amber:var(--gold-light); --silver-soft:var(--surface); --silver:var(--stone);
+  --amber:var(--gold-light); --silver-soft:var(--surface); --silver:var(--stone); --silver-mid:var(--stone);
   /* Shadows */
   --shadow-sm:0 2px 8px rgba(9,20,40,.06);
   --shadow:0 6px 20px rgba(9,20,40,.10);
@@ -371,7 +371,7 @@ section{padding:3.5rem 0}
 .related-card:hover{
   border-color:var(--teal);
   box-shadow:var(--shadow-sm);
-  transform:translateY(-2px);
+  transform:translateY(-3px);
   color:var(--ink);
 }
 .related-thumb{
@@ -1055,7 +1055,7 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
   border-color: var(--teal);
   background: var(--white);
   box-shadow: var(--shadow-sm);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 .noel-contact .icon {
