@@ -27,7 +27,16 @@
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.7;color:var(--ink);background:var(--warm-white);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.7;color:var(--ink);background:var(--warm-white);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+
+/* ---- Dark-section heading contrast (headings default to navy; force white on dark) ---- */
+.hero h1,.hero h2,
+.product-hero h1,.product-hero h2,.product-hero h3,
+.blog-hero h1,.blog-hero h2,
+.cbam-inner h1,.cbam-inner h2,.cbam-inner h3,
+[style*="var(--navy"] h1,[style*="var(--navy"] h2,[style*="var(--navy"] h3,[style*="var(--navy"] h4{color:#fff}
+/* Spec/data values placed inside dark navy panels: teal is too dark — use gold */
+.cbam-inner span[style*="--teal"],.cbam-inner strong[style*="--teal"]{color:var(--gold-light)!important}
 img{max-width:100%;display:block;height:auto}
 a{color:var(--teal);text-decoration:none;transition:color .2s}
 a:hover{color:var(--teal-hover)}
@@ -473,7 +482,7 @@ section{padding:3.5rem 0}
   background: radial-gradient(circle at 50% 50%, rgba(0, 123, 95, 0.15), transparent 70%);
 }
 .blog-hero h1 {
-  color: #white;
+  color: #fff;
   margin-bottom: 0.75rem;
 }
 .blog-hero-lead {
@@ -1154,15 +1163,17 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
 
 .metric-num {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 2.5rem;
+  font-size: clamp(1.7rem, 6vw, 2.5rem);
   font-weight: 800;
   color: var(--navy);
   line-height: 1.1;
   margin-bottom: 0.5rem;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 .metric-num .unit {
-  font-size: 1.5rem;
+  font-size: 0.6em;
   color: var(--teal);
   margin-left: 0.1rem;
 }
