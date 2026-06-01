@@ -1546,3 +1546,25 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
   line-height: 1.45;
 }
 
+
+/* ===== Homepage product cards — shared across ALL languages (was scoped to EN) ===== */
+.products-section, .products { background: var(--white); }
+.product-card-modern {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s ease, border-color .3s ease;
+}
+.product-card-modern:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--teal); }
+.product-img-wrapper { position: relative; aspect-ratio: 16/10; overflow: hidden; background: var(--navy); }
+.product-img-asset { width: 100%; height: 100%; object-fit: cover; opacity: .88; transition: transform .5s ease, opacity .5s ease; }
+.product-card-modern:hover .product-img-asset { transform: scale(1.06); opacity: 1; }
+.product-img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.6) 0%, transparent 60%); display: flex; align-items: flex-end; padding: 1rem; }
+.product-img-overlay span, .product-img-label { color: #fff; font-weight: 600; font-size: .9rem; line-height: 1.3; }
+.product-link { display: inline-flex; align-items: center; gap: .4rem; color: var(--teal); font-weight: 600; font-size: .9rem; margin-top: auto; }
+.product-link:hover { gap: .6rem; }
+
+/* Readable text for lists/labels inside the dark navy .cbam-inner panel */
+.cbam-inner ul, .cbam-inner li { color: rgba(255,255,255,.85); }
+.cbam-inner li strong, .cbam-inner p strong { color: #fff; }
