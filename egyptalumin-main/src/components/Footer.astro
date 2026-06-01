@@ -25,12 +25,16 @@ const t = {
     facilityUrl: "/en/about/#facility",
     noelUrl: "/en/about/#noel",
     sustainabilityUrl: "/en/sustainability/",
-    
+
     cbamUrl: "/en/cbam-guide/",
     qualityUrl: "/en/quality/",
     logisticsUrl: "/en/logistics/",
     faqUrl: "/en/faq/",
-    blogUrl: "/en/blog/"
+    blogUrl: "/en/blog/",
+    qualityLabel: "Quality & Compliance",
+    logisticsLabel: "Logistics & Shipping",
+    faqLabel: "FAQ",
+    blogLabel: "Industry Insights",
   },
   de: {
     description: "Premium-Aluminiumbarren-Hersteller für A7-, ADC12- und AL-Si-Legierungsbarren für den europäischen Markt. ISO 9001 zertifiziert. CBAM-bereit. REACH-konform.",
@@ -50,12 +54,16 @@ const t = {
     facilityUrl: "/de/ueber-uns/#facility",
     noelUrl: "/de/ueber-uns/#noel",
     sustainabilityUrl: "/de/nachhaltigkeit/",
-    
+
     cbamUrl: "/de/cbam-leitfaden/",
     qualityUrl: "/de/qualitaet/",
     logisticsUrl: "/de/logistik/",
     faqUrl: "/de/faq/",
-    blogUrl: "/de/blog/"
+    blogUrl: "/de/blog/",
+    qualityLabel: "Qualität & Compliance",
+    logisticsLabel: "Logistik & Versand",
+    faqLabel: "FAQ",
+    blogLabel: "Brancheneinblicke",
   },
   fr: {
     description: "Fabricant de lingots d'aluminium de qualité supérieure fournissant des lingots A7, ADC12 et AL-Si pour le marché européen. Certifié ISO 9001. Prêt pour la CBAM. Conforme REACH.",
@@ -75,12 +83,16 @@ const t = {
     facilityUrl: "/fr/#facility",
     noelUrl: "/fr/#noel",
     sustainabilityUrl: "/en/sustainability/",
-    
+
     cbamUrl: "/en/cbam-guide/",
     qualityUrl: "/en/quality/",
     logisticsUrl: "/en/logistics/",
     faqUrl: "/en/faq/",
-    blogUrl: "/en/blog/"
+    blogUrl: "/en/blog/",
+    qualityLabel: "Qualité & Conformité",
+    logisticsLabel: "Logistique & Livraison",
+    faqLabel: "FAQ",
+    blogLabel: "Informations sectorielles",
   },
   it: {
     description: "Produttore di lingotti di alluminio premium che fornisce lingotti A7, ADC12 e AL-Si al mercato europeo. Certificato ISO 9001. CBAM-ready. Conforme a REACH.",
@@ -100,12 +112,16 @@ const t = {
     facilityUrl: "/it/#facility",
     noelUrl: "/it/#noel",
     sustainabilityUrl: "/en/sustainability/",
-    
+
     cbamUrl: "/en/cbam-guide/",
     qualityUrl: "/en/quality/",
     logisticsUrl: "/en/logistics/",
     faqUrl: "/en/faq/",
-    blogUrl: "/en/blog/"
+    blogUrl: "/en/blog/",
+    qualityLabel: "Qualità & Conformità",
+    logisticsLabel: "Logistica & Spedizioni",
+    faqLabel: "FAQ",
+    blogLabel: "Approfondimenti del settore",
   }
 };
 
@@ -142,7 +158,7 @@ const labels = t[lang] || t.en;
       <div class="footer-col">
         <h4>{labels.companyHeader}</h4>
         <ul>
-          <li><a href={labels.aboutUrl}>About Egypt Alumin</a></li>
+          <li><a href={labels.aboutUrl}>{lang === 'de' ? 'Über Egypt Alumin' : lang === 'fr' ? "À propos d'Egypt Alumin" : lang === 'it' ? 'Chi siamo' : 'About Egypt Alumin'}</a></li>
           <li><a href={labels.facilityUrl}>Our Facility</a></li>
           <li><a href={labels.noelUrl}>Noel Murphy</a></li>
           <li><a href={labels.sustainabilityUrl}>Sustainability</a></li>
@@ -153,10 +169,10 @@ const labels = t[lang] || t.en;
         <h4>{labels.resourcesHeader}</h4>
         <ul>
           <li><a href={labels.cbamUrl}>{labels.cbamUrl.includes('cbam-leitfaden') ? 'CBAM-Leitfaden' : labels.cbamUrl.includes('guide-cbam') ? 'Guide de la CBAM' : 'CBAM Guide'}</a></li>
-          <li><a href={labels.qualityUrl}>Quality & Compliance</a></li>
-          <li><a href={labels.logisticsUrl}>Logistics & Shipping</a></li>
-          <li><a href={labels.faqUrl}>FAQ</a></li>
-          <li><a href={labels.blogUrl}>Industry Insights (Blog)</a></li>
+          <li><a href={labels.qualityUrl}>{labels.qualityLabel}</a></li>
+          <li><a href={labels.logisticsUrl}>{labels.logisticsLabel}</a></li>
+          <li><a href={labels.faqUrl}>{labels.faqLabel}</a></li>
+          <li><a href={labels.blogUrl}>{labels.blogLabel}</a></li>
         </ul>
       </div>
 
