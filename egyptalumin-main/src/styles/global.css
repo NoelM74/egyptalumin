@@ -1222,7 +1222,7 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
   height: 100%;
 }
 
-.product-body {
+.product-card-body {
   padding: 2rem;
   flex-grow: 1;
   display: flex;
@@ -1258,13 +1258,15 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
 }
 
 .product-specs span {
-  background: var(--silver-soft);
+  background: var(--surface);
   border: 1px solid var(--border);
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--navy-light);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--navy);
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
+  font-variant-numeric: tabular-nums;
 }
 
 .product-desc {
