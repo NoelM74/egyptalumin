@@ -11,7 +11,7 @@ const t = {
     productsHeader: "Products",
     companyHeader: "Company",
     resourcesHeader: "Resources",
-    rights: "© 2026 Egypt Alumin. All rights reserved.",
+    rights: "© 2026 Tech Aluminum. All rights reserved.",
     privacy: "Privacy Policy",
     cookies: "Cookie Policy",
     catalogue: "Full Catalogue (PDF)",
@@ -41,7 +41,7 @@ const t = {
     productsHeader: "Produkte",
     companyHeader: "Unternehmen",
     resourcesHeader: "Ressourcen",
-    rights: "© 2026 Egypt Alumin. Alle Rechte vorbehalten.",
+    rights: "© 2026 Tech Aluminum. Alle Rechte vorbehalten.",
     privacy: "Datenschutzerklärung",
     cookies: "Cookie-Richtlinie",
     catalogue: "Gesamtkatalog (PDF)",
@@ -70,7 +70,7 @@ const t = {
     productsHeader: "Produits",
     companyHeader: "Entreprise",
     resourcesHeader: "Ressources",
-    rights: "© 2026 Egypt Alumin. Tous droits réservés.",
+    rights: "© 2026 Tech Aluminum. Tous droits réservés.",
     privacy: "Politique de Confidentialité",
     cookies: "Politique relative aux cookies",
     catalogue: "Catalogue Complet (PDF)",
@@ -99,7 +99,7 @@ const t = {
     productsHeader: "Prodotti",
     companyHeader: "Azienda",
     resourcesHeader: "Risorse",
-    rights: "© 2026 Egypt Alumin. Tutti i diritti riservati.",
+    rights: "© 2026 Tech Aluminum. Tutti i diritti riservati.",
     privacy: "Informativa sulla Privacy",
     cookies: "Cookie Policy",
     catalogue: "Catalogo Completo (PDF)",
@@ -133,9 +133,8 @@ const labels = t[lang] || t.en;
     <div class="footer-grid">
 
       <div class="footer-brand">
-        <a href={lang === 'en' ? '/en/' : `/${lang}/`} class="brand" style="color:#fff">
-          <span class="brand-mark" aria-hidden="true">EA</span>
-          <span class="brand-name">Egypt Alumin</span>
+        <a href={lang === 'en' ? '/en/' : `/${lang}/`} class="brand" aria-label="Tech Aluminum" style="color:#fff">
+          <img src="/images/branding/brand-logo-white-01.webp" alt="Tech Aluminum" width="220" height="88" style="height:44px;width:auto;display:block" />
         </a>
         <p>{labels.description}</p>
         <div class="footer-cert">
@@ -158,7 +157,7 @@ const labels = t[lang] || t.en;
       <div class="footer-col">
         <h4>{labels.companyHeader}</h4>
         <ul>
-          <li><a href={labels.aboutUrl}>{lang === 'de' ? 'Über Egypt Alumin' : lang === 'fr' ? "À propos d'Egypt Alumin" : lang === 'it' ? 'Chi siamo' : 'About Egypt Alumin'}</a></li>
+          <li><a href={labels.aboutUrl}>{lang === 'de' ? 'Über Tech Aluminum' : lang === 'fr' ? "À propos de Tech Aluminum" : lang === 'it' ? 'Chi siamo' : 'About Tech Aluminum'}</a></li>
           <li><a href={labels.facilityUrl}>Our Facility</a></li>
           <li><a href={labels.noelUrl}>Noel Murphy</a></li>
           <li><a href={labels.sustainabilityUrl}>Sustainability</a></li>

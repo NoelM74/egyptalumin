@@ -1,4 +1,4 @@
-# Egypt Alumin — DESIGN.md
+# Tech Aluminum — DESIGN.md
 
 ## 1. Visual Theme & Atmosphere
 

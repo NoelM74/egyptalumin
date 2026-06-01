@@ -1,5 +1,5 @@
 /* =========================================================
-   Egypt Alumin — Global Stylesheet
+   Tech Aluminum — Global Stylesheet
    Shared across all pages, all languages
    Maps directly to src/styles/global.css in Astro project
    ========================================================= */
@@ -71,8 +71,7 @@ section{padding:3.5rem 0}
 .nav-phone{display:none;font-size:.88rem;color:var(--ink-soft);font-weight:600}
 .nav-phone a{color:var(--navy)}
 .menu-toggle{background:transparent;border:none;cursor:pointer;width:42px;height:42px;display:grid;place-items:center;color:var(--navy)}
-@media (min-width:768px){.lang-switch,.nav-phone{display:inline-flex}.menu-toggle{display:none}}
-@media (min-width:1024px){.nav-links{display:flex}}
+@media (min-width:1024px){.nav-links{display:flex}.menu-toggle{display:none}}
 
 /* ----------- Breadcrumbs ----------- */
 .breadcrumb{
@@ -457,7 +456,7 @@ section{padding:3.5rem 0}
 @media (prefers-reduced-motion: reduce){*{animation-duration:0s!important;transition-duration:0s!important}}
 
 /* =========================================================
-   Egypt Alumin — Blog & Article Premium Styles
+   Tech Aluminum — Blog & Article Premium Styles
    ========================================================= */
 .blog-hero {
   background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
@@ -794,7 +793,7 @@ section{padding:3.5rem 0}
 }
 
 /* =========================================================
-   Egypt Alumin — Home & Main Page Layout Grids (Premium additions)
+   Tech Aluminum — Home & Main Page Layout Grids (Premium additions)
    ========================================================= */
 
 /* Constrain SVG icons inside components so they are never huge */
@@ -859,7 +858,7 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
 .hero-title {
   color: var(--white);
   margin-bottom: 1.5rem;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   letter-spacing: -0.02em;
 }
 
@@ -992,7 +991,7 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
 .flag-ie span:nth-child(3) { background: #FF883E; }
 
 .noel-content h2 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   letter-spacing: -0.015em;
   margin-bottom: 1rem;
 }
@@ -1116,7 +1115,7 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
   justify-content: center;
   align-items: center;
   gap: 0.75rem 1.25rem;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
   font-size: 1.15rem;
   color: var(--navy);
@@ -1154,7 +1153,7 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
 }
 
 .metric-num {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
   color: var(--navy);
@@ -1193,7 +1192,7 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
 }
 
 .section-head h2 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   letter-spacing: -0.015em;
   margin-bottom: 1.25rem;
 }
@@ -1244,7 +1243,7 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
 }
 
 .product-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.35rem;
   margin-bottom: 0.85rem;
   line-height: 1.3;
@@ -1357,7 +1356,7 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
 }
 
 .pillar h3 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.15rem;
   margin-bottom: 0.75rem;
   color: var(--navy);
@@ -1444,7 +1443,7 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
 }
 
 .industry-name {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -1497,7 +1496,7 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
 }
 
 .cbam-inner h2 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   letter-spacing: -0.015em;
   color: var(--white);
   margin-bottom: 1.25rem;
@@ -1523,7 +1522,7 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
 }
 
 .cbam-stat strong {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 2rem;
   font-weight: 800;
   color: var(--amber);
