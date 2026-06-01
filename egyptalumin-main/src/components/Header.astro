@@ -99,12 +99,16 @@ const pathname = Astro.url.pathname;
       <li><a href={labels.cbamUrl} class={pathname.includes('cbam') ? 'active' : ''}>{labels.cbam}</a></li>
       <li><a href={labels.aboutUrl} class={pathname.includes('/about/') || pathname.includes('/ueber-uns/') || pathname.includes('/a-propos/') || pathname.includes('/chi-siamo/') ? 'active' : ''}>{labels.about}</a></li>
       <li><a href={labels.contactUrl} class={pathname.includes('/contact/') || pathname.includes('/kontakt/') || pathname.includes('/contatti/') ? 'active' : ''}>{labels.contact}</a></li>
+      <li style="margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 1.5rem;">
+        <a href={labels.contactUrl} class="btn btn-primary" style="width: 100%; justify-content: center; text-align: center; display: inline-flex;">{labels.rfq}</a>
+      </li>
     </ul>
 
     <div class="nav-cta">
       <div class="lang-switch-dropdown" aria-label="Language">
-        <button class="lang-btn" aria-haspopup="listbox" aria-expanded="false">
-          🌐 {lang.toUpperCase()} <span class="chevron">▼</span>
+        <button class="lang-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Change language">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          {lang.toUpperCase()} <span class="chevron">▼</span>
         </button>
         <ul class="lang-dropdown" role="listbox">
           <li><a href="/en/" class={lang === 'en' ? 'active' : ''}>English (EN)</a></li>
@@ -114,13 +118,7 @@ const pathname = Astro.url.pathname;
         </ul>
       </div>
 
-      <span class="nav-phone" aria-label="Direct sales line">
-        <a href="tel:+353871187806">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--teal);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.31 1.78.57 2.62a2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6 6l1.46-1.23a2 2 0 0 1 2.11-.45c.84.26 1.72.45 2.62.57A2 2 0 0 1 22 16.92z"/></svg>
-          +353 87 118 7806
-        </a>
-      </span>
-      <a href={labels.contactUrl} class="btn btn-primary nav-rfq-btn">{labels.rfq}</a>
+<a href={labels.contactUrl} class="btn btn-primary nav-rfq-btn">{labels.rfq}</a>
       <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
           <line x1="3" y1="6" x2="21" y2="6" class="line-1"/>
@@ -172,22 +170,23 @@ const pathname = Astro.url.pathname;
     display: inline-block;
   }
   .lang-btn {
-    background: var(--silver-soft);
+    background: transparent;
     border: 1px solid var(--border);
-    color: var(--navy);
-    font-size: 0.85rem;
+    color: var(--ink-soft);
+    font-size: 0.82rem;
     font-weight: 600;
-    padding: 0.45rem 0.75rem;
+    padding: 0.4rem 0.65rem;
     border-radius: 6px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 0.35rem;
-    transition: all 0.2s ease;
+    gap: 0.3rem;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
   .lang-btn:hover {
-    background: var(--white);
     border-color: var(--teal);
+    color: var(--teal);
   }
   .lang-btn .chevron {
     font-size: 0.6rem;
@@ -267,9 +266,6 @@ const pathname = Astro.url.pathname;
       width: 100%;
       display: block;
       padding: 0.5rem 0;
-    }
-    .nav-rfq-btn {
-      display: none; /* Show only on desktop, use mobile menu links for mobile */
     }
   }
 
