@@ -1591,3 +1591,18 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
 .product-body, .product-content, .product-aside, .cbam-inner > *{ min-width: 0; }
 .product-content :where(p,li,h1,h2,h3){ overflow-wrap:anywhere; }
 .quick-stat strong{ overflow-wrap:anywhere; }
+
+/* ===== Mobile padding + readability + responsive tables ===== */
+@media (max-width: 900px){
+  /* the navy .cbam-inner panel + inner cards stacked too much padding on phones */
+  .cbam-inner{ padding: 1.25rem !important; gap: 1.5rem !important; }
+}
+/* Quotes/labels sitting directly on the navy .cbam-inner panel must be light */
+.cbam-inner blockquote{ color: rgba(255,255,255,.92) !important; border-left-color: var(--gold) !important; }
+.cbam-inner blockquote cite{ color: var(--gold-light) !important; }
+/* Wide spec tables: scroll horizontally on small screens instead of forcing
+   the whole page wider than the viewport */
+@media (max-width: 760px){
+  .spec-table{ display:block; overflow-x:auto; -webkit-overflow-scrolling:touch; white-space:nowrap; }
+  .spec-table caption{ white-space:normal; }
+}
