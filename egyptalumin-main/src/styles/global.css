@@ -1574,3 +1574,20 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
 .app-item:has(h3){ display:block; border-left:0; }
 .app-item:has(h3) h3{ color:var(--navy); }
 .app-item:has(h3) p{ margin:0; }
+
+/* ===== Mobile two-column collapse (inline grid-template-columns overrode the
+   responsive defaults, leaving cramped/cut layouts on phones) ===== */
+@media (max-width: 900px){
+  /* .cbam-inner panels (contact form, quality lab, sustainability, logistics)
+     carry inline 2-col templates — force a single column on small screens. */
+  .cbam-inner{ grid-template-columns: 1fr !important; gap: 2rem !important; }
+  /* product detail / cbam-guide hero two-up */
+  .product-hero-grid{ grid-template-columns: 1fr !important; }
+}
+/* Stacked form field rows on small screens */
+.form-row{ display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+@media (max-width: 560px){ .form-row{ grid-template-columns:1fr; } }
+/* Prevent grid/flex children from overflowing the viewport (long tokens etc.) */
+.product-body, .product-content, .product-aside, .cbam-inner > *{ min-width: 0; }
+.product-content :where(p,li,h1,h2,h3){ overflow-wrap:anywhere; }
+.quick-stat strong{ overflow-wrap:anywhere; }
