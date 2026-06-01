@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ============================================================
+       English pages
+       ============================================================ -->
+
+  <url>
+    <loc>https://techaluminum.com/en/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/" />
+  </url>
+
+  <url>
+    <loc>https://techaluminum.com/en/products/a7-primary-aluminium-ingot/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/products/a7-primary-aluminium-ingot/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/produkte/a7-primaer-aluminiummassel/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/products/a7-primary-aluminium-ingot/" />
+  </url>
+
+  <url>
+    <loc>https://techaluminum.com/en/products/adc12-die-casting-alloy/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/products/adc12-die-casting-alloy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/produkte/adc12-druckguss-legierung/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/products/adc12-die-casting-alloy/" />
+  </url>
+
+  <url>
+    <loc>https://techaluminum.com/en/products/aluminium-silicon-alloy-ingot/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/products/aluminium-silicon-alloy-ingot/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/produkte/aluminium-silizium-legierung/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/products/aluminium-silicon-alloy-ingot/" />
+  </url>
+
+  <url>
+    <loc>https://techaluminum.com/en/cbam-guide/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/cbam-guide/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/cbam-leitfaden/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/cbam-guide/" />
+  </url>
+
+  <!-- ============================================================
+       German pages
+       ============================================================ -->
+
+  <url>
+    <loc>https://techaluminum.com/de/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/" />
+  </url>
+
+  <url>
+    <loc>https://techaluminum.com/de/produkte/a7-primaer-aluminiummassel/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/products/a7-primary-aluminium-ingot/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/produkte/a7-primaer-aluminiummassel/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/products/a7-primary-aluminium-ingot/" />
+  </url>
+
+  <url>
+    <loc>https://techaluminum.com/de/produkte/adc12-druckguss-legierung/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/products/adc12-die-casting-alloy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/produkte/adc12-druckguss-legierung/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/products/adc12-die-casting-alloy/" />
+  </url>
+
+  <url>
+    <loc>https://techaluminum.com/de/produkte/aluminium-silizium-legierung/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/products/aluminium-silicon-alloy-ingot/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/produkte/aluminium-silizium-legierung/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/products/aluminium-silicon-alloy-ingot/" />
+  </url>
+
+  <url>
+    <loc>https://techaluminum.com/de/cbam-leitfaden/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/cbam-guide/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/cbam-leitfaden/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/cbam-guide/" />
+  </url>
+
+</urlset>

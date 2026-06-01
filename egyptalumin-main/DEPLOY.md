@@ -21,7 +21,7 @@ This site is designed for **Cloudflare Pages** (free tier, edge-deployed, sub-1s
 
 | Setting | Value |
 |---|---|
-| **Project name** | `egyptalumin` |
+| **Project name** | `tech-aluminum` |
 | **Production branch** | `main` |
 | **Build command** | *(leave blank — this is a static site)* |
 | **Build output directory** | `/` *(root of the repo)* |
@@ -34,7 +34,7 @@ Click **Save and Deploy**.
 Cloudflare will build and deploy in ~30 seconds. You'll get a temporary URL like:
 
 ```
-https://egyptalumin.pages.dev
+https://tech-aluminum.pages.dev
 ```
 
 Test it. Every push to `main` from now on will trigger an automatic redeploy.
@@ -42,9 +42,9 @@ Test it. Every push to `main` from now on will trigger an automatic redeploy.
 ### Step 4 — Custom domain
 
 1. In your Pages project → **Custom domains** → **Set up a custom domain**
-2. Enter `egyptalumin.com`
-3. Cloudflare will guide you through the DNS records. If your domain is already on Cloudflare, it's a one-click setup. Otherwise, you'll add a CNAME at your DNS provider pointing to `egyptalumin.pages.dev`
-4. Also add `www.egyptalumin.com` as a custom domain and set it to redirect to the apex
+2. Enter `techaluminum.com`
+3. Cloudflare will guide you through the DNS records. If your domain is already on Cloudflare, it's a one-click setup. Otherwise, you'll add a CNAME at your DNS provider pointing to `tech-aluminum.pages.dev`
+4. Also add `www.techaluminum.com` as a custom domain and set it to redirect to the apex
 
 ### Step 5 — Performance & analytics
 
@@ -56,7 +56,7 @@ In the Pages dashboard → **Settings**:
 
 ### Step 6 — Submit to search engines
 
-- **Google Search Console** (https://search.google.com/search-console) — add property, verify via TXT record, submit `https://egyptalumin.com/sitemap.xml`
+- **Google Search Console** (https://search.google.com/search-console) — add property, verify via TXT record, submit `https://techaluminum.com/sitemap.xml`
 - **Bing Webmaster Tools** (https://www.bing.com/webmasters) — same procedure
 - **Yandex Webmaster** (optional, for Russian-language reach) — same procedure
 
@@ -124,11 +124,11 @@ Branch-based previews work out of the box: push to any non-`main` branch and Clo
 
 - [ ] Custom domain has SSL enabled (Cloudflare does this automatically)
 - [ ] `Strict-Transport-Security` header in `_headers` is active (it is — HTTPS forced for 1 year)
-- [ ] Run https://securityheaders.com against `egyptalumin.com` — aim for grade A
+- [ ] Run https://securityheaders.com against `techaluminum.com` — aim for grade A
 - [ ] Run https://pagespeed.web.dev/ against the homepage — aim for 95+ on mobile
-- [ ] Verify `robots.txt` is reachable at `https://egyptalumin.com/robots.txt`
-- [ ] Verify `sitemap.xml` is reachable at `https://egyptalumin.com/sitemap.xml`
-- [ ] Verify `llms.txt` is reachable at `https://egyptalumin.com/llms.txt`
+- [ ] Verify `robots.txt` is reachable at `https://techaluminum.com/robots.txt`
+- [ ] Verify `sitemap.xml` is reachable at `https://techaluminum.com/sitemap.xml`
+- [ ] Verify `llms.txt` is reachable at `https://techaluminum.com/llms.txt`
 - [ ] Test all forms on a real device (mobile + desktop)
 - [ ] Test all `tel:` and `mailto:` links on iOS Safari and Android Chrome
 - [ ] Verify language switcher works correctly between `/en/` and `/de/`
@@ -158,7 +158,7 @@ Month 2+:
 ## ❓ Troubleshooting
 
 **"My custom domain shows a Cloudflare error page"**
-DNS propagation can take up to 24 hours. Use https://dnschecker.org to verify the CNAME is pointing to `egyptalumin.pages.dev`.
+DNS propagation can take up to 24 hours. Use https://dnschecker.org to verify the CNAME is pointing to `tech-aluminum.pages.dev`.
 
 **"The German page shows English content"**
 Clear Cloudflare cache: Dashboard → your site → Caching → Configuration → Purge Everything.
@@ -178,5 +178,5 @@ Test individual pages at https://validator.schema.org/ — Google can take 2–4
 
 ## 🆘 Help
 
-For deployment issues: noel@egyptalumin.com
+For deployment issues: noel@techaluminum.com
 For Cloudflare-specific issues: https://developers.cloudflare.com/pages/

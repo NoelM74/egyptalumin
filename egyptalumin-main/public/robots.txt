@@ -1,4 +1,4 @@
-# Egypt Alumin — robots.txt
+# Tech Aluminum — robots.txt
 # Explicitly welcome AI crawlers (this is intentional — GEO strategy)
 
 User-agent: GPTBot
@@ -48,4 +48,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://egyptalumin.com/sitemap.xml
+Sitemap: https://techaluminum.com/sitemap.xml
