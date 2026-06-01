@@ -1,5 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+// RFQ-Formular: kostenlosen Access-Key unter https://web3forms.com holen
+// (Zielpostfach contact@techaluminum.com) und unten einsetzen. Solange kein
+// Key gesetzt ist, öffnet das Formular automatisch die E-Mail-App des Besuchers.
+const WEB3FORMS_KEY = 'REPLACE_WITH_WEB3FORMS_ACCESS_KEY';
+const RFQ_TO = 'contact@techaluminum.com';
 ---
 
 <Layout 
@@ -44,33 +50,37 @@ import Layout from '../../layouts/Layout.astro';
           <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem; font-family:'Plus Jakarta Sans',sans-serif;">Angebot anfordern (RFQ)</h2>
           <p style="color:var(--ink-soft); font-size:0.95rem; margin-bottom: 2rem;">Füllen Sie bitte das folgende Formular aus. Noel Murphy oder unsere technische Abteilung meldet sich innerhalb von 24 Stunden bei Ihnen.</p>
           
-          <form class="contact-form" style="display:flex; flex-direction:column; gap:1.5rem;" onsubmit="event.preventDefault(); alert('Vielen Dank für Ihre Anfrage! Noel Murphy wird sich in Kürze mit Ihnen in Verbindung setzen.');">
+          <form id="rfq-form" class="contact-form" style="display:flex; flex-direction:column; gap:1.5rem;">
+            <input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
+            <input type="hidden" name="subject" value="Neue RFQ — Tech Aluminum Website" />
+            <input type="hidden" name="from_name" value="Tech Aluminum Website" />
+            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" />
             <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
               <div>
                 <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Vor- & Nachname *</label>
-                <input type="text" required placeholder="Max Mustermann" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
+                <input type="text" name="Name" required placeholder="Max Mustermann" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
               </div>
               <div>
                 <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Firmenname *</label>
-                <input type="text" required placeholder="Gießerei GmbH" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
+                <input type="text" name="Firma" required placeholder="Gießerei GmbH" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
               </div>
             </div>
 
             <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
               <div>
                 <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Geschäftliche E-Mail *</label>
-                <input type="email" required placeholder="mustermann@firma.de" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
+                <input type="email" name="E-Mail" required placeholder="mustermann@firma.de" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
               </div>
               <div>
-                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Direkte Telefonnummer *</label>
-                <input type="tel" required placeholder="+49 170 1234567" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">WhatsApp / Telefon</label>
+                <input type="text" name="WhatsApp oder Telefon" placeholder="+49 170 1234567" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
               </div>
             </div>
 
             <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
               <div>
                 <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Produktkategorie</label>
-                <select style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit; background:white;">
+                <select name="Produktkategorie" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit; background:white;">
                   <option>Primär-Aluminiummassel (A7 / Al99.7)</option>
                   <option>Druckgusslegierung (ADC12 / EN AC-46000)</option>
                   <option>Aluminium-Silizium-Legierung (AlSi7Mg / AlSi11 / Andere)</option>
@@ -79,16 +89,17 @@ import Layout from '../../layouts/Layout.astro';
               </div>
               <div>
                 <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Geschätzter Monatsbedarf (Tonnen)</label>
-                <input type="text" placeholder="z. B. 50 Tonnen" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
+                <input type="text" name="Monatsbedarf" placeholder="z. B. 50 Tonnen" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
               </div>
             </div>
 
             <div>
               <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Spezifische Anforderungen / Nachricht</label>
-              <textarea placeholder="Bitte beschreiben Sie gewünschte Toleranzfenster, Verpackungsbündelungen oder Wünsche für Testlieferungen..." style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit; min-height:120px; resize:vertical;"></textarea>
+              <textarea name="Nachricht" placeholder="Bitte beschreiben Sie gewünschte Toleranzfenster, Verpackungsbündelungen oder Wünsche für Testlieferungen..." style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit; min-height:120px; resize:vertical;"></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary" style="width:fit-content; cursor:pointer; font-size:1rem; padding: 0.85rem 2rem;">RFQ absenden</button>
+            <div id="rfq-status" role="status" aria-live="polite" style="font-size:0.9rem; font-weight:600;"></div>
           </form>
         </div>
 
@@ -107,11 +118,11 @@ import Layout from '../../layouts/Layout.astro';
             <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.75rem; font-size:0.9rem; text-align:left;">
               <li style="display:flex; gap:0.5rem;">
                 <span>📞</span>
-                <a href="https://wa.me/353871187806" style="color:var(--navy); font-weight:600;">+353 87 118 7806</a>
+                <a href="https://wa.me/353871187806" style="color:var(--navy); font-weight:600;">WhatsApp</a>
               </li>
               <li style="display:flex; gap:0.5rem;">
                 <span>✉️</span>
-                <a href="mailto:noel@egyptalumin.com" style="color:var(--navy); font-weight:600;">noel@egyptalumin.com</a>
+                <a href="mailto:noel@techaluminum.com" style="color:var(--navy); font-weight:600;">noel@techaluminum.com</a>
               </li>
               <li style="display:flex; gap:0.5rem;">
                 <span>💬</span>
@@ -135,4 +146,39 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+  <script define:vars={{ RFQ_TO }}>
+    const form = document.getElementById('rfq-form');
+    const statusEl = document.getElementById('rfq-status');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        if (data.get('botcheck')) return;
+        const key = data.get('access_key');
+        statusEl.style.color = 'var(--ink-soft)';
+        statusEl.textContent = 'Wird gesendet…';
+        if (key && key !== 'REPLACE_WITH_WEB3FORMS_ACCESS_KEY') {
+          try {
+            const res = await fetch('https://api.web3forms.com/submit', {
+              method: 'POST', headers: { Accept: 'application/json' }, body: data
+            });
+            const out = await res.json();
+            if (out.success) {
+              form.reset();
+              statusEl.style.color = 'var(--teal)';
+              statusEl.textContent = 'Vielen Dank — Ihre Anfrage wurde gesendet. Noel meldet sich innerhalb eines Werktages.';
+              return;
+            }
+          } catch (err) { /* Fallback: mailto */ }
+        }
+        const skip = ['access_key', 'subject', 'from_name', 'botcheck'];
+        const lines = [];
+        for (const [k, v] of data.entries()) { if (!skip.includes(k) && v) lines.push(k + ': ' + v); }
+        window.location.href = 'mailto:' + RFQ_TO + '?subject=' + encodeURIComponent('Neue RFQ — Tech Aluminum Website') + '&body=' + encodeURIComponent(lines.join('\n'));
+        statusEl.style.color = 'var(--ink-soft)';
+        statusEl.textContent = 'Ihre E-Mail-App wird geöffnet, um die Anfrage an ' + RFQ_TO + ' zu senden…';
+      });
+    }
+  </script>
 </Layout>
