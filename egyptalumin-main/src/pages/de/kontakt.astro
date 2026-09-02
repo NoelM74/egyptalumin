@@ -48,12 +48,18 @@ const RFQ_TO = 'contact@techaluminum.com';
         <!-- Contact Form Card -->
         <div style="background: var(--silver-soft); border: 1px solid var(--border); padding: clamp(1.25rem, 5vw, 3rem); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
           <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem; font-family:'Plus Jakarta Sans',sans-serif;">Angebot anfordern (RFQ)</h2>
-          <p style="color:var(--ink-soft); font-size:0.95rem; margin-bottom: 2rem;">Füllen Sie bitte das folgende Formular aus. Noel Murphy oder unsere technische Abteilung meldet sich innerhalb von 24 Stunden bei Ihnen.</p>
-          
+          <p style="color:var(--ink-soft); font-size:0.95rem; margin-bottom: 1.25rem;">Füllen Sie bitte das folgende Formular aus. Noel Murphy oder unsere technische Abteilung meldet sich innerhalb von 24 Stunden bei Ihnen.</p>
+
+          <div id="rfq-product-note" hidden style="display:flex; align-items:center; gap:0.6rem; background:rgba(0,105,77,0.08); border-left:3px solid var(--teal); border-radius:6px; padding:0.8rem 1rem; margin-bottom:1.5rem; font-size:0.9rem; font-weight:600; color:var(--navy);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0; color:var(--teal);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span id="rfq-product-note-text"></span>
+          </div>
+
           <form id="rfq-form" class="contact-form" style="display:flex; flex-direction:column; gap:1.5rem;">
             <input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
             <input type="hidden" name="subject" value="Neue RFQ — Tech Aluminum Website" />
             <input type="hidden" name="from_name" value="Tech Aluminum Website" />
+            <input type="hidden" name="Anfragequelle" id="rfq-source" value="Direkt" />
             <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" />
             <div class="form-row">
               <div>
@@ -79,12 +85,12 @@ const RFQ_TO = 'contact@techaluminum.com';
 
             <div class="form-row">
               <div>
-                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Produktkategorie</label>
-                <select name="Produktkategorie" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit; background:white;">
-                  <option>Primär-Aluminiummassel (A7 / Al99.7)</option>
-                  <option>Druckgusslegierung (ADC12 / EN AC-46000)</option>
-                  <option>Aluminium-Silizium-Legierung (AlSi7Mg / AlSi11 / Andere)</option>
-                  <option>Andere Spezifikation / Kundenspezifische Schmelze</option>
+                <label for="product-interest" style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Produktkategorie</label>
+                <select id="product-interest" name="Produktkategorie" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit; background:white;">
+                  <option data-product="ADC12">Druckgusslegierung (ADC12 / EN AC-46000)</option>
+                  <option data-product="AL-Si">Aluminium-Silizium-Legierung (AlSi7Mg / AlSi11 / Andere)</option>
+                  <option data-product="A7">Primär-Aluminiummassel (A7 / Al99.7)</option>
+                  <option data-product="Other">Andere Spezifikation / Kundenspezifische Schmelze</option>
                 </select>
               </div>
               <div>
@@ -150,6 +156,33 @@ const RFQ_TO = 'contact@techaluminum.com';
   <script define:vars={{ RFQ_TO }}>
     const form = document.getElementById('rfq-form');
     const statusEl = document.getElementById('rfq-status');
+
+    // Produkt vorauswählen, mit dem der Besucher angekommen ist (?product=ADC12)
+    const params = new URLSearchParams(window.location.search);
+    const requested = params.get('product');
+    const select = document.getElementById('product-interest');
+    const note = document.getElementById('rfq-product-note');
+    const noteText = document.getElementById('rfq-product-note-text');
+    if (requested && select) {
+      const match = Array.from(select.options).find(
+        (o) => (o.dataset.product || '').toLowerCase() === requested.trim().toLowerCase()
+      );
+      if (match) {
+        select.value = match.value;
+        noteText.textContent = 'Angefragt: ' + match.textContent.trim();
+        note.hidden = false;
+      }
+    }
+
+    // Herkunft der Anfrage erfassen, damit RFQs einer Seite zugeordnet werden können
+    const sourceEl = document.getElementById('rfq-source');
+    if (sourceEl) {
+      const parts = [];
+      if (requested) parts.push('product=' + requested);
+      parts.push(document.referrer ? 'von ' + document.referrer : 'kein Referrer');
+      sourceEl.value = parts.join(' · ');
+    }
+
     if (form) {
       form.addEventListener('submit', async (e) => {
         e.preventDefault();

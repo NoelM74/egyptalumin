@@ -1615,3 +1615,49 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
   .metric-num{ font-size: clamp(1.35rem, 5.2vw, 2rem); }
   .metric-num .unit{ font-size: 0.55em; }
 }
+
+/* ── A7 allocation notice + ADC12 cross-sell ─────────────────────
+   Shown while A7 production is fully committed. Routes buyers whose
+   spec allows AlSi9Cu3(Fe) toward ADC12 instead of a dead end. */
+.allocation-notice{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 260px;
+  gap:2rem;
+  align-items:center;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-left:4px solid var(--gold);
+  border-radius:var(--radius-lg);
+  padding:2rem;
+}
+.allocation-notice-cta{
+  display:flex;
+  flex-direction:column;
+  gap:0.75rem;
+}
+@media (max-width:820px){
+  .allocation-notice{
+    grid-template-columns:1fr;
+    gap:1.5rem;
+    padding:1.5rem;
+  }
+}
+
+/* ── Product availability badges ─────────────────────────────────
+   Signals A7 allocation status vs ADC12 availability on cards. */
+.product-img-wrapper{ position: relative; }
+.product-avail{
+  position:absolute;
+  top:0.75rem;
+  right:0.75rem;
+  z-index:3;
+  font-size:0.68rem;
+  font-weight:700;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  padding:0.32rem 0.6rem;
+  border-radius:4px;
+  line-height:1;
+}
+.product-avail.available{ background:var(--teal); color:#fff; }
+.product-avail.allocated{ background:rgba(25,40,67,0.9); color:rgba(255,255,255,0.92); }

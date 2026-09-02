@@ -46,7 +46,7 @@ import Layout from '../../../layouts/Layout.astro';
     ],
     "offers": {
       "@type":"Offer",
-      "availability":"https://schema.org/InStock",
+      "availability":"https://schema.org/LimitedAvailability",
       "priceCurrency":"EUR",
       "price":"0.00",
       "priceValidUntil":"2026-12-31",
@@ -152,10 +152,40 @@ import Layout from '../../../layouts/Layout.astro';
         <div class="quick-stat"><strong>25 kg</strong><span>Standard-Masselgewicht</span></div>
         <div class="quick-stat"><strong>≥ 99,7 %</strong><span>Aluminium-Reinheit</span></div>
         <div class="quick-stat"><strong>20 t</strong><span>Mindestbestellmenge</span></div>
-        <div class="quick-stat"><strong>10–30 Tage</strong><span>Lieferzeit zu EU-Häfen</span></div>
+        <div class="quick-stat"><strong>Ausgelastet</strong><span>Aktuelle Produktion vollständig vergeben</span></div>
       </div>
     </div>
   </aside>
+
+  <!-- ============================================================
+       KONTINGENT-HINWEIS + ADC12 CROSS-SELL
+       TODO: Sobald das nächste A7-Kontingent feststeht, das Quartal
+       im Absatz unten konkret benennen ("ab Q1 2027").
+       ============================================================ -->
+  <section style="padding: 2.5rem 0 0 0;">
+    <div class="container">
+      <div class="allocation-notice">
+        <div class="allocation-notice-main">
+          <span class="eyebrow" style="color:var(--gold);">Liefersituation</span>
+          <h2 style="font-size:1.5rem; margin:0.4rem 0 0.75rem 0; font-family:'Plus Jakarta Sans',sans-serif; color:var(--navy);">A7-Produktion ist vollständig vergeben</h2>
+          <p style="margin:0 0 1rem 0; color:var(--ink-soft); font-size:0.95rem;">
+            Unsere gesamte aktuelle A7-Produktion ist durch bestehende Verträge gebunden. Wir nehmen
+            Reservierungen für das nächste Kontingent entgegen. Noel nennt Ihnen Ihre Position in der
+            Warteliste, bevor Sie sich festlegen.
+          </p>
+          <p style="margin:0; color:var(--ink-soft); font-size:0.95rem;">
+            <strong style="color:var(--navy);">Lässt Ihre Spezifikation eine AlSi9Cu3(Fe)-Legierung zu, ist ADC12 sofort verfügbar</strong>
+            mit 10 bis 30 Tagen Lieferzeit nach Rotterdam, Hamburg und Genua. Gleiche EN-Zertifizierung,
+            gleiche CBAM-Emissionsdokumentation, keine Warteliste.
+          </p>
+        </div>
+        <div class="allocation-notice-cta">
+          <a href="/de/produkte/adc12-druckguss-legierung/" class="btn btn-primary" style="width:100%; justify-content:center; text-align:center;">ADC12-Spezifikationen ansehen</a>
+          <a href="/de/kontakt/?product=A7" class="btn btn-ghost" style="width:100%; justify-content:center; text-align:center;">A7-Kontingent reservieren</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section style="padding-top:4rem">
     <div class="container">
