@@ -1,7 +1,64 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 ---
-<Layout title="Aluminium Ingots for Automotive Manufacturing | Tech Aluminum" lang="en">
+<Layout
+  title="ADC12 Die-Casting Alloy for Automotive Manufacturing | Tech Aluminum"
+  description="ADC12 (EN AC-46000 / AlSi9Cu3(Fe)) die-casting alloy for European automotive foundries. Transmission housings, EV battery trays, motor housings. EN and JIS certified on one MTC, CBAM-documented, 10 to 30 day lead times to EU ports."
+  lang="en"
+>
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://techaluminum.com/en/"},
+      {"@type":"ListItem","position":2,"name":"Industries","item":"https://techaluminum.com/en/industries/"},
+      {"@type":"ListItem","position":3,"name":"Automotive","item":"https://techaluminum.com/en/industries/automotive/"}
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type":"Question",
+        "name":"Which aluminium alloy should I use for EV battery enclosures?",
+        "acceptedAnswer":{"@type":"Answer","text":"It depends on whether the enclosure carries structural load. Non-structural trays, covers and housings are routinely cast in ADC12 (EN AC-46000), which fills large thin-walled sections reliably at high volume. Enclosures that form part of the crash structure need far higher ductility than ADC12 provides, and are normally cast in a low-iron AlSi10MnMg or AlSi7Mg alloy. Tell us which case applies and we will quote the correct alloy rather than the convenient one."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can ADC12 be used for structural or crash-relevant castings?",
+        "acceptedAnswer":{"@type":"Answer","text":"Generally no. ADC12 contains 1.5 to 3.5% copper and up to 1.3% iron, which give it strength, machinability and excellent die-casting behaviour, but leave elongation typically in the 1 to 3% range. Structural and crash-relevant castings need 8 to 12% elongation and the ability to be riveted or welded into a body-in-white. Those parts call for a low-iron AlSi10MnMg type alloy. ADC12 remains the right choice for housings, covers and enclosures that are not load-bearing."}
+      },
+      {
+        "@type":"Question",
+        "name":"What iron content do you supply for high-pressure die casting?",
+        "acceptedAnswer":{"@type":"Answer","text":"Our standard ADC12 runs iron in the 0.8 to 1.1% band. That is deliberate. Below roughly 0.7% iron, aluminium tends to solder to steel dies in high-pressure die casting, shortening die life and causing surface defects. Above about 1.2%, brittle beta-AlFeSi platelets form and reduce ductility. If your process window needs a different iron target, specify it on the enquiry and we will cast to it."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can you certify ADC12 to A383 limits for a North American customer?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. ADC12 overlaps most closely with ASTM A383, which carries tighter iron and zinc limits than the base EN AC-46000 specification. If your downstream customer requires A383 compliance, note it on your enquiry and we will tighten the heat composition and certify accordingly on the material test certificate, at no additional cost on standard-tonnage orders."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do you provide CBAM emissions data for automotive castings entering the EU?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. Every shipment carries verified embedded-emissions data covering direct and indirect emissions per tonne of finished ingot, calculated to the EU CBAM methodology and verified by an accredited third party. Egypt's hydroelectric base at Aswan typically produces lower embedded emissions than aluminium from coal-grid jurisdictions, which means fewer CBAM certificates against your import."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can we run a trial melt before switching supplier?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes, and we expect it. First-time European buyers can order 5 to 10 tonnes for qualification testing rather than a full 20 tonne container. Most foundries run the trial alongside their incumbent supply for one or two production weeks, checking die fill, soldering behaviour and machined surface finish before committing to a contract volume."}
+      }
+    ]
+  }
+  </script>
+
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container"><ol>
       <li><a href="/en/">Home</a></li>
@@ -10,41 +67,286 @@ import Layout from '../../../layouts/Layout.astro';
     </ol></div>
   </nav>
 
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
   <section class="product-hero">
     <div class="container">
-      <div class="product-hero-grid" style="grid-template-columns:1fr;">
-        <div style="max-width:800px;">
-          <span class="eyebrow on-dark">Industry Application</span>
-          <h1>Aluminium for Automotive Manufacturing</h1>
-          <p class="product-hero-lead">ADC12 and AL-Si alloys for engine blocks, wheel hubs, EV battery housings and structural body components. EN-standard compliant, CBAM-documented.</p>
+      <div class="product-hero-grid">
+        <div>
+          <span class="eyebrow on-dark">Industry Application · High-Pressure Die Casting</span>
+          <span class="product-h1-sub">EN AC-46000 · AlSi9Cu3(Fe) · JIS H 5302</span>
+          <h1>ADC12 for automotive die casting</h1>
+          <p class="product-hero-lead">
+            The working alloy for transmission housings, motor and inverter housings, oil pans
+            and EV battery trays. Certified to EN and JIS on a single material test certificate,
+            with CBAM emissions documentation on every shipment.
+          </p>
+          <div class="product-hero-badges">
+            <span><i class="dot"></i> 20 kg ingot</span>
+            <span><i class="dot"></i> Si 9.6–12%</span>
+            <span><i class="dot"></i> Fe 0.8–1.1% for HPDC</span>
+            <span><i class="dot"></i> 10–30 days to EU ports</span>
+            <span><i class="dot"></i> CBAM-documented</span>
+          </div>
           <div class="product-hero-ctas">
-            <a href="/en/contact/" class="btn btn-primary">Request Specifications</a>
-            <a href="/en/products/" class="btn btn-secondary">View All Products</a>
+            <a href="/en/contact/?product=ADC12" class="btn btn-primary">
+              Request an ADC12 quote
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="/en/products/adc12-die-casting-alloy/" class="btn btn-secondary">Full specifications</a>
+          </div>
+        </div>
+        <div class="product-image" aria-hidden="true">
+          <div class="product-img-container-inner">
+            <img src="/images/applications/4.1-aluminium-die-casting-automotive-engine-block-manufacturing.webp" alt="Automotive aluminium die casting production" class="product-img-modern" />
+            <div class="product-image-overlay-layer"></div>
+            <div class="product-image-inner-text">
+              <strong>ADC12 · EN AC-46000</strong>
+              <span>High-pressure die casting</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section style="padding:5rem 0;background:var(--warm-white);">
+  <aside class="quick-stats" aria-label="Quick facts">
+    <div class="container">
+      <div class="quick-stats-grid">
+        <div class="quick-stat"><strong>20 kg</strong><span>Standard ingot weight</span></div>
+        <div class="quick-stat"><strong>1–3%</strong><span>Typical elongation, as cast</span></div>
+        <div class="quick-stat"><strong>20 t</strong><span>Minimum order quantity</span></div>
+        <div class="quick-stat"><strong>5–10 t</strong><span>Qualification trial volume</span></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       WHAT AUTOMOTIVE CASTING DEMANDS
+       ============================================================ -->
+  <section style="padding:4.5rem 0;">
+    <div class="container" style="max-width:900px;">
+      <span class="eyebrow">The casting problem</span>
+      <h2>What a production die-casting line actually needs from its ingot</h2>
+      <p>
+        Automotive die casting runs at volume and at speed. The alloy has to fill a complex die
+        in milliseconds, release cleanly, hold dimension through solidification, and behave the
+        same way on the last shot of a heat as it did on the first. Most of that behaviour is
+        determined before the metal reaches your furnace, by the chemistry of the ingot you bought.
+      </p>
+
+      <div class="app-grid" style="margin-top:2rem;">
+        <div class="app-item">
+          <div>
+            <strong>Die fill at speed</strong>
+            <span>9.6 to 12% silicon gives ADC12 the fluidity to fill thin walls and long flow paths before the metal freezes. This is what makes 2 to 3 mm sections practical at cycle time.</span>
+          </div>
+        </div>
+        <div class="app-item">
+          <div>
+            <strong>Controlled die soldering</strong>
+            <span>Iron held at 0.8 to 1.1% stops the aluminium welding itself to the steel die. Too little iron shortens die life; too much forms brittle platelets that cost you ductility.</span>
+          </div>
+        </div>
+        <div class="app-item">
+          <div>
+            <strong>Dimensional stability</strong>
+            <span>Low solidification shrinkage and good hot-cracking resistance keep housings within tolerance across a long production run, which is what protects your machining yield.</span>
+          </div>
+        </div>
+        <div class="app-item">
+          <div>
+            <strong>Heat-to-heat consistency</strong>
+            <span>Every ingot carries a stamped heat number traceable to its composition certificate. Process drift you cannot trace back to a heat is process drift you cannot fix.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       COMPONENT / ALLOY MAP
+       ============================================================ -->
+  <section style="padding:4.5rem 0;background:var(--surface);">
+    <div class="container" style="max-width:900px;">
+      <span class="eyebrow">Alloy selection</span>
+      <h2>Which alloy belongs in which component</h2>
+      <p>
+        ADC12 is the right answer for most automotive die castings, and the wrong answer for a
+        few of them. We would rather quote you the correct alloy than the one we have most of.
+      </p>
+
+      <table class="spec-table" style="margin-top:1.75rem;">
+        <caption>Alloy recommendation by automotive component</caption>
+        <thead>
+          <tr><th>Component</th><th>Alloy</th><th>Why</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Transmission and gearbox housings</td>
+            <td><strong>ADC12</strong></td>
+            <td>Pressure tightness and dimensional stability across thin, cored sections</td>
+          </tr>
+          <tr>
+            <td>Motor, inverter and e-drive housings</td>
+            <td><strong>ADC12</strong></td>
+            <td>Complex cores, good thermal path, stable as-cast properties</td>
+          </tr>
+          <tr>
+            <td>Oil pans, timing covers, bell housings</td>
+            <td><strong>ADC12</strong></td>
+            <td>Fluidity to fill large thin sections in a single shot</td>
+          </tr>
+          <tr>
+            <td>EV battery trays and covers, non-structural</td>
+            <td><strong>ADC12</strong></td>
+            <td>Large thin-wall castings at volume, no load-bearing duty</td>
+          </tr>
+          <tr>
+            <td>Engine blocks and bedplates</td>
+            <td><strong>ADC12</strong></td>
+            <td>Silicon for wear resistance, copper for strength at temperature</td>
+          </tr>
+          <tr>
+            <td>Cylinder heads</td>
+            <td>AL-Si (AlSi7Mg / AlSi10Mg)</td>
+            <td>Heat treatable, holds fatigue strength at operating temperature</td>
+          </tr>
+          <tr>
+            <td>Structural nodes and crash elements</td>
+            <td>AL-Si (low-iron AlSi10MnMg)</td>
+            <td>Needs 8 to 12% elongation and weldability that ADC12 cannot reach</td>
+          </tr>
+          <tr>
+            <td>Cast road wheels</td>
+            <td>AL-Si (AlSi7Mg)</td>
+            <td>Ductility and fatigue life for a safety-critical rotating part</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top:1.5rem;font-size:0.95rem;color:var(--ink-soft);">
+        Casting a structural part? <a href="/en/products/aluminium-silicon-alloy-ingot/">See our AL-Si alloy range</a>,
+        or send the drawing and we will tell you which specification fits.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WHY BUY FROM US
+       ============================================================ -->
+  <section style="padding:4.5rem 0;">
+    <div class="container" style="max-width:900px;">
+      <span class="eyebrow">Why Tech Aluminum</span>
+      <h2>What changes when you buy direct from the smelter</h2>
+
+      <div class="app-grid" style="margin-top:2rem;">
+        <div class="app-item">
+          <div>
+            <strong>One certificate, two standards</strong>
+            <span>Every heat is certified to EN AC-46000 and JIS H 5302 on the same material test certificate. If you supply both European and Japanese-spec customers, that removes a second qualified supplier and a second certificate trail.</span>
+          </div>
+        </div>
+        <div class="app-item">
+          <div>
+            <strong>CBAM documentation as standard</strong>
+            <span>Verified embedded-emissions data ships with the metal, not six weeks later on request. Our hydroelectric base at Aswan means fewer certificates against your import than coal-grid origins.</span>
+          </div>
+        </div>
+        <div class="app-item">
+          <div>
+            <strong>Primary-metal base</strong>
+            <span>Our ADC12 is built on primary aluminium with controlled residuals rather than blended from mixed scrap. Residual elements you did not specify are the ones that surprise you in production.</span>
+          </div>
+        </div>
+        <div class="app-item">
+          <div>
+            <strong>No trading house in between</strong>
+            <span>You talk to Noel Murphy, who talks to the plant. Composition changes, tighter windows and trial volumes get answered in a day rather than passed along a chain.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       A7 ALLOCATION NOTICE
+       ============================================================ -->
+  <section style="padding:0 0 4.5rem 0;">
+    <div class="container" style="max-width:900px;">
+      <div class="allocation-notice">
+        <div class="allocation-notice-main">
+          <span class="eyebrow" style="color:var(--gold);">If you buy A7 as charge material</span>
+          <h2 style="font-size:1.4rem;margin:0.4rem 0 0.75rem 0;font-family:'Plus Jakarta Sans',sans-serif;color:var(--navy);">A7 primary ingot is fully allocated</h2>
+          <p style="margin:0;color:var(--ink-soft);font-size:0.95rem;">
+            Foundries blending their own automotive alloys from A7 charge material should know that
+            our current A7 output is committed to existing contracts. We are taking reservations for
+            the next allocation window. If you are blending to an AlSi9Cu3(Fe) target anyway, buying
+            finished ADC12 removes the blending step and ships on a 10 to 30 day lead time.
+          </p>
+        </div>
+        <div class="allocation-notice-cta">
+          <a href="/en/contact/?product=ADC12" class="btn btn-primary" style="width:100%;justify-content:center;text-align:center;">Quote me for ADC12</a>
+          <a href="/en/products/a7-primary-aluminium-ingot/" class="btn btn-ghost" style="width:100%;justify-content:center;text-align:center;">A7 allocation details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+       ============================================================ -->
+  <section style="padding:0 0 5rem 0;">
     <div class="container" style="max-width:820px;">
-      <h2>Products for automotive casting</h2>
-      <p>The automotive sector demands consistent mechanical properties, tight chemical tolerances, and full traceability across every shipment. Our alloys are manufactured to EN standards with full mill test certificates and CBAM-ready embedded-emissions data on request.</p>
-      <ul>
-        <li><strong>ADC12 Die-Casting Alloy (EN AC-46000)</strong> — Si 9.6–12%, Cu 1.5–3.5%. The industry standard for thin-walled, high-volume die-casting: gearbox housings, EV battery enclosures, door handles, structural brackets.</li>
-        <li><strong>AL-Si Alloy Ingot (EN 1706)</strong> — Engineered for cylinder heads, pistons, intake manifolds and complex structural castings requiring superior fluidity and dimensional stability.</li>
-        <li><strong>A7 Primary Aluminium Ingot (EN 576)</strong> — Used as a charge material by foundries blending their own automotive alloys. 99.7% minimum purity.</li>
-      </ul>
-      <a href="/en/contact/" class="btn btn-primary" style="margin-top:1.5rem;display:inline-flex;">Request specifications →</a>
+      <h2>Frequently asked questions</h2>
+      <div class="faq-inline">
+        <details>
+          <summary>Which aluminium alloy should I use for EV battery enclosures?</summary>
+          <div class="faq-body">
+            <p>It depends on whether the enclosure carries structural load. Non-structural trays, covers and housings are routinely cast in ADC12, which fills large thin-walled sections reliably at high volume. Enclosures that form part of the crash structure need far higher ductility than ADC12 provides, and are normally cast in a low-iron AlSi10MnMg or AlSi7Mg alloy. Tell us which case applies and we will quote the correct alloy rather than the convenient one.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can ADC12 be used for structural or crash-relevant castings?</summary>
+          <div class="faq-body">
+            <p>Generally no. ADC12 contains 1.5 to 3.5% copper and up to 1.3% iron, which give it strength, machinability and excellent die-casting behaviour, but leave elongation typically in the 1 to 3% range. Structural and crash-relevant castings need 8 to 12% elongation and the ability to be riveted or welded into a body-in-white. Those parts call for a low-iron AlSi10MnMg type alloy. ADC12 remains the right choice for housings, covers and enclosures that are not load-bearing.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What iron content do you supply for high-pressure die casting?</summary>
+          <div class="faq-body">
+            <p>Our standard ADC12 runs iron in the 0.8 to 1.1% band. That is deliberate. Below roughly 0.7% iron, aluminium tends to solder to steel dies in high-pressure die casting, shortening die life and causing surface defects. Above about 1.2%, brittle beta-AlFeSi platelets form and reduce ductility. If your process window needs a different iron target, specify it on the enquiry and we will cast to it.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can you certify ADC12 to A383 limits for a North American customer?</summary>
+          <div class="faq-body">
+            <p>Yes. ADC12 overlaps most closely with ASTM A383, which carries tighter iron and zinc limits than the base EN AC-46000 specification. If your downstream customer requires A383 compliance, note it on your enquiry and we will tighten the heat composition and certify accordingly on the material test certificate, at no additional cost on standard-tonnage orders.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do you provide CBAM emissions data for automotive castings entering the EU?</summary>
+          <div class="faq-body">
+            <p>Yes. Every shipment carries verified embedded-emissions data covering direct and indirect emissions per tonne of finished ingot, calculated to the EU CBAM methodology and verified by an accredited third party. Egypt's hydroelectric base at Aswan typically produces lower embedded emissions than aluminium from coal-grid jurisdictions, which means fewer CBAM certificates against your import. <a href="/en/cbam-guide/">Read the full CBAM guide</a>.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can we run a trial melt before switching supplier?</summary>
+          <div class="faq-body">
+            <p>Yes, and we expect it. First-time European buyers can order 5 to 10 tonnes for qualification testing rather than a full 20 tonne container. Most foundries run the trial alongside their incumbent supply for one or two production weeks, checking die fill, soldering behaviour and machined surface finish before committing to a contract volume.</p>
+          </div>
+        </details>
+      </div>
     </div>
   </section>
 
   <section class="final-cta">
     <div class="container">
-      <h2>Talk to us about your automotive casting requirements</h2>
-      <p>Noel Murphy handles all European enquiries. Response within 24 hours.</p>
+      <h2>Send us the part, we will tell you the alloy</h2>
+      <p>Give us the component, the annual volume and the delivery port. Noel Murphy replies within 24 hours with pricing, lead time and CBAM documentation.</p>
       <div class="final-cta-actions">
-        <a href="/en/contact/" class="btn btn-primary">Request a Quote</a>
+        <a href="/en/contact/?product=ADC12" class="btn btn-primary">Request an ADC12 quote</a>
         <a href="https://wa.me/353871187806" class="btn btn-secondary">WhatsApp</a>
       </div>
     </div>

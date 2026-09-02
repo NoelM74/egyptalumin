@@ -1,7 +1,54 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 ---
-<Layout title="Aluminium Ingots for Electronics & Thermal Management | Tech Aluminum" lang="en">
+<Layout
+  title="ADC12 Die-Casting Alloy for Electronics & Thermal Management | Tech Aluminum"
+  description="ADC12 (EN AC-46000) die-casting alloy for device housings, LED drivers, 5G enclosures and heat sinks. EN and JIS certified on one MTC, CBAM-documented, 10 to 30 day lead times to EU ports."
+  lang="en"
+>
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://techaluminum.com/en/"},
+      {"@type":"ListItem","position":2,"name":"Industries","item":"https://techaluminum.com/en/industries/"},
+      {"@type":"ListItem","position":3,"name":"Electronics","item":"https://techaluminum.com/en/industries/electronics/"}
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type":"Question",
+        "name":"Is ADC12 suitable for heat sinks?",
+        "acceptedAnswer":{"@type":"Answer","text":"For most commercial heat sinks, yes. ADC12 conducts heat at roughly 90 to 100 W/m·K, well below pure aluminium at around 220 W/m·K, because silicon and copper both impede conduction. Where the casting geometry does the work, through fin count, fin density and surface area that only die casting can produce economically, ADC12 usually outperforms a simpler extruded profile in a cheaper alloy. For thermally critical applications where every watt matters, an extruded 6000-series profile or a lower-alloy AL-Si casting is the better choice."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does ADC12 provide EMI shielding?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. A die-cast ADC12 enclosure gives a continuous conductive housing with no seams to leak through, which is why it is the default for RF and 5G equipment enclosures. Cast-in bosses, gasket grooves and mounting features can be produced in the same shot, removing assembly operations that would otherwise compromise the shield."}
+      },
+      {
+        "@type":"Question",
+        "name":"How thin a wall can you cast in ADC12?",
+        "acceptedAnswer":{"@type":"Answer","text":"ADC12 fills reliably down to about 1.2 to 1.5 mm on small to medium electronics housings, and 2 to 2.5 mm across larger enclosures where flow paths are longer. The 9.6 to 12% silicon content is what makes this possible, giving the alloy the fluidity to fill a thin section before it freezes."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do you supply CBAM emissions data for electronics enclosures?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. Every shipment carries verified embedded-emissions data covering direct and indirect emissions per tonne of finished ingot, calculated to the EU CBAM methodology and verified by an accredited third party. This documentation supports your CBAM declaration directly."}
+      }
+    ]
+  }
+  </script>
+
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container"><ol>
       <li><a href="/en/">Home</a></li>
@@ -12,39 +59,166 @@ import Layout from '../../../layouts/Layout.astro';
 
   <section class="product-hero">
     <div class="container">
-      <div class="product-hero-grid" style="grid-template-columns:1fr;">
-        <div style="max-width:800px;">
-          <span class="eyebrow on-dark">Industry Application</span>
-          <h1>Aluminium for Electronics & Thermal Management</h1>
-          <p class="product-hero-lead">High-purity primary ingots and precision die-casting alloys for heat sinks, device housings and conductive connectors.</p>
+      <div class="product-hero-grid">
+        <div>
+          <span class="eyebrow on-dark">Industry Application · Die Casting</span>
+          <span class="product-h1-sub">EN AC-46000 · AlSi9Cu3(Fe) · JIS H 5302</span>
+          <h1>ADC12 for electronics and thermal management</h1>
+          <p class="product-hero-lead">
+            Device housings, LED driver enclosures, 5G base station casings and cast heat sinks.
+            Thin-wall capability down to 1.2 mm, certified to EN and JIS on a single material
+            test certificate.
+          </p>
+          <div class="product-hero-badges">
+            <span><i class="dot"></i> 20 kg ingot</span>
+            <span><i class="dot"></i> Si 9.6–12%</span>
+            <span><i class="dot"></i> 1.2 mm min wall</span>
+            <span><i class="dot"></i> 10–30 days to EU ports</span>
+            <span><i class="dot"></i> CBAM-documented</span>
+          </div>
           <div class="product-hero-ctas">
-            <a href="/en/contact/" class="btn btn-primary">Request Specifications</a>
-            <a href="/en/products/" class="btn btn-secondary">View All Products</a>
+            <a href="/en/contact/?product=ADC12" class="btn btn-primary">
+              Request an ADC12 quote
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="/en/products/adc12-die-casting-alloy/" class="btn btn-secondary">Full specifications</a>
+          </div>
+        </div>
+        <div class="product-image" aria-hidden="true">
+          <div class="product-img-container-inner">
+            <img src="/images/applications/4.5-aluminium-heat-sink-electronic-components-manufacturing.webp" alt="Aluminium heat sink and electronic component manufacturing" class="product-img-modern" />
+            <div class="product-image-overlay-layer"></div>
+            <div class="product-image-inner-text">
+              <strong>ADC12 · EN AC-46000</strong>
+              <span>Thermal management castings</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section style="padding:5rem 0;background:var(--warm-white);">
+  <section style="padding:4.5rem 0;">
+    <div class="container" style="max-width:900px;">
+      <span class="eyebrow">Alloy selection</span>
+      <h2>Where ADC12 belongs, and where it does not</h2>
+      <p>
+        Electronics casting splits along one question: is the part doing electrical and mechanical
+        work, or is it moving heat? ADC12 is excellent at the first and adequate at the second.
+        Being straight about that saves you a failed prototype round.
+      </p>
+
+      <table class="spec-table" style="margin-top:1.75rem;">
+        <caption>Alloy recommendation by electronics component</caption>
+        <thead>
+          <tr><th>Component</th><th>Alloy</th><th>Why</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Device and instrument housings</td>
+            <td><strong>ADC12</strong></td>
+            <td>Thin walls, cast-in bosses and gasket grooves in a single shot</td>
+          </tr>
+          <tr>
+            <td>5G and RF base station enclosures</td>
+            <td><strong>ADC12</strong></td>
+            <td>Continuous conductive shell for EMI shielding, no seams to leak</td>
+          </tr>
+          <tr>
+            <td>LED driver and luminaire housings</td>
+            <td><strong>ADC12</strong></td>
+            <td>Combines housing, mounting and fin geometry in one casting</td>
+          </tr>
+          <tr>
+            <td>Commercial cast heat sinks</td>
+            <td><strong>ADC12</strong></td>
+            <td>Fin density that extrusion cannot reach, offsets lower conductivity</td>
+          </tr>
+          <tr>
+            <td>Thermally critical heat sinks</td>
+            <td>AL-Si or extruded 6000-series</td>
+            <td>Needs conductivity above what a 3% copper alloy can deliver</td>
+          </tr>
+          <tr>
+            <td>High-conductivity connectors and busbars</td>
+            <td>A7 primary ingot</td>
+            <td>Electrical conductivity requires minimal alloying additions</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout-cbam" style="margin-top:2rem;">
+        <div class="callout-body">
+          <p style="margin:0;">
+            <strong>On thermal conductivity:</strong> ADC12 conducts at roughly 90 to 100 W/m·K
+            against pure aluminium at about 220. Silicon and copper both impede conduction. Where
+            the geometry does the work, through fin count and surface area that only die casting
+            makes economic, ADC12 usually wins on thermal performance per euro. Where every watt
+            counts, it does not.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 0 4.5rem 0;">
+    <div class="container" style="max-width:900px;">
+      <div class="allocation-notice">
+        <div class="allocation-notice-main">
+          <span class="eyebrow" style="color:var(--gold);">If you buy A7 for conductive parts</span>
+          <h2 style="font-size:1.4rem;margin:0.4rem 0 0.75rem 0;font-family:'Plus Jakarta Sans',sans-serif;color:var(--navy);">A7 primary ingot is fully allocated</h2>
+          <p style="margin:0;color:var(--ink-soft);font-size:0.95rem;">
+            High-conductivity applications genuinely need A7, and our current output is committed to
+            existing contracts. We are taking reservations for the next allocation window. For housing,
+            enclosure and thermal work, ADC12 is available now on a 10 to 30 day lead time.
+          </p>
+        </div>
+        <div class="allocation-notice-cta">
+          <a href="/en/contact/?product=ADC12" class="btn btn-primary" style="width:100%;justify-content:center;text-align:center;">Quote me for ADC12</a>
+          <a href="/en/products/a7-primary-aluminium-ingot/" class="btn btn-ghost" style="width:100%;justify-content:center;text-align:center;">A7 allocation details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 0 5rem 0;">
     <div class="container" style="max-width:820px;">
-      <h2>Products for electronics manufacturing</h2>
-      <p>Electronics and thermal management applications demand tight alloy purity for predictable conductivity and castability. Whether you're manufacturing CPU heat sinks, LED driver housings, or 5G base station enclosures, the starting ingot chemistry sets the tolerance ceiling.</p>
-      <ul>
-        <li><strong>A7 Primary Aluminium Ingot (EN 576)</strong> — 99.7% minimum purity. Used as charge material for high-conductivity electrical and electronic alloys where iron contamination must be minimised.</li>
-        <li><strong>ADC12 Die-Casting Alloy (EN AC-46000)</strong> — Excellent fluidity for thin-walled, complex device housings. Consistent Si 9.6–12% for repeatable die fill in high-volume production.</li>
-        <li><strong>AL-Si Alloy Ingot (EN 1706)</strong> — Preferred for heat sink castings requiring controlled thermal conductivity and precision dimensional tolerances.</li>
-      </ul>
-      <a href="/en/contact/" class="btn btn-primary" style="margin-top:1.5rem;display:inline-flex;">Request specifications →</a>
+      <h2>Frequently asked questions</h2>
+      <div class="faq-inline">
+        <details>
+          <summary>Is ADC12 suitable for heat sinks?</summary>
+          <div class="faq-body">
+            <p>For most commercial heat sinks, yes. ADC12 conducts heat at roughly 90 to 100 W/m·K, well below pure aluminium at around 220 W/m·K, because silicon and copper both impede conduction. Where the casting geometry does the work, through fin count, fin density and surface area that only die casting can produce economically, ADC12 usually outperforms a simpler extruded profile in a cheaper alloy. For thermally critical applications where every watt matters, an extruded 6000-series profile or a lower-alloy AL-Si casting is the better choice.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Does ADC12 provide EMI shielding?</summary>
+          <div class="faq-body">
+            <p>Yes. A die-cast ADC12 enclosure gives a continuous conductive housing with no seams to leak through, which is why it is the default for RF and 5G equipment enclosures. Cast-in bosses, gasket grooves and mounting features can be produced in the same shot, removing assembly operations that would otherwise compromise the shield.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How thin a wall can you cast in ADC12?</summary>
+          <div class="faq-body">
+            <p>ADC12 fills reliably down to about 1.2 to 1.5 mm on small to medium electronics housings, and 2 to 2.5 mm across larger enclosures where flow paths are longer. The 9.6 to 12% silicon content is what makes this possible, giving the alloy the fluidity to fill a thin section before it freezes.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do you supply CBAM emissions data for electronics enclosures?</summary>
+          <div class="faq-body">
+            <p>Yes. Every shipment carries verified embedded-emissions data covering direct and indirect emissions per tonne of finished ingot, calculated to the EU CBAM methodology and verified by an accredited third party. This documentation supports your CBAM declaration directly. <a href="/en/cbam-guide/">Read the full CBAM guide</a>.</p>
+          </div>
+        </details>
+      </div>
     </div>
   </section>
 
   <section class="final-cta">
     <div class="container">
-      <h2>Sourcing aluminium for electronics production?</h2>
-      <p>Noel Murphy handles all European enquiries. Response within 24 hours.</p>
+      <h2>Send us the enclosure, we will tell you the alloy</h2>
+      <p>Give us the part, the annual volume and the delivery port. Noel Murphy replies within 24 hours with pricing, lead time and CBAM documentation.</p>
       <div class="final-cta-actions">
-        <a href="/en/contact/" class="btn btn-primary">Request a Quote</a>
+        <a href="/en/contact/?product=ADC12" class="btn btn-primary">Request an ADC12 quote</a>
         <a href="https://wa.me/353871187806" class="btn btn-secondary">WhatsApp</a>
       </div>
     </div>
