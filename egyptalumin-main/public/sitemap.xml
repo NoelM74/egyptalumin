@@ -1,113 +1,351 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- ============================================================
-       English pages
-       ============================================================ -->
-
-  <url>
-    <loc>https://techaluminum.com/en/</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/" />
-  </url>
-
-  <url>
-    <loc>https://techaluminum.com/en/products/a7-primary-aluminium-ingot/</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/products/a7-primary-aluminium-ingot/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/produkte/a7-primaer-aluminiummassel/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/products/a7-primary-aluminium-ingot/" />
-  </url>
-
-  <url>
-    <loc>https://techaluminum.com/en/products/adc12-die-casting-alloy/</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/products/adc12-die-casting-alloy/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/produkte/adc12-druckguss-legierung/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/products/adc12-die-casting-alloy/" />
-  </url>
-
-  <url>
-    <loc>https://techaluminum.com/en/products/aluminium-silicon-alloy-ingot/</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/products/aluminium-silicon-alloy-ingot/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/produkte/aluminium-silizium-legierung/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/products/aluminium-silicon-alloy-ingot/" />
-  </url>
-
-  <url>
-    <loc>https://techaluminum.com/en/cbam-guide/</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/cbam-guide/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/cbam-leitfaden/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/cbam-guide/" />
-  </url>
-
-  <!-- ============================================================
-       German pages
-       ============================================================ -->
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://techaluminum.com/de/</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/" />
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
-
   <url>
-    <loc>https://techaluminum.com/de/produkte/a7-primaer-aluminiummassel/</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/products/a7-primary-aluminium-ingot/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/produkte/a7-primaer-aluminiummassel/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/products/a7-primary-aluminium-ingot/" />
+    <loc>https://techaluminum.com/de/blog/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
   </url>
-
   <url>
-    <loc>https://techaluminum.com/de/produkte/adc12-druckguss-legierung/</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/products/adc12-die-casting-alloy/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/produkte/adc12-druckguss-legierung/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/products/adc12-die-casting-alloy/" />
+    <loc>https://techaluminum.com/de/blog/aegypten-aluminium-industrie-ueberblick/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
   </url>
-
   <url>
-    <loc>https://techaluminum.com/de/produkte/aluminium-silizium-legierung/</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://techaluminum.com/de/blog/aluminium-barren-qualitaeten-leitfaden/</loc>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/products/aluminium-silicon-alloy-ingot/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/produkte/aluminium-silizium-legierung/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/products/aluminium-silicon-alloy-ingot/" />
+    <priority>0.85</priority>
   </url>
-
+  <url>
+    <loc>https://techaluminum.com/de/blog/aluminium-legierungs-standards-vergleich/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/de/blog/auswahl-druckguss-legierungen/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/de/blog/cbam-2026-leitfaden/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/de/blog/logistik-aegypten-europa-leitfaden/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/de/branchen/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
   <url>
     <loc>https://techaluminum.com/de/cbam-leitfaden/</loc>
-    <lastmod>2026-05-31</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://techaluminum.com/en/cbam-guide/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://techaluminum.com/de/cbam-leitfaden/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://techaluminum.com/en/cbam-guide/" />
+    <priority>0.85</priority>
   </url>
-
+  <url>
+    <loc>https://techaluminum.com/de/faq/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/de/kontakt/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/de/logistik/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/de/nachhaltigkeit/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/de/produkte/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/de/produkte/a7-primaer-aluminiummassel/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/de/produkte/adc12-druckguss-legierung/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/de/produkte/aluminium-silizium-legierung/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/de/qualitaet/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/de/ueber-uns/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/about/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/blog/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/blog/adc12-vs-a380/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/blog/aluminium-ingot-grades-guide/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/blog/cbam-2026-guide/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/blog/die-casting-alloy-selection/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/blog/egypt-aluminium-industry-overview/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/blog/egypt-to-europe-logistics-guide/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/blog/en-standards-comparison/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/blog/primary-vs-secondary-adc12/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/blog/qualify-new-adc12-supplier/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/cbam-guide/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/contact/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/cookie-policy/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.20</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/faq/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/industries/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/industries/aerospace/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/industries/automotive/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/industries/construction/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/industries/electronics/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/industries/mechanical-manufacturing/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/industries/packaging/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/industries/power-transportation/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/logistics/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/privacy-policy/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.20</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/products/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/products/a7-primary-aluminium-ingot/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/products/adc12-die-casting-alloy/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/products/aluminium-silicon-alloy-ingot/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/quality/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/en/sustainability/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/fr/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/fr/contact/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/fr/produits/adc12-alliage-fonderie/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/it/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/it/contatti/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://techaluminum.com/it/prodotti/adc12-lega-fonderia/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
 </urlset>

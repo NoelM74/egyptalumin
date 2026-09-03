@@ -1,0 +1,242 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: "Home", url: "/en/" },
+  { name: "Blog", url: "/en/blog/" },
+  { name: "Primary vs Secondary ADC12", url: "/en/blog/primary-vs-secondary-adc12/" }
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://techaluminum.com/en/blog/primary-vs-secondary-adc12/#breadcrumb",
+      "itemListElement": breadcrumbs.map((b, i) => ({
+        "@type": "ListItem", "position": i + 1, "name": b.name,
+        "item": `https://techaluminum.com${b.url}`
+      }))
+    },
+    {
+      "@type": "Article",
+      "@id": "https://techaluminum.com/en/blog/primary-vs-secondary-adc12/#article",
+      "isPartOf": { "@type": "WebPage", "@id": "https://techaluminum.com/en/blog/primary-vs-secondary-adc12/" },
+      "headline": "Primary vs Secondary ADC12: Why Two Certificates Can Read the Same and Cast Differently",
+      "description": "Both meet EN AC-46000. One is blended from mixed scrap, the other built on primary metal. What residual elements do to die life, porosity and scrap rate.",
+      "image": "https://techaluminum.com/images/blog/6.1-guide-aluminium-ingot-grades-european-manufacturers.webp",
+      "datePublished": "2026-09-03T08:00:00+02:00",
+      "dateModified": "2026-09-03T08:00:00+02:00",
+      "author": {
+        "@type": "Person", "name": "Noel Murphy", "jobTitle": "Partner, European Operations",
+        "worksFor": { "@type": "Organization", "name": "Tech Aluminum" }
+      },
+      "publisher": {
+        "@type": "Organization", "name": "Tech Aluminum",
+        "logo": { "@type": "ImageObject", "url": "https://techaluminum.com/images/branding/brand-logo-primary-01.webp" }
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Primary vs Secondary ADC12: What the Certificate Does Not Tell You | Tech Aluminum"
+  description="Two ADC12 certificates can both say EN AC-46000 and cast completely differently. Residual elements, die soldering, porosity and how to spot the difference before it reaches your furnace."
+  lang="en"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        {breadcrumbs.map((b, i) => (
+          i === breadcrumbs.length - 1 ? (<li aria-current="page">{b.name}</li>) : (<li><a href={b.url}>{b.name}</a></li>)
+        ))}
+      </ol>
+    </div>
+  </nav>
+
+  <article class="article-container">
+    <header class="article-header">
+      <div class="container">
+        <div class="article-header-meta">
+          <span class="article-badge">Technical</span>
+          <span>September 3, 2026</span>
+          <span>•</span>
+          <span>6 min read</span>
+        </div>
+        <h1>Primary vs secondary ADC12: what the certificate does not tell you</h1>
+        <div class="article-author-info">
+          <div class="article-author-avatar">NM</div>
+          <div class="article-author-details">
+            <strong>Noel Murphy</strong>
+            <span>European Operations Desk</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="article-layout">
+        <div class="article-body">
+          <img src="/images/blog/6.1-guide-aluminium-ingot-grades-european-manufacturers.webp" alt="Primary aluminium ingot grades and composition" class="article-hero-image" />
+
+          <p>
+            Two suppliers quote you ADC12. Both certificates say EN AC-46000. Both list silicon inside
+            9.6 to 12%, copper inside 1.5 to 3.5%, iron under 1.3%. On paper you are looking at the same
+            alloy at two different prices, and the cheaper one wins.
+          </p>
+          <p>
+            Then one of them casts differently, and the reason is sitting in the elements the
+            certificate does not report.
+          </p>
+
+          <h2>Where secondary ADC12 comes from</h2>
+          <p>
+            Most of the world's ADC12 is secondary, meaning it is blended from recycled aluminium:
+            process scrap, end-of-life castings, extrusion offcuts, shredded automotive material. A
+            refiner melts the mix, measures it, and adds silicon, copper and other elements until the
+            specified elements land inside the EN AC-46000 window.
+          </p>
+          <p>
+            That is a legitimate process and it produces a legitimate alloy. Recycled aluminium also
+            carries a fraction of the embodied energy of primary metal, which is a real environmental
+            argument in its favour.
+          </p>
+          <p>
+            The catch is what the process controls for. A refiner is adjusting the elements the
+            specification names. The elements it does not name go wherever the scrap stream takes them.
+          </p>
+
+          <h2>The elements nobody specifies</h2>
+          <p>
+            EN AC-46000 sets limits on silicon, iron, copper, manganese, magnesium, nickel, zinc, tin,
+            lead and titanium. A standard certificate reports those and stops. Meanwhile the scrap
+            stream can contribute chromium, vanadium, strontium, calcium, sodium, antimony and
+            phosphorus, in quantities that are small enough to ignore individually and not always small
+            enough to ignore together.
+          </p>
+
+          <table class="spec-table">
+            <caption>Residual elements and what they do in a die-casting alloy</caption>
+            <thead>
+              <tr><th>Element</th><th>Typical source</th><th>Effect at trace level</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Calcium, sodium</td>
+                <td>Fluxing residue, scrap contamination</td>
+                <td>Increases hydrogen pickup and porosity; degrades surface finish</td>
+              </tr>
+              <tr>
+                <td>Phosphorus</td>
+                <td>Mixed scrap streams</td>
+                <td>Interferes with strontium modification, coarsens silicon structure</td>
+              </tr>
+              <tr>
+                <td>Chromium, vanadium</td>
+                <td>Aerospace and automotive alloy scrap</td>
+                <td>Forms hard intermetallic sludge phases, accelerates tool wear</td>
+              </tr>
+              <tr>
+                <td>Antimony, strontium</td>
+                <td>Previously modified castings in the scrap mix</td>
+                <td>Uncontrolled modification; the two counteract each other</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>Sludge, and why iron alone does not explain it</h2>
+          <p>
+            The failure mode most foundries recognise is sludge: hard, heavy intermetallic particles
+            that settle in the holding furnace, block filters, wear the shot sleeve and appear as hard
+            spots that ruin a cutting edge during machining.
+          </p>
+          <p>
+            Sludge is normally blamed on iron, and iron is part of it. The fuller picture is the sludge
+            factor, an industry rule of thumb that weights iron against manganese and chromium:
+          </p>
+          <blockquote>
+            Sludge factor = (1 × %Fe) + (2 × %Mn) + (3 × %Cr)
+          </blockquote>
+          <p>
+            Chromium carries three times the weight of iron. A melt that looks comfortable on iron can
+            still sludge if the chromium rode in on the scrap and nobody measured it, because chromium
+            is not a reported element under EN AC-46000. Most die-casters aim to keep the factor below
+            about 1.8 at normal holding temperatures.
+          </p>
+
+          <h2>What primary-based ADC12 changes</h2>
+          <p>
+            Building ADC12 on primary aluminium and adding controlled silicon and copper starts the
+            alloy from a known composition instead of an averaged one. The specified elements land in
+            the same place. The unspecified ones stay near zero, because they were never introduced.
+          </p>
+          <p>
+            In practice a foundry running primary-based ADC12 tends to see steadier hydrogen levels and
+            less porosity variation between heats, less furnace sludge and longer intervals between
+            cleanouts, more predictable machining, and heat-to-heat consistency that holds across a long
+            production run rather than drifting with whatever the refiner's scrap intake looked like
+            that month.
+          </p>
+
+          <h2>Which one should you buy?</h2>
+          <p>
+            Secondary ADC12 is the right economic answer for a great deal of work. Non-critical
+            housings, thick-section parts, anything with a generous process window and a tolerant
+            machining operation. Paying a primary premium there buys you nothing.
+          </p>
+          <p>
+            The calculation changes when your process window is narrow. Thin walls, pressure-tight
+            castings, tight surface finish requirements, or a part where a machining reject costs
+            considerably more than the metal in it. There, the variation is the expensive part, and
+            consistency is what you are buying.
+          </p>
+
+          <h2>What to ask a supplier</h2>
+          <p>
+            Whichever route you take, three questions separate a supplier who controls their process
+            from one who meets a specification on paper:
+          </p>
+          <ul>
+            <li><strong>Will you report elements outside the EN AC-46000 list?</strong> Chromium, vanadium and calcium in particular. A supplier who measures them can tell you; one who does not, cannot.</li>
+            <li><strong>What is your typical sludge factor, and how much does it move between heats?</strong> The spread matters more than the average.</li>
+            <li><strong>What iron band do you actually cast to?</strong> "Under 1.3%" is a specification limit, not an answer. A supplier targeting 0.8 to 1.1% for high-pressure die casting is managing die soldering deliberately.</li>
+          </ul>
+
+          <div class="callout callout-cbam" style="margin-top:2rem;">
+            <div class="callout-body">
+              <p style="margin:0;">
+                <strong>Our ADC12 is built on primary metal with controlled residuals</strong>, cast to a
+                0.8 to 1.1% iron target for high-pressure die casting, and certified to EN AC-46000 and
+                JIS H 5302 on one material test certificate.
+                <a href="/en/products/adc12-die-casting-alloy/">See the full specification</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="article-sidebar">
+          <div class="rfq-card">
+            <h3>Request an ADC12 quote</h3>
+            <p>Trial volumes from 5 tonnes for qualification testing. Full composition certificate with every heat.</p>
+            <a href="/en/contact/?product=ADC12" class="btn btn-primary">Open RFQ form</a>
+            <a href="https://wa.me/353871187806" class="btn btn-secondary">WhatsApp chat</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </article>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Chasing porosity or sludge you cannot explain?</h2>
+      <p>Send us your current composition certificate. We will tell you what we would look at first.</p>
+      <div class="final-cta-actions">
+        <a href="/en/contact/?product=ADC12" class="btn btn-primary">Request a Quote</a>
+        <a href="https://wa.me/353871187806" class="btn btn-secondary">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</Layout>

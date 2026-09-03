@@ -1,0 +1,219 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: "Home", url: "/en/" },
+  { name: "Blog", url: "/en/blog/" },
+  { name: "ADC12 vs A380", url: "/en/blog/adc12-vs-a380/" }
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://techaluminum.com/en/blog/adc12-vs-a380/#breadcrumb",
+      "itemListElement": breadcrumbs.map((b, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": b.name,
+        "item": `https://techaluminum.com${b.url}`
+      }))
+    },
+    {
+      "@type": "Article",
+      "@id": "https://techaluminum.com/en/blog/adc12-vs-a380/#article",
+      "isPartOf": { "@type": "WebPage", "@id": "https://techaluminum.com/en/blog/adc12-vs-a380/" },
+      "headline": "ADC12 vs A380 vs A383: What European Buyers Need to Know",
+      "description": "ADC12, A380 and A383 are cross-shopped constantly and are not interchangeable. A composition-by-composition comparison for European foundries buying to EN AC-46000.",
+      "image": "https://techaluminum.com/images/blog/6.4-aluminium-alloy-standards-en-jis-gbt-comparison.webp",
+      "datePublished": "2026-09-03T08:00:00+02:00",
+      "dateModified": "2026-09-03T08:00:00+02:00",
+      "author": {
+        "@type": "Person", "name": "Noel Murphy", "jobTitle": "Partner, European Operations",
+        "worksFor": { "@type": "Organization", "name": "Tech Aluminum" }
+      },
+      "publisher": {
+        "@type": "Organization", "name": "Tech Aluminum",
+        "logo": { "@type": "ImageObject", "url": "https://techaluminum.com/images/branding/brand-logo-primary-01.webp" }
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="ADC12 vs A380 vs A383: A Guide for European Buyers | Tech Aluminum"
+  description="ADC12, A380 and A383 get cross-shopped as if they were the same alloy. They are not. Composition limits, where each one belongs, and what to specify when a North American customer asks for A380."
+  lang="en"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        {breadcrumbs.map((b, i) => (
+          i === breadcrumbs.length - 1 ? (<li aria-current="page">{b.name}</li>) : (<li><a href={b.url}>{b.name}</a></li>)
+        ))}
+      </ol>
+    </div>
+  </nav>
+
+  <article class="article-container">
+    <header class="article-header">
+      <div class="container">
+        <div class="article-header-meta">
+          <span class="article-badge">Standards</span>
+          <span>September 3, 2026</span>
+          <span>•</span>
+          <span>7 min read</span>
+        </div>
+        <h1>ADC12 vs A380 vs A383: what European buyers need to know</h1>
+        <div class="article-author-info">
+          <div class="article-author-avatar">NM</div>
+          <div class="article-author-details">
+            <strong>Noel Murphy</strong>
+            <span>European Operations Desk</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="article-layout">
+        <div class="article-body">
+          <img src="/images/blog/6.4-aluminium-alloy-standards-en-jis-gbt-comparison.webp" alt="Comparison of aluminium alloy standards across regions" class="article-hero-image" />
+
+          <p>
+            Three designations get quoted against each other in the same breath: ADC12, A380 and A383.
+            Buyers treat them as regional names for one alloy and ask for whichever their customer
+            wrote on the drawing. Two of them are close. One of them is not, and specifying it by
+            accident changes both the copper content and the way the casting machines.
+          </p>
+
+          <h2>Where the three designations come from</h2>
+          <p>
+            <strong>ADC12</strong> is Japanese, from JIS H 5302. <strong>A380 and A383</strong> are American,
+            both from ASTM B85. The European equivalent that matters to a foundry buying in the EU is
+            <strong>EN AC-46000</strong>, chemical designation AlSi9Cu3(Fe), from EN 1706. Four names,
+            three genuinely different chemistries.
+          </p>
+
+          <h2>The composition, side by side</h2>
+          <table class="spec-table">
+            <caption>Principal element limits, percentage by weight</caption>
+            <thead>
+              <tr><th>Element</th><th class="num">ADC12 / EN AC-46000</th><th class="num">A383</th><th class="num">A380</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Silicon (Si)</td><td class="num">9.6–12.0</td><td class="num">9.5–11.5</td><td class="num">7.5–9.5</td></tr>
+              <tr><td>Copper (Cu)</td><td class="num">1.5–3.5</td><td class="num">2.0–3.0</td><td class="num">3.0–4.0</td></tr>
+              <tr><td>Iron (Fe) max</td><td class="num">1.3</td><td class="num">1.3</td><td class="num">1.3</td></tr>
+              <tr><td>Zinc (Zn) max</td><td class="num">1.2</td><td class="num">3.0</td><td class="num">3.0</td></tr>
+              <tr><td>Magnesium (Mg) max</td><td class="num">0.3</td><td class="num">0.10</td><td class="num">0.10</td></tr>
+            </tbody>
+          </table>
+
+          <p>
+            Read the silicon and copper rows together and the picture resolves. ADC12 and A383 overlap
+            across most of their range. A380 sits somewhere else: two points lower on silicon, a full
+            point higher on copper.
+          </p>
+
+          <h2>What that difference does on the shop floor</h2>
+          <p>
+            <strong>Silicon governs how the metal fills the die.</strong> More silicon means more fluidity,
+            which is what lets you cast a 2 mm wall across a long flow path before the metal freezes.
+            ADC12 at 9.6 to 12% fills thin sections that A380 at 7.5 to 9.5% will struggle with. If you
+            switch a thin-wall part from ADC12 to A380 without changing anything else, misruns and cold
+            shuts are the first thing you will see.
+          </p>
+          <p>
+            <strong>Copper governs strength, machinability and what happens in a corrosive environment.</strong>
+            A380's higher copper gives slightly better strength and cleaner machining. It also worsens
+            corrosion resistance, which matters on any part that will live in a wheel arch or under a
+            bonnet without a coating.
+          </p>
+
+          <blockquote>
+            If your drawing says A380 and your part has thin walls, the drawing is probably inherited
+            from a North American design that assumed a different casting envelope. Check it before
+            you buy the metal.
+          </blockquote>
+
+          <h2>Which one should a European foundry actually buy?</h2>
+          <p>
+            Buy to <strong>EN AC-46000</strong>. It is the specification your European customers will
+            audit against, it is what your quality system is built around, and it covers the same
+            chemistry as ADC12. Treating ADC12 and EN AC-46000 as one purchase is correct.
+          </p>
+          <p>
+            The complication arrives when a North American customer specifies A383 or A380 on a part you
+            cast in Europe. In that case you have two options. Either qualify a second alloy, with the
+            second vendor file and second incoming inspection that implies. Or ask your supplier to
+            certify the heat to the tighter of the two specifications so a single delivery satisfies
+            both approvals.
+          </p>
+
+          <h2>Certifying ADC12 to A383 limits</h2>
+          <p>
+            A383 is the closer of the two American grades and the practical one to align with. Its
+            copper band, 2.0 to 3.0%, sits inside the ADC12 band of 1.5 to 3.5%, and its silicon band
+            sits inside ADC12's as well. A heat cast to hit the middle of the ADC12 range will usually
+            satisfy A383 on its own.
+          </p>
+          <p>
+            The element that catches people out is zinc. A383 permits up to 3.0%, ADC12 up to 1.2%.
+            That is the opposite of a problem, because ADC12's tighter limit is the harder one to meet.
+            If your supplier can certify ADC12 zinc, A383 zinc is already covered.
+          </p>
+          <p>
+            We tighten the heat composition and certify to whichever standard the specification requires,
+            on the same material test certificate, at no additional cost on standard-tonnage orders. If
+            your downstream customer needs A383 compliance, put it on the enquiry.
+          </p>
+
+          <h2>A380 is a different alloy, not a different name</h2>
+          <p>
+            The point worth carrying away: ADC12 and A383 are close enough to treat as one purchasing
+            decision with the right certification. A380, with its lower silicon and higher copper, is a
+            separate alloy that behaves differently in the die and in service. Substituting it because
+            the names look interchangeable is how a qualified part starts failing at the tail of a
+            production run.
+          </p>
+
+          <div class="callout callout-cbam" style="margin-top:2rem;">
+            <div class="callout-body">
+              <p style="margin:0;">
+                <strong>Sourcing ADC12 into Europe?</strong> Our ingots are certified to EN AC-46000 and
+                JIS H 5302 on a single material test certificate, with A383 certification on request and
+                CBAM emissions documentation on every shipment.
+                <a href="/en/products/adc12-die-casting-alloy/">See the full ADC12 specification</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="article-sidebar">
+          <div class="rfq-card">
+            <h3>Request an ADC12 quote</h3>
+            <p>Tell us the tonnage, the delivery port and the standard you certify against. We reply within 24 hours.</p>
+            <a href="/en/contact/?product=ADC12" class="btn btn-primary">Open RFQ form</a>
+            <a href="https://wa.me/353871187806" class="btn btn-secondary">WhatsApp chat</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </article>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Not sure which standard to specify?</h2>
+      <p>Send us the drawing and the customer requirement. We will tell you what to certify against.</p>
+      <div class="final-cta-actions">
+        <a href="/en/contact/?product=ADC12" class="btn btn-primary">Request a Quote</a>
+        <a href="https://wa.me/353871187806" class="btn btn-secondary">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,263 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: "Home", url: "/en/" },
+  { name: "Blog", url: "/en/blog/" },
+  { name: "Qualifying a New ADC12 Supplier", url: "/en/blog/qualify-new-adc12-supplier/" }
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://techaluminum.com/en/blog/qualify-new-adc12-supplier/#breadcrumb",
+      "itemListElement": breadcrumbs.map((b, i) => ({
+        "@type": "ListItem", "position": i + 1, "name": b.name,
+        "item": `https://techaluminum.com${b.url}`
+      }))
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://techaluminum.com/en/blog/qualify-new-adc12-supplier/#howto",
+      "name": "How to qualify a new ADC12 supplier without stopping production",
+      "description": "A five-stage qualification process for introducing a second ADC12 supplier alongside incumbent supply, from paperwork review through parallel running to contract volume.",
+      "totalTime": "P8W",
+      "step": [
+        {"@type":"HowToStep","position":1,"name":"Review the paperwork before the metal","text":"Request a recent material test certificate, the CBAM emissions data, the ISO 9001 certificate and a full composition report including elements outside the EN AC-46000 list. Check the iron target and ask for the heat-to-heat spread rather than the specification limit."},
+        {"@type":"HowToStep","position":2,"name":"Order a trial quantity","text":"Order 5 to 10 tonnes rather than a full 20 tonne container. This is enough for one or two production shifts on a representative tool without committing to contract volume."},
+        {"@type":"HowToStep","position":3,"name":"Run it on a known tool","text":"Run the trial metal on a tool with a well-understood process window and recent baseline data. Do not qualify new metal on a new tool or a problem part, because you will not know which variable moved."},
+        {"@type":"HowToStep","position":4,"name":"Measure against your baseline","text":"Compare die fill and misrun rate, soldering and die-release behaviour, porosity by X-ray or section, machined surface finish, hard spots and tool wear, and scrap rate against your incumbent baseline over the same number of shots."},
+        {"@type":"HowToStep","position":5,"name":"Run in parallel before switching","text":"Hold both suppliers on the approved vendor list and split volume for one to two production months before transferring the majority. This preserves fallback supply and exposes drift that a single trial cannot show."}
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://techaluminum.com/en/blog/qualify-new-adc12-supplier/#article",
+      "isPartOf": { "@type": "WebPage", "@id": "https://techaluminum.com/en/blog/qualify-new-adc12-supplier/" },
+      "headline": "How to Qualify a New ADC12 Supplier Without Stopping the Line",
+      "description": "A five-stage qualification process for adding a second ADC12 supplier, with the measurements that matter and the trap of qualifying on the wrong tool.",
+      "image": "https://techaluminum.com/images/applications/4.1-aluminium-die-casting-automotive-engine-block-manufacturing.webp",
+      "datePublished": "2026-09-03T08:00:00+02:00",
+      "dateModified": "2026-09-03T08:00:00+02:00",
+      "author": {
+        "@type": "Person", "name": "Noel Murphy", "jobTitle": "Partner, European Operations",
+        "worksFor": { "@type": "Organization", "name": "Tech Aluminum" }
+      },
+      "publisher": {
+        "@type": "Organization", "name": "Tech Aluminum",
+        "logo": { "@type": "ImageObject", "url": "https://techaluminum.com/images/branding/brand-logo-primary-01.webp" }
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="How to Qualify a New ADC12 Supplier Without Stopping the Line | Tech Aluminum"
+  description="A five-stage qualification process for adding a second ADC12 supplier: paperwork review, trial tonnage, running on a known tool, the measurements that matter, and parallel running before you switch."
+  lang="en"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        {breadcrumbs.map((b, i) => (
+          i === breadcrumbs.length - 1 ? (<li aria-current="page">{b.name}</li>) : (<li><a href={b.url}>{b.name}</a></li>)
+        ))}
+      </ol>
+    </div>
+  </nav>
+
+  <article class="article-container">
+    <header class="article-header">
+      <div class="container">
+        <div class="article-header-meta">
+          <span class="article-badge">Procurement</span>
+          <span>September 3, 2026</span>
+          <span>•</span>
+          <span>8 min read</span>
+        </div>
+        <h1>How to qualify a new ADC12 supplier without stopping the line</h1>
+        <div class="article-author-info">
+          <div class="article-author-avatar">NM</div>
+          <div class="article-author-details">
+            <strong>Noel Murphy</strong>
+            <span>European Operations Desk</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="article-layout">
+        <div class="article-body">
+          <img src="/images/applications/4.1-aluminium-die-casting-automotive-engine-block-manufacturing.webp" alt="High-pressure die casting production cell" class="article-hero-image" />
+
+          <p>
+            Most foundries know they are over-exposed to one alloy supplier. Very few do anything about
+            it, because the downside of a bad switch lands on the production floor and the upside lands
+            on a spreadsheet in another department.
+          </p>
+          <p>
+            The way through is to stop treating it as a switch. Qualification is a parallel process that
+            runs alongside normal production, and done properly it never puts a shipment at risk.
+            Here is the sequence we see working across European die-casters.
+          </p>
+
+          <h2>Stage 1: Review the paperwork before you look at metal</h2>
+          <p>
+            Ask for a recent material test certificate from an actual heat, not a specification sheet.
+            A specification sheet tells you what the alloy is allowed to be. A certificate tells you
+            what it was.
+          </p>
+          <p>Alongside it, request:</p>
+          <ul>
+            <li><strong>The full composition report</strong>, including elements outside the EN AC-46000 list. Chromium and vanadium drive sludge and are not reported by default.</li>
+            <li><strong>The iron target and its spread.</strong> "Under 1.3%" is a limit. A supplier managing high-pressure die casting deliberately will name a band, typically 0.8 to 1.1%.</li>
+            <li><strong>CBAM embedded-emissions data.</strong> Mandatory for EU imports since January 2026. A supplier who cannot produce it on request will become your problem at declaration time.</li>
+            <li><strong>ISO 9001 certification and the EN 10204 certificate type</strong> they issue. 3.1 is the normal expectation.</li>
+          </ul>
+          <p>
+            This stage costs an email and filters out most of the field.
+          </p>
+
+          <h2>Stage 2: Order a trial quantity, not a container</h2>
+          <p>
+            Standard minimum order for ADC12 is 20 tonnes, one 20-foot container. That is too much metal
+            to commit to an unproven supplier and more than you need to learn anything.
+          </p>
+          <p>
+            Ask for 5 to 10 tonnes. Any supplier serious about European business will do this for a
+            first-time buyer, and a supplier who refuses has told you something useful. Five tonnes
+            covers one or two production shifts on a representative tool, which is what you need.
+          </p>
+
+          <h2>Stage 3: Run it on a tool you already understand</h2>
+          <p>
+            This is where qualification programmes usually go wrong. The temptation is to try new metal
+            on the part that has been causing trouble, on the theory that if it fixes that, it will fix
+            anything.
+          </p>
+          <p>
+            Do the opposite. Run the trial on a tool with a well-characterised process window and recent
+            baseline data, ideally a part you have been casting steadily for months. If you qualify new
+            metal on a new tool or a problem part, you will not be able to separate the metal from the
+            tooling, and you will end up with an inconclusive trial and an argument.
+          </p>
+
+          <blockquote>
+            Change one variable. If the tool, the part and the process are all steady, anything that
+            moves is the metal.
+          </blockquote>
+
+          <h2>Stage 4: Measure the things that actually differ</h2>
+          <p>
+            Composition compliance is table stakes and the certificate already covers it. What you are
+            testing is behaviour. Record these against your incumbent baseline over a comparable number
+            of shots:
+          </p>
+
+          <table class="spec-table">
+            <caption>Trial measurements and what a change indicates</caption>
+            <thead>
+              <tr><th>Measure</th><th>What it tells you</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Misruns and cold shuts</td><td>Fluidity, which tracks silicon content and melt cleanliness</td></tr>
+              <tr><td>Die soldering and release behaviour</td><td>Iron level. Low iron solders; the effect shows within a shift</td></tr>
+              <tr><td>Porosity, by X-ray or sectioning</td><td>Hydrogen pickup and melt quality, influenced by calcium and sodium</td></tr>
+              <tr><td>Machined surface finish and hard spots</td><td>Intermetallic sludge from iron, manganese and chromium together</td></tr>
+              <tr><td>Furnace sludge accumulation</td><td>Residual element load; check the crucible after the trial, not during</td></tr>
+              <tr><td>Overall scrap rate</td><td>The number that decides the commercial case</td></tr>
+            </tbody>
+          </table>
+
+          <p>
+            Note the last row carefully. A metal that costs 3% more and cuts your scrap rate by a point
+            is cheaper. Metal price per tonne is the number procurement is measured on and it is
+            rarely the number that matters.
+          </p>
+
+          <h2>Stage 5: Run in parallel before you commit</h2>
+          <p>
+            A successful trial proves one delivery worked. It does not prove the supplier is consistent,
+            and consistency is the thing you are actually buying.
+          </p>
+          <p>
+            Add the new supplier to the approved vendor list without removing the incumbent, and split
+            volume for one to two production months. Watch heat-to-heat variation across several
+            deliveries. This is where a refiner whose scrap intake changes month to month will show
+            drift that a single trial container never would.
+          </p>
+          <p>
+            Once the second supplier holds steady across several deliveries, you can shift the majority
+            of volume and keep the other as fallback. You now have supply security you did not have
+            before, and a live price comparison that keeps both suppliers honest.
+          </p>
+
+          <h2>How long the whole thing takes</h2>
+          <table class="spec-table">
+            <caption>Typical qualification timeline</caption>
+            <thead>
+              <tr><th>Stage</th><th>Elapsed time</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Paperwork review and supplier shortlist</td><td>1 week</td></tr>
+              <tr><td>Trial order placed to delivery at EU port</td><td>10 to 30 days</td></tr>
+              <tr><td>Trial run and measurement</td><td>1 to 2 shifts, results within a week</td></tr>
+              <tr><td>Parallel running</td><td>1 to 2 production months</td></tr>
+              <tr><td><strong>Total to a qualified second source</strong></td><td><strong>8 to 12 weeks</strong></td></tr>
+            </tbody>
+          </table>
+
+          <p>
+            None of that requires stopping production, and none of it commits you to anything until
+            stage 5. The only real cost is the attention of one process engineer for a couple of shifts.
+          </p>
+
+          <h2>The case for starting now</h2>
+          <p>
+            European primary aluminium supply is tight, CBAM has added a documentation burden that not
+            every supplier outside the EU is equipped to carry, and single-sourcing an alloy that
+            underpins your entire production is a risk that only becomes visible on the day it matters.
+            Qualification takes eight to twelve weeks. It is worth starting before you need it.
+          </p>
+
+          <div class="callout callout-cbam" style="margin-top:2rem;">
+            <div class="callout-body">
+              <p style="margin:0;">
+                <strong>We supply trial quantities from 5 tonnes</strong> for exactly this process, with a
+                full composition report including non-specified elements, a 0.8 to 1.1% iron target for
+                high-pressure die casting, and CBAM documentation on every shipment.
+                <a href="/en/products/adc12-die-casting-alloy/">See the ADC12 specification</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="article-sidebar">
+          <div class="rfq-card">
+            <h3>Start a qualification trial</h3>
+            <p>5 to 10 tonnes for first-time European buyers. Tell us the tool and the part and we will send a composition report before you order.</p>
+            <a href="/en/contact/?product=ADC12" class="btn btn-primary">Open RFQ form</a>
+            <a href="https://wa.me/353871187806" class="btn btn-secondary">WhatsApp chat</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </article>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Thinking about a second ADC12 source?</h2>
+      <p>Ask us for a composition certificate from a recent heat before you commit to anything. No obligation.</p>
+      <div class="final-cta-actions">
+        <a href="/en/contact/?product=ADC12" class="btn btn-primary">Request a Quote</a>
+        <a href="https://wa.me/353871187806" class="btn btn-secondary">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</Layout>

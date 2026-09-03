@@ -1,5 +1,8 @@
-# Cloudflare redirects — stopgap until DE/FR/IT sub-pages are built.
+# Cloudflare redirects — stopgap for pages not yet translated.
 # Syntax: <from>  <to>  <status>   (first match wins)
+#
+# NOTE: the ADC12 path is now live in FR and IT (product page + contact form),
+# so those routes must NOT be caught by the splats below.
 
 # Cookie & Privacy policy — single English source for now
 /de/cookie-policy/    /en/cookie-policy/    302
@@ -9,18 +12,33 @@
 /fr/privacy-policy/   /en/privacy-policy/   302
 /it/privacy-policy/   /en/privacy-policy/   302
 
-# French sections not yet translated → English equivalents
-/fr/produits/*        /en/products/         302
+# ── German ───────────────────────────────────────────────────────
+# Industry detail pages exist in English only; the DE index links to them.
+/de/branchen/automotive/          /en/industries/automotive/                302
+/de/branchen/bauwesen/            /en/industries/construction/              302
+/de/branchen/elektronik/          /en/industries/electronics/               302
+/de/branchen/energie-und-verkehr/ /en/industries/power-transportation/      302
+/de/branchen/luft-und-raumfahrt/  /en/industries/aerospace/                 302
+/de/branchen/maschinenbau/        /en/industries/mechanical-manufacturing/  302
+/de/branchen/verpackung/          /en/industries/packaging/                 302
+
+# ── French ────────────────────────────────────────────────────────
+# Live: /fr/produits/adc12-alliage-fonderie/ and /fr/contact/
+# Product lines not yet translated → English equivalents
+/fr/produits/a7-*             /en/products/a7-primary-aluminium-ingot/      302
+/fr/produits/aluminium-si*    /en/products/aluminium-silicon-alloy-ingot/   302
+/fr/produits/                 /en/products/                                 302
 /fr/industries/*      /en/industries/       302
 /fr/qualite/*         /en/quality/          302
-/fr/guide-cbam/*      /en/cbam-guide/        302
+/fr/guide-cbam/*      /en/cbam-guide/       302
 /fr/a-propos/*        /en/about/            302
-/fr/contact/*         /en/contact/          302
 
-# Italian sections not yet translated → English equivalents
-/it/prodotti/*        /en/products/         302
+# ── Italian ───────────────────────────────────────────────────────
+# Live: /it/prodotti/adc12-lega-fonderia/ and /it/contatti/
+/it/prodotti/a7-*             /en/products/a7-primary-aluminium-ingot/      302
+/it/prodotti/alluminio-si*    /en/products/aluminium-silicon-alloy-ingot/   302
+/it/prodotti/                 /en/products/                                 302
 /it/industrie/*       /en/industries/       302
 /it/qualita/*         /en/quality/          302
-/it/guida-cbam/*      /en/cbam-guide/        302
+/it/guida-cbam/*      /en/cbam-guide/       302
 /it/chi-siamo/*       /en/about/            302
-/it/contatti/*        /en/contact/          302

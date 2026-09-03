@@ -1,0 +1,197 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const WEB3FORMS_KEY = '2b6f383a-1087-4cde-8534-d0628fcc305b';
+const RFQ_TO = 'contact@techaluminum.com';
+---
+
+<Layout
+  title="Contactez notre service commercial et technique | Tech Aluminum"
+  description="Demandez un devis ou un échantillon de nos lingots ADC12, AL-Si ou aluminium primaire A7. Réponse directe de Noel Murphy sous 24 heures."
+  lang="fr"
+>
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <div class="container">
+      <ol>
+        <li><a href="/fr/">Accueil</a></li>
+        <li aria-current="page">Contact</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="product-hero" style="padding: 4rem 0 3rem 0;">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="eyebrow on-dark">Réponse B2B sous 24 heures</span>
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Service commercial et technique</h1>
+        <p class="product-hero-lead" style="font-size: 1.15rem; color: rgba(255,255,255,0.85);">
+          Demandez nos grilles tarifaires, des fenêtres de composition resserrées ou une
+          livraison d'essai pour vos coulées de qualification, directement à Noel Murphy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--white); padding: 5rem 0;">
+    <div class="container">
+      <div class="cbam-inner" style="grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: start;">
+
+        <div style="background: var(--silver-soft); border: 1px solid var(--border); padding: clamp(1.25rem, 5vw, 3rem); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+          <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem; font-family:'Plus Jakarta Sans',sans-serif;">Demande de devis (RFQ)</h2>
+          <p style="color:var(--ink-soft); font-size:0.95rem; margin-bottom: 1.25rem;">Remplissez le formulaire ci-dessous. Noel Murphy ou notre service technique vous répondra sous un jour ouvré.</p>
+
+          <div id="rfq-product-note" hidden style="display:flex; align-items:center; gap:0.6rem; background:rgba(0,105,77,0.08); border-left:3px solid var(--teal); border-radius:6px; padding:0.8rem 1rem; margin-bottom:1.5rem; font-size:0.9rem; font-weight:600; color:var(--navy);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0; color:var(--teal);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span id="rfq-product-note-text"></span>
+          </div>
+
+          <form id="rfq-form" class="contact-form" style="display:flex; flex-direction:column; gap:1.5rem;">
+            <input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
+            <input type="hidden" name="subject" value="Nouvelle RFQ — Site Tech Aluminum (FR)" />
+            <input type="hidden" name="from_name" value="Tech Aluminum Website" />
+            <input type="hidden" name="Origine de la demande" id="rfq-source" value="Directe" />
+            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" />
+
+            <div class="form-row">
+              <div>
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Nom et prénom *</label>
+                <input type="text" name="Nom" required placeholder="Jean Dupont" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
+              </div>
+              <div>
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Société *</label>
+                <input type="text" name="Société" required placeholder="Fonderie SAS" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">E-mail professionnel *</label>
+                <input type="email" name="E-mail" required placeholder="jean@societe.fr" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
+              </div>
+              <div>
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">WhatsApp / Téléphone</label>
+                <input type="text" name="WhatsApp ou Téléphone" placeholder="+33 6 12 34 56 78" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label for="product-interest" style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Produit concerné</label>
+                <select id="product-interest" name="Produit" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit; background:white;">
+                  <option data-product="ADC12">Alliage de fonderie (ADC12 / EN AC-46000)</option>
+                  <option data-product="AL-Si">Alliage aluminium-silicium (AlSi7Mg / AlSi11 / Autre)</option>
+                  <option data-product="A7">Lingot primaire (A7 / Al99,7)</option>
+                  <option data-product="Other">Autre spécification / coulée sur mesure</option>
+                </select>
+              </div>
+              <div>
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Besoin mensuel estimé (tonnes)</label>
+                <input type="text" name="Besoin mensuel" placeholder="ex. 50 tonnes" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit;" />
+              </div>
+            </div>
+
+            <div>
+              <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.5rem; color:var(--navy);">Exigences particulières / message</label>
+              <textarea name="Message" placeholder="Décrivez vos tolérances de composition, la configuration des paquets ou vos besoins pour une livraison d'essai..." style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:6px; font-family:inherit; min-height:120px; resize:vertical;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:fit-content; cursor:pointer; font-size:1rem; padding: 0.85rem 2rem;">Envoyer la demande</button>
+            <div id="rfq-status" role="status" aria-live="polite" style="font-size:0.9rem; font-weight:600;"></div>
+          </form>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:2rem;">
+          <div style="background:var(--silver-soft); border:1px solid var(--border); padding:2rem; border-radius:var(--radius-lg); text-align:center;">
+            <div style="width:110px; height:110px; border-radius:50%; overflow:hidden; margin:0 auto 1.25rem auto; box-shadow:var(--shadow-md);">
+              <img src="/images/branding/brand-noel-murphy-portrait-01.webp" alt="Noel Murphy" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <h3 style="font-family:'Plus Jakarta Sans',sans-serif; margin-bottom:0.25rem;">Noel Murphy</h3>
+            <span style="color:var(--teal); font-weight:600; font-size:0.85rem; text-transform:uppercase; display:block; margin-bottom:1rem;">Partenaire commercial Europe</span>
+            <hr style="border:0; border-top:1px solid var(--border); margin-bottom:1.25rem;" />
+            <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.75rem; font-size:0.9rem; text-align:left;">
+              <li style="display:flex; gap:0.5rem;">
+                <span>✉️</span>
+                <a href="mailto:noel@techaluminum.com" style="color:var(--navy); font-weight:600;">noel@techaluminum.com</a>
+              </li>
+              <li style="display:flex; gap:0.5rem;">
+                <span>💬</span>
+                <a href="https://wa.me/353871187806" target="_blank" style="color:var(--teal); font-weight:600;">Discussion directe sur WhatsApp</a>
+              </li>
+            </ul>
+          </div>
+
+          <div style="background:var(--navy); color:white; padding:2rem; border-radius:var(--radius-lg);">
+            <h3 style="font-family:'Plus Jakarta Sans',sans-serif; margin-bottom:1rem; font-size:1.15rem; color:var(--gold-light);">Conformité documentaire :</h3>
+            <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.8rem; font-size:0.85rem; color:rgba(255,255,255,0.85);">
+              <li>✓ Numéro d'enregistrement REACH disponible</li>
+              <li>✓ Données MACF trimestrielles vérifiées</li>
+              <li>✓ Production certifiée ISO 9001:2015</li>
+              <li>✓ Certificats matière EN 10204 3.1</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script define:vars={{ RFQ_TO }}>
+    const form = document.getElementById('rfq-form');
+    const statusEl = document.getElementById('rfq-status');
+
+    const params = new URLSearchParams(window.location.search);
+    const requested = params.get('product');
+    const select = document.getElementById('product-interest');
+    const note = document.getElementById('rfq-product-note');
+    const noteText = document.getElementById('rfq-product-note-text');
+    if (requested && select) {
+      const match = Array.from(select.options).find(
+        (o) => (o.dataset.product || '').toLowerCase() === requested.trim().toLowerCase()
+      );
+      if (match) {
+        select.value = match.value;
+        noteText.textContent = 'Demande pour : ' + match.textContent.trim();
+        note.hidden = false;
+      }
+    }
+
+    const sourceEl = document.getElementById('rfq-source');
+    if (sourceEl) {
+      const parts = [];
+      if (requested) parts.push('product=' + requested);
+      parts.push(document.referrer ? 'depuis ' + document.referrer : 'aucun référent');
+      sourceEl.value = parts.join(' · ');
+    }
+
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        if (data.get('botcheck')) return;
+        const key = data.get('access_key');
+        statusEl.style.color = 'var(--ink-soft)';
+        statusEl.textContent = 'Envoi en cours…';
+        if (key && key !== '2b6f383a-1087-4cde-8534-d0628fcc305b') {
+          try {
+            const res = await fetch('https://api.web3forms.com/submit', {
+              method: 'POST', headers: { Accept: 'application/json' }, body: data
+            });
+            const out = await res.json();
+            if (out.success) {
+              form.reset();
+              statusEl.style.color = 'var(--teal)';
+              statusEl.textContent = 'Merci, votre demande a bien été envoyée. Noel vous répondra sous un jour ouvré.';
+              return;
+            }
+          } catch (err) { /* repli mailto */ }
+        }
+        const skip = ['access_key', 'subject', 'from_name', 'botcheck'];
+        const lines = [];
+        for (const [k, v] of data.entries()) { if (!skip.includes(k) && v) lines.push(k + ': ' + v); }
+        window.location.href = 'mailto:' + RFQ_TO + '?subject=' + encodeURIComponent('Nouvelle RFQ — Site Tech Aluminum (FR)') + '&body=' + encodeURIComponent(lines.join('\n'));
+        statusEl.style.color = 'var(--ink-soft)';
+        statusEl.textContent = 'Ouverture de votre messagerie pour envoyer la demande à ' + RFQ_TO + '…';
+      });
+    }
+  </script>
+</Layout>

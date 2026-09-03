@@ -1818,3 +1818,16 @@ svg, .icon svg, .pillar-icon svg, .industry-icon svg, .noel-contacts svg, .brand
   .product-img-modern{ transition:none; }
   .product-img-container-inner:hover .product-img-modern{ transform:none; }
 }
+
+/* ── Blog article layout: allow tracks to shrink ─────────────────
+   .article-layout used a bare 1fr, which resolves to minmax(auto,1fr)
+   and refuses to shrink below the min-content of a wide table, pushing
+   the whole article past the viewport on mobile. */
+.article-layout{ grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 1024px){
+  .article-layout{ grid-template-columns: minmax(0, 1fr) 340px; }
+}
+.article-body,
+.article-sidebar{ min-width: 0; }
+.article-body .spec-table,
+.article-body table{ max-width: 100%; }

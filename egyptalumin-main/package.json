@@ -9,7 +9,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "postbuild": "node scripts/gen-sitemap.mjs"
   },
   "dependencies": {
     "astro": "^6.4.2"
